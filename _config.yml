@@ -1,2 +1,5 @@
-name: Your New Jekyll Site
+name: Bicrement
+description: Where (Progress++)++
+author: Zhuochun
 pygments: true
+exclude: ['CNAME', 'README.markdown']
