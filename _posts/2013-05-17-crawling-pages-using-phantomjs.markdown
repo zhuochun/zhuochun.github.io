@@ -2,7 +2,8 @@
 layout: post
 title:  "Crawling pages using PhantomJS"
 date:   2013-05-17 19:08:10
-categories: PhantomJS JavaScript
+tags: PhantomJS JavaScript
+categories: JavaScript
 ---
 
 I used [PhantomJS][phantomjs] in my [CORS Planner][corsplanner] project to crawl module codes from NUS website. It is really simple to pick up some code from the [examples](https://github.com/ariya/phantomjs/wiki/Examples) provided in PhantomJS site. My code look like this:
