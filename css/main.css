@@ -99,6 +99,12 @@ ul.posts span {
   color: #aaa;
 }
 
+.site #post {
+    border-bottom: 4px solid #EEEEEE;
+    margin: 0 0 3em;
+    padding: 0 0 3em;
+}
+
 .site .footer {
   font-size: 80%;
   color: #666;
@@ -162,4 +168,52 @@ ul.posts span {
 
 #post pre.terminal code {
   background-color: #333;
+}
+
+/*****************************************************************************/
+/*
+/* Table
+/*
+/*****************************************************************************/
+
+table {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+table th, table td {
+    border: 1px solid #DDDDDD;
+    line-height: 20px;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+table th {
+    font-weight: bold;
+}
+
+/*****************************************************************************/
+/*
+/* Special
+/*
+/*****************************************************************************/
+
+.blue-color {
+    color: #2980b9;
+}
+
+.green-color {
+    color: #16a085;
+}
+
+.yellow-color {
+    color: #f39c12;
+}
+
+.red-color {
+    color: #c0392b;
 }
