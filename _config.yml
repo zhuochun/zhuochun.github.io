@@ -1,5 +1,6 @@
 name: Bicrement
+url: http://blog.bicrement.com
 description: Where (Progress++)++
 author: Zhuochun
 pygments: true
-exclude: ['CNAME', 'README.markdown']
+exclude: ['CNAME', 'README.md', '_drafts']

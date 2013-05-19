@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Crawling pages using PhantomJS"
-date:   2013-05-17 19:08:10
+published: true
+title: "Crawling pages using PhantomJS"
+date: 2013-05-17 19:08:10
 tags: PhantomJS JavaScript
 categories: JavaScript
 ---
@@ -39,8 +40,6 @@ page.open(encodeURI(url), function (status) {
 Last month, I added support on NTU modules in CORS Planner. However, NTU modules are distributed in 339 different webpages. Crawling page after page in sequence is far too slow. So a better way would be running several PhantomJS `webpage` together and each completes a part of the crawling. The code is (*thread is the number of `webpages`, not a real thread, `webpages` runs in asynchronous*):
 
 {% highlight javascript linenos %}
-// Full Source Code: http://bit.ly/12GNeGq
-
 // list contains all the NTU pages to be visited
 var llength = list.length, completed = 0
 // max is the maximum # of pages to be visited for each thread
@@ -87,6 +86,8 @@ function visitPage(page, idx, max) {
         }
     });
 }
+
+// Full Source Code: http://bit.ly/12GNeGq
 {% endhighlight %}
 
 Run `$ phantomjs crawl-phantomjs.js -t #` in command window, where `#` is the thread you want.
