@@ -83,7 +83,7 @@ ul.posts span {
 }
 
 .site .header h1.title a:hover {
-  color: #000;
+  color: #c0392b;
 }
 
 .site .header a.extra {
@@ -97,12 +97,6 @@ ul.posts span {
 
 .site .meta {
   color: #aaa;
-}
-
-.site #post {
-    border-bottom: 4px solid #EEEEEE;
-    margin: 0 0 3em;
-    padding: 0 0 3em;
 }
 
 .site .footer {
