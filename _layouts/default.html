@@ -1,58 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+{% include header.html %}
 
-        <title>{{ page.title }}</title>
+<div class="container">
+  <div class="site">
+    {% include menus.html %}
 
-        <meta name="author" content="Wang Zhuochun">
-        <meta name="viewport" content="width=device-width">
+    {{ content }}
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-    </head>
-    <body>
+    {% include about.html %}
+  </div> <!-- /site -->
+</div> <!-- /container -->
 
-        <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">Home</a>
-              <a class="extra" href="http://cors.bicrement.com/" target="_blank">CORS Planner</a>
-            </div>
-
-                {{ content }}
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Zhuochun<br />
-                  What You Are<br />
-                  <span title="bicrement" class="yellow-color">{{ site.description }}</span>
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="https://github.com/zhuochun">https://github.com/zhuochun</a><br />
-                  <a href="http://stackoverflow.com/users/889972/mifeng">Stack Overflow</a><br />
-                </p>
-              </div>
-            </div>
-
-        </div> <!-- /container -->
-
-        <script type="text/javascript">
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-35844116-3']);
-          _gaq.push(['_trackPageview']);
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        </script>
-    </body>
-</html>
+{% include footer.html %}
