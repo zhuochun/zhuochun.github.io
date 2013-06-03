@@ -41,6 +41,12 @@ blockquote {
   border-left: 2px solid #2980b9;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /*****************************************************************************/
 /*
 /* Home
@@ -169,6 +175,32 @@ ul.posts span {
 
 #post pre.terminal code {
   background-color: #333;
+}
+
+/* page navigation */
+#page-nav {
+    margin-top: 2em;
+    border-top: 4px solid #EFEFEF;
+    padding-top: 1.5em;
+}
+
+#page-nav a {
+    color: #2980b9;
+}
+
+#page-nav a:hover {
+    color: #2c3e50;
+}
+
+#page-nav .left {
+    float: left;
+    width: 45%;
+}
+
+#page-nav .right {
+    text-align: right;
+    float: right;
+    width: 45%;
 }
 
 /*****************************************************************************/

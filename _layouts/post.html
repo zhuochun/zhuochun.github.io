@@ -1,9 +1,24 @@
 ---
 layout: default
 ---
+
 <h2>{{ page.title }}</h2>
 <p class="meta">{{ page.date | date_to_string }}</p>
 
 <div id="post">
-{{ content }}
+  {{ content }}
 </div>
+
+<div id="page-nav" class="clearfix">
+  <div class="left">
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+    {% endif %}
+  </div>
+
+  <div class="right">
+    {% if page.next.url %}
+    <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo; </a>
+    {% endif %}
+  </div>
+</div> 
