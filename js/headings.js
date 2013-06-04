@@ -1,3 +1,6 @@
+// Author: Wang Zhuochun
+// Url: http://blog.bicrement.com
+
 (function ($) {
     "use strict";
     
@@ -13,7 +16,7 @@
     Node.prototype.addChild = function(node) {
         this.child.push(node);
         node.parent = this;
-    }
+    };
     
     var list = [], current = null, prefix = 'heading-';
     
@@ -65,6 +68,6 @@
         return result;
     }
     
-    $("#content-menu").append("<div><ul>" + dump(list) + "</ul></div>");
+    $("#content-menu").append("<ol>" + dump(list) + "</ol>");
 
 })(jQuery);
