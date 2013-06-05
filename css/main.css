@@ -177,6 +177,10 @@ ul.posts span {
   background-color: #333;
 }
 
+#post .highlight {
+    margin: 1em 0;
+}
+
 /* page navigation */
 #page-nav {
     margin-top: 2em;
