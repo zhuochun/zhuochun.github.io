@@ -15,7 +15,7 @@ html, body { height: 100%; }
 body {
   background-color: #FFF;
   font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
+  font-size: normal;
   text-align: center;
 }
 
@@ -113,7 +113,7 @@ ul.posts span {
 }
 
 .site .footer {
-  font-size: 80%;
+  font-size: 90%;
   color: #666;
   border-top: 4px solid #eee;
   margin-top: 2em;
@@ -212,6 +212,28 @@ ul.posts span {
 /* Wiki
 /*
 /*****************************************************************************/
+
+.section {
+    margin: 2em 0;
+}
+
+.section b {
+    color: #bdc3c7;
+}
+
+.section a {
+    color: #7f8c8d;
+}
+
+.section:nth-child(even) h2 {
+    font-size: 110%;
+    color: #3498db;
+}
+
+.section:nth-child(odd) h2 {
+    font-size: 110%;
+    color: #2c3e50;
+}
 
 #content-menu {
     border: 1px solid #BDC3C7;
