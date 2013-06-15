@@ -9,7 +9,7 @@ categories: Git
 
 I started using Github Issues to track progess on my FYP development. Today I found that you can **close issues via commit messages.**
 
-If you used any of the following synonyms in your commits, github will reference the commits from the issues and mark them closed.
+If you used any of the following synonyms in your commits, github will reference to the commits from the issues and mark the issues closed.
 
 {% highlight text %}
 fixes #xxx
