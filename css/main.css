@@ -14,7 +14,7 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  font: 16px 'Lato', Helvetica, Arial, sans-serif;
   font-size: normal;
   text-align: center;
 }
@@ -74,7 +74,7 @@ ul.posts span {
 /*****************************************************************************/
 
 .site {
-  font-size: 115%;
+  font-size: 100%;
   text-align: justify;
   width: 42em;
   margin: 3em auto 2em;
@@ -150,6 +150,7 @@ ul.posts span {
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .4em;
+  font-size: 90% !important;
 }
 
 #post ul, #post ol {
