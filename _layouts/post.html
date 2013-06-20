@@ -2,23 +2,35 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<div class="posts pure-g">
+  <h1 class="pure-u-1 content-subhead">
+    {{ page.date | date_to_string }},
+    On {{ page.tags | array_to_sentence_string }}
+  </h1>
 
-<div id="post">
-  {{ content }}
+  <section class="post pure-u-1">
+    <header class="post-header">
+      <h2 class="post-title pure-u-1">{{ page.title }}</h2>
+    </header>
+
+    <article class="post-description pure-u-1">
+      {{ content }}
+    </article>
+  </section>
+
+  <div class="page-nav" class="pure-u-1">
+    <div class="pure-g-r">
+      <div class="pure-u-1-2 prev-post">
+        {% if page.previous.url %}
+        <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+        {% endif %}
+      </div>
+
+      <div class="pure-u-1-2 next-post">
+        {% if page.next.url %}
+        <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo; </a>
+        {% endif %}
+      </div>
+    </div>
+  </div> 
 </div>
-
-<div id="page-nav" class="clearfix">
-  <div class="left">
-    {% if page.previous.url %}
-    <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-    {% endif %}
-  </div>
-
-  <div class="right">
-    {% if page.next.url %}
-    <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo; </a>
-    {% endif %}
-  </div>
-</div> 

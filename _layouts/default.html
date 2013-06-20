@@ -1,13 +1,15 @@
 {% include header.html %}
 
-<div class="container">
-  <div class="site">
-    {% include menus.html %}
+<div class="pure-g-r" id="layout">
+  {% include menus.html %}
 
+  <div class="content pure-u-1">
     {{ content }}
 
-    {% include about.html %}
-  </div> <!-- /site -->
-</div> <!-- /container -->
+    <footer class="footer">
+      {% include about.html %}
+    </footer>
+  </div>
+</div>
 
 {% include footer.html %}

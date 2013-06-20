@@ -24,22 +24,20 @@ Although we can iterate a node list and refer to its member like an array, it is
 
 Let's see the suggestion extracted from [Google JavaScript Style Guide, #Tips and Tricks](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml#Tips_and_Tricks):
 
-> **Iterating over Node Lists**
-> 
-> Node lists are often implemented as node iterators with a filter. This means that getting a property like length is O(n), and iterating over the list by re-checking the length will be O(n^2).
->  
 <blockquote>
+<p><b>Iterating over Node Lists</b></p>
+ 
+<p>Node lists are often implemented as node iterators with a filter. This means that getting a property like length is <code>O(n)</code>, and iterating over the list by re-checking the length will be <code>O(n^2)</code>.</p>
+  
 {% highlight javascript linenos %}
 var paragraphs = document.getElementsByTagName('p');
 for (var i = 0; i < paragraphs.length; i++) {
     doSomething(paragraphs[i]);
 }
 {% endhighlight %}
-</blockquote>
->  
-> It is better to do this instead:
->   
-<blockquote>
+  
+<p>It is better to do this instead:</p>
+   
 {% highlight javascript linenos %}
 var paragraphs = document.getElementsByTagName('p');
 for (var i = 0, paragraph; paragraph = paragraphs[i]; i++) {
@@ -59,7 +57,7 @@ for (var i = 0, paragraph; paragraph = paragraphs[i]; i++) {
 
 Running the above code will hang/crash your browser. As mentioned, the node list is live (reflects DOM changes)! For every new `p` element created, the `paragraphs.length` increases by 1. So you just created an infinite loop.
 
-In such situation, it is better to convert the node list to a real array first manually or using `Array.prototype.slice.call(paragraphs)`.
+In such situation, it is better to convert the node list to a real array using `for` loop or using `Array.prototype.slice.call(paragraphs)` first.
 
 **Last but not least**, I created two jsperf comparisons [1](http://jsperf.com/iterate-nodelist-in-loop/2) and [2](http://jsperf.com/iterate-nodelist-in-loop-2) with several different for-loops.
 
