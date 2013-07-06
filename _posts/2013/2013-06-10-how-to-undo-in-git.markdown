@@ -7,7 +7,7 @@ tags: Git
 categories: git
 ---
 
-One of the best parts in version control is undo. This is a quick collection of undo comments in git.
+One of the best parts in version control is undo. This is a quick collection of undo commands in git.
 
 ## Unstage a staged file
 
@@ -20,7 +20,7 @@ $ git reset HEAD <file>
 
 ## Unmodify a modified file
 
-You made some unsatisfied changes in a file and want to discard it. You can use `checkout --` comment:
+You made some unsatisfied changes in a file and want to discard it. You can use `checkout --` command:
 
 {% highlight bash %}
 # discard all changes in a file (not staged)
@@ -44,7 +44,7 @@ This command takes your staging area and uses it for the commit. The `amend` com
 
 ## Redo last commit
 
-If you made a unwanted commit, you can overwrite it using `git reset HEAD^` like it never happens:
+If you made a unwanted commit, you can overwrite it using `git reset HEAD^` command like it never happens:
 
 {% highlight bash %}
 # your unwanted commit
@@ -67,3 +67,7 @@ edit `~/.gitconfig` file:
     uncommit = reset --soft HEAD^
     amend = commit --amend
 {% endhighlight %}
+
+**References**
+
+- [Git Basics - Undoing Things](http://git-scm.com/book/en/Git-Basics-Undoing-Things)
