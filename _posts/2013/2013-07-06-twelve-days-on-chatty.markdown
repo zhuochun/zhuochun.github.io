@@ -3,11 +3,11 @@ layout: post
 published: true
 title: "Twelve days on Chatty"
 date: 2013-07-06 15:58:30
-tags: Android Project
+tags: Android Project Chatty
 categories: Project
 ---
 
-Now, after taken a break away from computer, I want to sit back and write a few words on my project [Chatty](https://play.google.com/store/apps/details?id=com.bicrement.chatty).
+Now, after taken a break away from computer, I want to sit back and write a few words on my project [Chatty](http://chatty.bicrement.com).
 
 ![Chatty Logo](/images/chatty/icon.png "Chatty Logo")
 
@@ -19,7 +19,7 @@ At first, I want to share some tips on writing Chatty using PhoneGap, Parse and 
 
 ## Write down your idea
 
-Write down your idea in details! Otherwise your idea slips away, and you will build something not what you thought in the end.
+Write down your idea in short and sweet sentences! Otherwise your idea slips away, and you will build something not what you thought in the end.
 
 During the development, new ideas and features will hit you and push you away from your initial goal. I know you get so excited when you hit by the _"OMG, I have a new and brilliant feature!"_ moment, and cannot wait to implement it. So do I. Please take a few seconds to write it down, and come back to it later (after completed what you have in hand). Probably you will find it is not that "new" or "brilliant" anymore.
 
@@ -37,8 +37,15 @@ Fast prototyping! Use free services and fast tools to implement. Slow implementa
 
 ## Exercise
 
-**DO NOT forget to exercise!** Lack of exercise hurts productivity. Exerice clears your thoughts and brings freshness to your mind.
+**DO NOT forget to exercise!** Lack of exercise hurts productivity. Exercise clears your thoughts and brings freshness to your mind.
 
 ## Revise commits
 
 Commits often and revise them before you ends a day. I found it helps me get ready for the next day and have a nice sleep: keep progress in mind, and refresh what you have done today.
+
+**Add-ons**
+
+A few articles I read recently, provided as additional readings:
+
+- [The Little, Big Idea](https://medium.com/better-humans/271ae5edf93e)
+- [Too scared to write a line of code](https://medium.com/i-m-h-o/eef96ea6f4cb)
