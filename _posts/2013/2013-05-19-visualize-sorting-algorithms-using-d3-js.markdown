@@ -61,8 +61,8 @@ These are all the basic code required to display the bar chart. You will then ca
 
 **d3.js Tutorials:**
 
-* D3 Website: [http://d3js.org/]()
-* D3 Examples: [https://github.com/mbostock/d3/wiki/Gallery]()
-* D3 Tutorials: [https://github.com/mbostock/d3/wiki/Tutorials]()
-* D3 Tutorials from Scott Murray: [http://alignedleft.com/tutorials/]()
-* Learning D3.js (Chinese): [http://www.civn.cn/p/tag/learning_d3]()
+* [D3 Website](http://d3js.org/)
+* [D3 Examples](https://github.com/mbostock/d3/wiki/Gallery)
+* [D3 Tutorials](https://github.com/mbostock/d3/wiki/Tutorials)
+* [D3 Tutorials from Scott Murray](http://alignedleft.com/tutorials/)
+* [Learning D3.js (Chinese)](http://www.civn.cn/p/tag/learning_d3)

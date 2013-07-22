@@ -105,9 +105,9 @@ Thread | Pages Crawled | Time Taken | Avg Time/Page
 
 **Extra**, Some plugins in Node.js:
 
-- cheerio: [https://github.com/MatthewMueller/cheerio]()
-- htmlparser2: [https://github.com/fb55/htmlparser2]()
-- CasperJS (in PhantomJS): [http://casperjs.org/]()
+- [cheerio](https://github.com/MatthewMueller/cheerio)
+- [htmlparser2](https://github.com/fb55/htmlparser2)
+- [CasperJS (in PhantomJS)](http://casperjs.org/)
 
 [corsplanner]: http://cors.bicrement.com/
 [phantomjs]: http://phantomjs.org/

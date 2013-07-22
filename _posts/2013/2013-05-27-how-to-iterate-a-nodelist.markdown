@@ -26,18 +26,18 @@ Let's see the suggestion extracted from [Google JavaScript Style Guide, #Tips an
 
 <blockquote>
 <p><b>Iterating over Node Lists</b></p>
- 
+
 <p>Node lists are often implemented as node iterators with a filter. This means that getting a property like length is <code>O(n)</code>, and iterating over the list by re-checking the length will be <code>O(n^2)</code>.</p>
-  
+
 {% highlight javascript linenos %}
 var paragraphs = document.getElementsByTagName('p');
 for (var i = 0; i < paragraphs.length; i++) {
     doSomething(paragraphs[i]);
 }
 {% endhighlight %}
-  
+
 <p>It is better to do this instead:</p>
-   
+
 {% highlight javascript linenos %}
 var paragraphs = document.getElementsByTagName('p');
 for (var i = 0, paragraph; paragraph = paragraphs[i]; i++) {
