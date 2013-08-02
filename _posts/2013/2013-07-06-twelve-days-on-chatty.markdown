@@ -11,7 +11,7 @@ Now, after taken a break away from computer, I want to sit back and write a few 
 
 ![Chatty Logo](/images/chatty/icon.png "Chatty Logo")
 
-> Chatty seems to be just another social app. **It is more.** It aims to build active interactions between strangers through activities. **Activities are break points for people to build relations.** We met our friends because they took the same courses with us, they watched movies together with us, they had dinner with us, etc. These activities or experiences we had together connect us. This is what Chatty want to help. 
+> Chatty seems to be just another social app. **It is more.** It aims to build active interactions between strangers through activities. **Activities are breakpoints for people to build relations.** We met our friends because they took the same courses with us, they watched movies together with us, they had dinner with us, etc. These activities or experiences we had together connect us. This is what Chatty want to help. 
 
 Ok, enough for a quick introduction of Chatty.
 
@@ -41,7 +41,7 @@ Fast prototyping! Use free services and fast tools to implement. Slow implementa
 
 ## Revise commits
 
-Commits often and revise them before you ends a day. I found it helps me get ready for the next day and have a nice sleep: keep progress in mind, and refresh what you have done today.
+Commits often and revise them before you ends a day. I found it helps me get ready for the next day and have a nice sleep: refresh what you have done today, and keep progress in mind.
 
 **Add-ons**
 
