@@ -27,36 +27,36 @@ a:focus {
     bottom: 0;
     width: 25%;
     margin-left: -25%;
-    background: #34495e;
+    background-color: #34495e;
     color: #fff;
 }
 
 .sidebar-color-0 {
-    background: #34495e;
+    background-color: #34495e;
 }
 
 .sidebar-color-1 {
-    background: #f39c12;
+    background-color: #f39c12;
 }
 
 .sidebar-color-2 {
-    background: #d35400;
+    background-color: #d35400;
 }
 
 .sidebar-color-3 {
-    background: #c0392b;
+    background-color: #c0392b;
 }
 
 .sidebar-color-4 {
-    background: #2980b9;
+    background-color: #2980b9;
 }
 
 .sidebar-color-5 {
-    background: #16a085;
+    background-color: #16a085;
 }
 
 .sidebar-color-6 {
-    background: #8e44ad;
+    background-color: #8e44ad;
 }
 
 .header {
@@ -123,6 +123,7 @@ a:focus {
 
 .content {
     padding: 2em 3em 0;
+    letter-spacing: normal;
 }
 
 .posts {
@@ -159,10 +160,12 @@ a:focus {
     color: #2c3e50;
 }
 
-.post-description {
+.post-content {
     font-family: Georgia, "Cambria", serif;
     color: #444;
     line-height: 1.8em;
+    font-size: 120%;
+    max-width: 40em;
 }
 
 .post-meta {
@@ -180,27 +183,12 @@ a:focus {
     opacity: 0.8;
 }
 
-    .post-category:hover,
-    .post-category:focus {
-        color: #eee;
-        opacity: 1;
-        text-decoration: none;
-    }
-    .post-category-css {
-        background: #5aba59;
-    }
-    .post-category-javascript {
-        background: #4d85d1;
-    }
-    .post-category-rails {
-        background: #8156a7;
-    }
-    .post-category-ruby {
-        background: #df2d4f;
-    }
-    .post-category-git {
-        background: #e67e22;
-    }
+.post-category:hover,
+.post-category:focus {
+    color: #eee;
+    opacity: 1;
+    text-decoration: none;
+}
 
 .post-images {
     margin: 1em 0;
@@ -248,6 +236,20 @@ blockquote {
     background: #f3f3f9;
     color: #34495e;
     border-left: .2em solid #2980b9;
+}
+
+pre {
+    font-size: 90%;
+}
+
+pre code {
+    color: #666;
+    background-color: transparent;
+}
+
+code {
+    color: #999;
+    background-color: #f9f9f9;
 }
 
 .page-nav .prev-post {
@@ -299,8 +301,8 @@ blockquote {
         padding: 0;
     }
 
-    .page-nav .next-post {
-        text-align: left;
+    .post-content {
+        font-size: 100%;
     }
 
     pre {
@@ -314,6 +316,6 @@ blockquote {
     }
 
     pre {
-        font-size: 70%;
+        font-size: 66%;
     }
 }
