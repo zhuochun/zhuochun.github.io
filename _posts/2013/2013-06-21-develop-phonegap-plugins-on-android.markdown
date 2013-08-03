@@ -13,7 +13,7 @@ Recently, I dug a little further in [Phonegap](http://phonegap.com/) on writing 
 
 Phonegap plugins allow you to use functionalities on native platform through a single JavaScript interface `cordova.exec`.
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 cordova.exec(<successFunction>, <failFunction>, <service>, <action>, <args>);
 {% endhighlight %}
 
@@ -29,7 +29,7 @@ On the native platform, you needs to implement the `service` (as class name), wh
 
 Your plugin must be added to the `config.xml` file in your Cordova-Android application's `res/xml/` folder.
 
-{% highlight xml linenos %}
+{% highlight xml %}
 <plugin name="<service_name>" value="<full_name_including_namespace>"/>
 {% endhighlight %}
 
@@ -37,14 +37,14 @@ This is a plugin template:
 
 {% highlight java linenos %}
 public class YourServiceName extends CordovaPlugin {
-	
-	@Override
+
+    @Override
     public boolean execute(String action, JSONArray args, CallbackContext ctx) {
         if (action.equalsIgnoreCase("an action")) {
             // do some thing
             return true;
         }
-    	
+
         return false;
     }
 
