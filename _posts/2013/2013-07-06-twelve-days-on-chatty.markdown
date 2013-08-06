@@ -43,6 +43,12 @@ Fast prototyping! Use free services and fast tools to implement. Slow implementa
 
 Commits often and revise them before you ends a day. I found it helps me get ready for the next day and have a nice sleep: refresh what you have done today, and keep progress in mind.
 
+**More on Chatty**
+
+- [Chatty Site](http://chatty.bicrement.com)
+- [Chatty Video](http://youtu.be/5Xq1C6zw61Y)
+- [My Presentation on Chatty](https://speakerdeck.com/zhuochun/chatty-meet-new-friends)
+
 **Add-ons**
 
 A few articles I read recently, provided as additional readings:
