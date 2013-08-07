@@ -2,5 +2,14 @@ name: Bicrement
 url: http://blog.bicrement.com
 description: Where (Progress++)++
 author: Zhuochun
+page:
+    wiki: /wiki/
+    note: /note/
+    project: http://www.bicrement.com
+social:
+    github: https://github.com/zhuochun
+    linkedin: http://www.linkedin.com/in/zhuochun
+    stackoverflow: http://stackoverflow.com/users/889972/mifeng
+    twitter: https://twitter.com/zhuochun
 pygments: true
 exclude: ['CNAME', 'README.md', '_drafts']
