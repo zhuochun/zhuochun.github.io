@@ -9,21 +9,21 @@ categories: Phonegap
 
 Recently, I dug a little further in [Phonegap](http://phonegap.com/) on writing plugins. The [official plugin development guide](http://docs.phonegap.com/en/edge/guide_plugin-development_android_index.md.html#Developing%20a%20Plugin%20on%20Android) is hard to grasp for beginner. So this is quick note.
 
-# JavaScript Interface
+## JavaScript Interface
 
 Phonegap plugins allow you to use functionalities on native platform through a single JavaScript interface `cordova.exec`.
 
 {% highlight javascript %}
-cordova.exec(<successFunction>, <failFunction>, <service>, <action>, <args>);
+cordova.exec(<successFun>, <failFun>, <service>, <action>, <args>);
 {% endhighlight %}
 
-- `successFunction (Function)`: if your `exec` call completes successfully, this function is invoked (optionally with any parameters you pass back to it).
-- `failFunction (Function)`: if the operation does not complete successfully, this function is invoked (optionally with an error parameter).
+- `successFun (Function)`: if your `exec` call completes successfully, this function is invoked (optionally with any parameters you pass back to it).
+- `failFun (Function)`: if the operation does not complete successfully, this function is invoked (optionally with an error parameter).
 - `service (String)`: the service name to call into on the native side.
 - `action (String)`: the action name to call into. 
 - `args (Array)`: arguments to pass into.
 
-# Android
+## Android
 
 On the native platform, you needs to implement the `service` (as class name), which extends `CordovaPlugin` and overides `execute` method.
 
@@ -61,11 +61,11 @@ You can pass data back using `ctx` with `ctx.success()`, `ctx.error()` or `ctx.s
 
 For example, you can refer to the [source code](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/Notification.java) of `Notification` API provided by phonegap.
 
-# JavaScript Plugin
+## JavaScript Plugin
 
 It is better to wrap your plugin calls, instead of calling `cordova.exec` directly every time. There are two ways doing it:
 
-## The Common Way
+### The Common Way
 
 This is the common way found in [phonegap-plugins](https://github.com/phonegap/phonegap-plugins) repos:
 
@@ -91,7 +91,7 @@ This is the common way found in [phonegap-plugins](https://github.com/phonegap/p
 window.plugins.YourService.action(args, succeed, failed);
 {% endhighlight %}
 
-## The `Require` Way
+### The `Require` Way
 
 This is what I found in `cordova.js`'s [source code](https://github.com/apache/cordova-android/blob/master/framework/assets/www/cordova.js#L4116):
 

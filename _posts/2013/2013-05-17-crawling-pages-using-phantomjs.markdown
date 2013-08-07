@@ -37,7 +37,7 @@ page.open(encodeURI(url), function (status) {
 // Full Source Code: http://bit.ly/12gHAdw
 {% endhighlight %}
 
-Last month, I added support on NTU modules in CORS Planner. However, NTU modules are distributed in 339 different webpages. Crawling page after page in sequence is far too slow. So a better way would be running several PhantomJS `webpage` together and each completes a part of the crawling. The code is (*thread is the number of `webpages`, not a real thread. `webpages` run in asynchronous*):
+Last month, I added support on NTU modules in CORS Planner. However, NTU modules are distributed in 339+ different webpages. Crawling page after page in sequence is far too slow. So a better way would be running several PhantomJS `webpage` together and each completes a part of the crawling. The code is (*thread is the number of `webpages`, not a real thread. `webpages` run in asynchronous*):
 
 {% highlight javascript linenos %}
 // list contains all the NTU pages to be visited

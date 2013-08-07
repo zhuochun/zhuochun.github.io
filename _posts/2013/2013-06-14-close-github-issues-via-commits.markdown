@@ -12,20 +12,20 @@ I started using Github Issues to track progess on my FYP development. Today I fo
 If you uses any of the following synonyms in your commits, github will reference to the commits from the issues and mark the issues closed.
 
 {% highlight text %}
-fixes #xxx
-fixed #xxx
-fix #xxx
-closes #xxx
-close #xxx
-closed #xxx
+ fixes #xxx
+ fixed #xxx
+ fix #xxx
+ closes #xxx
+ close #xxx
+ closed #xxx
 {% endhighlight %}
 
 Additionally, you can create nice tasks lists in issues, pulls and comments like [this](https://github.com/twitter/bootstrap/pull/6342), using `[ ]` or `[x]` (incomplete or complete, respectively) markdowns. For example:
 
 {% highlight text %}
-- [x] list syntax required
-- [x] this is a complete item
-- [ ] this is an incomplete item
+ - [x] list syntax required
+ - [x] this is a complete item
+ - [ ] this is an incomplete item
 {% endhighlight %}
 
 **References:**

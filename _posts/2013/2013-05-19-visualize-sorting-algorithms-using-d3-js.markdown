@@ -27,18 +27,18 @@ This creates a `svg` using d3.js with `width = 300` and `height = 100`.
 
 {% highlight javascript linenos %}
 var rects = svg.selectAll("rect")
-                .data([10, 20])
-                .enter()
-                .append("rect");
+               .data([10, 20])
+               .enter()
+               .append("rect");
 {% endhighlight %}
 
 To display bars in `svg` will need `rect` rectangles. d3.js provides `enter`, where you can create new nodes for incoming data (`[10, 20]`). Howeveer, these `rects` are not assigned with information of its width, height and position yet.
 
 {% highlight javascript linenos %}
 rects.attr("x", function(d, i) { return i * 21; })
-    .attr("y", h)
-    .attr("width", 20)
-    .attr("height", function(d, i) { return d; })
+     .attr("y", h)
+     .attr("width", 20)
+     .attr("height", function(d, i) { return d; })
 {% endhighlight %}
 
 Above lines will assign `<x, y>` position and `<width, height>` to each `rect`. `d` is the data associated with the rects (10 for `rects[0]`, 20 for `rects[1]`) and `i` is the index of `rect` in `rects`.
@@ -48,9 +48,9 @@ To update the `rects`, you will do the similar using new data and `transition`:
 {% highlight javascript linenos %}
 function redraw(newData) {
     var rects = svg.selectAll("rect")
-                    .data(newData)
-                    .transition()
-                    .duration(1000) // 1s
+                   .data(newData)
+                   .transition()
+                   .duration(1000) // 1s
 
     // bind the x, y, width, height again
     // ...
@@ -61,8 +61,8 @@ These are all the basic code required to display the bar chart. You will then ca
 
 **d3.js Tutorials:**
 
-* [D3 Website](http://d3js.org/)
-* [D3 Examples](https://github.com/mbostock/d3/wiki/Gallery)
-* [D3 Tutorials](https://github.com/mbostock/d3/wiki/Tutorials)
-* [D3 Tutorials from Scott Murray](http://alignedleft.com/tutorials/)
-* [Learning D3.js (Chinese)](http://www.civn.cn/p/tag/learning_d3)
+- [D3 Website](http://d3js.org/)
+- [D3 Examples](https://github.com/mbostock/d3/wiki/Gallery)
+- [D3 Tutorials](https://github.com/mbostock/d3/wiki/Tutorials)
+- [D3 Tutorials from Scott Murray](http://alignedleft.com/tutorials/)
+- [Learning D3.js (Chinese)](http://www.civn.cn/p/tag/learning_d3)
