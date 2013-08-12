@@ -3,7 +3,7 @@ layout: post
 published: true
 title: "Close github issues via commit messages"
 date: 2013-06-14 21:48:10
-tags: Github
+tags: Github Tip
 categories: Git
 ---
 

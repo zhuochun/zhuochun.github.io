@@ -323,7 +323,8 @@ code {
         margin: 0;
     }
 
-    .header {
+    .header,
+    .header.with-menu {
         text-align: center;
         top: auto;
         margin: 3em auto;
