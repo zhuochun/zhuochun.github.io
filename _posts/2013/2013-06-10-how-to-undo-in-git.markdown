@@ -1,5 +1,6 @@
 ---
 layout: post
+menu: true
 published: true
 title: "How to undo in Git"
 date: 2013-06-10 14:58:10

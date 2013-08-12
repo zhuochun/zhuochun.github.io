@@ -1,5 +1,6 @@
 ---
 layout: post
+menu: true
 published: true
 title: "Develop phonegap/cordova plugins on Android"
 date: 2013-06-21 15:58:30
@@ -14,7 +15,11 @@ Recently, I dug a little further in [Phonegap](http://phonegap.com/) on writing 
 Phonegap plugins allow you to use functionalities on native platform through a single JavaScript interface `cordova.exec`.
 
 {% highlight javascript %}
-cordova.exec(<successFun>, <failFun>, <service>, <action>, <args>);
+cordova.exec(<successFun>, // success callback function
+             <failFun>, // fail callback function
+             <service>, // the plugin's service
+             <action>, // the plugin's service action name
+             <args>); // arguments passed into the service action
 {% endhighlight %}
 
 - `successFun (Function)`: if your `exec` call completes successfully, this function is invoked (optionally with any parameters you pass back to it).
@@ -23,7 +28,7 @@ cordova.exec(<successFun>, <failFun>, <service>, <action>, <args>);
 - `action (String)`: the action name to call into. 
 - `args (Array)`: arguments to pass into.
 
-## Android
+## Android Plugin
 
 On the native platform, you needs to implement the `service` (as class name), which extends `CordovaPlugin` and overides `execute` method.
 
@@ -61,7 +66,7 @@ You can pass data back using `ctx` with `ctx.success()`, `ctx.error()` or `ctx.s
 
 For example, you can refer to the [source code](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/Notification.java) of `Notification` API provided by phonegap.
 
-## JavaScript Plugin
+## JavaScript Plugin Wrapper
 
 It is better to wrap your plugin calls, instead of calling `cordova.exec` directly every time. There are two ways doing it:
 
@@ -91,7 +96,7 @@ This is the common way found in [phonegap-plugins](https://github.com/phonegap/p
 window.plugins.YourService.action(args, succeed, failed);
 {% endhighlight %}
 
-### The `Require` Way
+### The Require Way
 
 This is what I found in `cordova.js`'s [source code](https://github.com/apache/cordova-android/blob/master/framework/assets/www/cordova.js#L4116):
 

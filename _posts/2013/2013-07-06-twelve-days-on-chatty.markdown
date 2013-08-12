@@ -1,5 +1,6 @@
 ---
 layout: post
+menu: true
 published: true
 title: "Twelve days on Chatty"
 date: 2013-07-06 15:58:30
@@ -13,7 +14,7 @@ Now, after taken a break away from computer, I want to sit back and write a few 
 
 > Chatty seems to be just another social app. **It is more.** It aims to build active interactions between strangers through activities. **Activities are breakpoints for people to build relations.** We met our friends because they took the same courses with us, they watched movies together with us, they had dinner with us, etc. These activities or experiences we had together connect us. This is what Chatty want to help. 
 
-Ok, enough for a quick introduction of Chatty.
+Ok, end of quick introduction ([more? Read my slides on Chatty](https://speakerdeck.com/zhuochun/chatty-meet-new-friends)).
 
 At first, I want to share some tips on writing Chatty using PhoneGap, Parse and JavaScript. I changed my mind. Let me talk about running this project.
 

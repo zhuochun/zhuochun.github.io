@@ -101,7 +101,7 @@ Thread | Pages Crawled | Time Taken | Avg Time/Page
 19 | 40 | 39.95s | 0.99s
 29 | 40 | 32.66s | 0.82s
 
-**Note**, I met situations where the `webpage` stopped randomly (often in slow network). But, I cannot reproduce the problem regularly :(.
+**Note**, Sometimes the `webpage` stopped randomly (often in slow network).
 
 **Extra**, Some plugins in Node.js:
 
