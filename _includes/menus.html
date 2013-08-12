@@ -1,8 +1,13 @@
 <div class="sidebar pure-u sidebar-color-{{ page.tags | size }}">
-  <header class="header">
+  <header class="header {% if page.menu %} with-menu {% endif %}">
     <hgroup>
     <h1 class="brand-title"><a href="/">Bicrement</a></h1>
     <h2 class="brand-tagline">Where (Progress++)++</h2>
     </hgroup>
+    {% if page.menu %}
+    <nav id="content-menu">
+      <h3>Article Contents</h3>
+    </nav>
+    {% endif %}
   </header>
 </div>

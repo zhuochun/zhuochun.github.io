@@ -64,6 +64,10 @@ a:focus {
     text-align: right;
 }
 
+.header.with-menu {
+    margin: 39% 2em 0;
+}
+
 .brand-title,
 .brand-tagline {
     margin: 0;
@@ -109,6 +113,35 @@ a:focus {
     border: 3px solid rgb(142, 142, 214);
     color: rgb(142, 142, 214);
     text-decoration: none;
+}
+
+#content-menu {
+    padding-top: 3em;
+}
+
+#content-menu h3 {
+    color: #fff;
+}
+
+#content-menu ol {
+    padding: 0;
+}
+
+#content-menu li {
+    margin-bottom: 1em;
+}
+
+#content-menu a {
+    color: #ddd;
+}
+
+#content-menu .sub-menu a {
+    color: #aaa;
+}
+
+#content-menu a:hover,
+#content-menu a:active {
+    color: #fff;
 }
 
 .content-subhead {
@@ -295,6 +328,11 @@ code {
         top: auto;
         margin: 3em auto;
         position: static;
+    }
+
+    #content-menu {
+        display: none;
+        visibility: hidden;
     }
 
     #layout {
