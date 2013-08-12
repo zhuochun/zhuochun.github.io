@@ -9,6 +9,7 @@
         this.title = title;
 
         this.id = "";
+        this.sid = title.toLowerCase().replace(/[^a-z ]/g, "").replace(/\s/g, "_");
         this.child = [];
         this.parent = null;
     }
@@ -47,20 +48,20 @@
 
         insertNode(current, node);
 
-        $this.append("<span id='" + node.id + "'></span>");
+        //$this.append("<span id='" + node.id + "'>&nbsp;</span>");
 
         current = node;
     });
 
-    function dump(arr) {
-        var result = "";
+    function dump(arr, submenu) {
+        var result = submenu ? "" : "<li><a href='#top'>Top</a></li>";
 
         for (var i = 0; i < arr.length; i++) {
-            result += "<li><a href='#" + arr[i].id + "'>" + 
+            result += "<li><a href='#" + arr[i].sid + "'>" + 
                     arr[i].title + "</a>";
 
             if (arr[i].child.length > 0)
-                result += "<ul>" + dump(arr[i].child) + "</ul>";
+                result += "<ul class='sub-menu'>" + dump(arr[i].child, true) + "</ul>";
 
             result += "</li>";
         }
