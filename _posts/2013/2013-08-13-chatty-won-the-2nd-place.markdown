@@ -9,7 +9,7 @@ categories: Project
 
 Happy to announce my project [Chatty](http://chatty.bicrement.com) has won the 2nd place in NUS [iCreate Mobility Challenge 2013](http://icreate.nus.edu.sg/).
 
-![Chatty won the 2nd place in NUS iCreate 2013](/images/chatty/award.png "Chatty 2nd Place")
+![Chatty won the 2nd place in NUS iCreate 2013](/images/chatty/award.jpg "Chatty 2nd Place")
 
 What I had achieved in the [twelve++ days](/project/2013/07/06/twelve-days-on-chatty.html):
 
@@ -17,6 +17,8 @@ What I had achieved in the [twelve++ days](/project/2013/07/06/twelve-days-on-ch
 - 55 commits on June 29th, and 56 commits on 30th (highest)
 - Besides coding: logo design, [presentation](http://youtu.be/pq4WfNcwm-s), [website](http://chatty.bicrement.com) and [demo video](http://youtu.be/5Xq1C6zw61Y)
 - 6 releases from `v0.9.9` to `v1.2.4`. The first program that I have labelled with `v1.x.x`! _Yes, I tagged the version `v1.2.1` with `v0.2.1` wrongly to realize this._
+
+**Bravo!**
 
 Gonna end with the demo video I made :)
 
