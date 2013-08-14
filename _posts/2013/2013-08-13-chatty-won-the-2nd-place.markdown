@@ -22,4 +22,6 @@ What I had achieved in the [twelve++ days](/project/2013/07/06/twelve-days-on-ch
 
 Gonna end with the demo video I made :)
 
-<iframe width="640" height="480" src="//www.youtube.com/embed/5Xq1C6zw61Y" frameborder="0"></iframe>
+<iframe width="640" height="480" src="//www.youtube.com/embed/5Xq1C6zw61Y" frameborder="0">chatty</iframe>
+
+Chatty - Meet new friends and have fun together! Download it on [Google Play](https://play.google.com/store/apps/details?id=com.bicrement.chatty).
