@@ -32,7 +32,7 @@ a:focus {
 }
 
 .sidebar-color-0 {
-    background-color: #34495e;
+    background-color: #2980b9;
 }
 
 .sidebar-color-1 {
@@ -40,7 +40,7 @@ a:focus {
 }
 
 .sidebar-color-2 {
-    background-color: #d35400;
+    background-color: #16a085;
 }
 
 .sidebar-color-3 {
@@ -48,11 +48,11 @@ a:focus {
 }
 
 .sidebar-color-4 {
-    background-color: #2980b9;
+    background-color: #34495e;
 }
 
 .sidebar-color-5 {
-    background-color: #16a085;
+    background-color: #d35400;
 }
 
 .sidebar-color-6 {
@@ -159,24 +159,32 @@ a:focus {
     letter-spacing: normal;
 }
 
+.about,
+.projects,
 .posts {
     padding-bottom: 2em;
 }
 
+.project,
 .post {
     padding-bottom: 1em;
 }
 
+.about-title,
+.project-title,
 .post-title {
     font-size: 2em;
     color: #222;
     margin-bottom: 0.2em;
 }
 
+.project-title a,
 .post-title a {
     color: #333;
 }
 
+.project-title a:hover,
+.project-title a:focus,
 .post-title a:hover,
 .post-title a:focus {
     color: #c0392b;
@@ -193,6 +201,7 @@ a:focus {
     color: #2c3e50;
 }
 
+.about-content,
 .post-content {
     font-family: Georgia, "Cambria", serif;
     color: #444;
@@ -201,6 +210,8 @@ a:focus {
     max-width: 40em;
 }
 
+.about-meta,
+.project-meta,
 .post-meta {
     color: #999;
     font-size: 90%;
@@ -352,6 +363,11 @@ code {
 @media (max-width: 480px) {
     .content {
         padding: 2em 1em 0;
+    }
+
+    .hidden-sm {
+        display: none;
+        visibility: hidden;
     }
 
     pre {

@@ -1,15 +1,19 @@
-name: Bicrement
-url: http://blog.bicrement.com
-description: Where (Progress++)++
-author: Zhuochun
+title: Bicrement
+url: http://www.bicrement.com
+subtitle: Where (Progress++)++
+author: Wang Zhuochun
+description: Bicrement is about anything I am interested. I write to make self (progress++)++.
 page:
-    wiki: /wiki/
-    note: /note/
-    project: http://www.bicrement.com
+    home: /
+    blog: /blog/
+    about: /about/
+    project: /project/
 social:
     github: https://github.com/zhuochun
     linkedin: http://www.linkedin.com/in/zhuochun
     stackoverflow: http://stackoverflow.com/users/889972/mifeng
     twitter: https://twitter.com/zhuochun
+    flickr: http://www.flickr.com/photos/mifeng
 pygments: true
+paginate: 3
 exclude: ['CNAME', 'README.md', '_drafts']

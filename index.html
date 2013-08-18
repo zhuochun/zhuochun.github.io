@@ -3,21 +3,70 @@ layout: default
 title: Home
 ---
 
-<div class="posts pure-g">
-  <h1 class="pure-u-1 content-subhead">Recent Posts</h1>
+<div>
+  <h3 class="content-subhead">About</h3>
 
-{% for post in site.posts %}
-  <section class="post pure-u-1">
+  <section class="about">
+    <header class="about-header">
+      <h1 class="about-title">Hi, I am Zhuochun <span class="hidden-sm">:)</span></h1>
+      <p class="about-meta">
+        I am at <a href="{{ site.social.github }}" title="github - zhuochun">Github</a>,
+        <a href="{{ site.social.stackoverflow }}" title="stack overflow - mifeng">Stack Overflow</a>, and
+        <a href="{{ site.social.linkedin }}" title="linkedin - zhuochun">LinkedIn</a> as well.
+      </p>
+    </header>
+
+    <div class="about-content">
+      <p>I am an undergraduate at National University of Singapore. I write code and I photograph.</p>
+    </div>
+  </section>
+</div>
+
+<div class="posts">
+  <h3 class="content-subhead">
+    Recent Posts <a href="{{ site.page.blog }}" title="Bicrement Blog">MORE &raquo;</a>
+  </h3>
+
+{% for post in paginator.posts %}
+  <section class="post">
     <header class="post-header">
-      <h2 class="post-title pure-u-1">
+      <h2 class="post-title">
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
       </h2>
 
-      <p class="post-meta pure-u-1">
-      On <span class="post-date">{{ post.date | date_to_string }}</span>
-      about {{ post.tags | array_to_sentence_string }}
+      <p class="post-meta">
+        On <span class="post-date">{{ post.date | date_to_string }}</span>
+        about {{ post.tags | array_to_sentence_string }}
       </p>
     </header>
   </section>
 {% endfor %}
+</div>
+
+<div class="projects">
+  <h3 class="content-subhead">
+    Project Highlights <a href="{{ site.page.project }}" title="Bicrement Projects">MORE &raquo;</a>
+  </h3>
+
+  <section class="project">
+    <header class="project-header">
+      <h2 class="project-title">
+        <a href="http://chatty.bicrement.com" title="Chatty - Meet New Friends">Chatty - Meet New Friends</a>
+      </h2>
+      <p class="post-meta">
+        A location based social app to meet new friends nearby you through interesting activities.
+      </p>
+    </header>
+  </section>
+
+  <section class="project">
+    <header class="project-header">
+      <h2 class="project-title">
+        <a href="http://cors.bicrement.com" title="CORS Planner - Timetable Builder for NUS and NTU">CORS Planner</a>
+      </h2>
+      <p class="post-meta">
+        A powerful and elegant client-side timetable builder for NUS and NTU.
+      </p>
+    </header>
+  </section>
 </div>

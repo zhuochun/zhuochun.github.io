@@ -1,8 +1,8 @@
 <div class="sidebar pure-u sidebar-color-{{ page.tags | size }}">
   <header class="header {% if page.menu %} with-menu {% endif %}">
     <hgroup>
-    <h1 class="brand-title"><a href="/">Bicrement</a></h1>
-    <h2 class="brand-tagline">Where (Progress++)++</h2>
+    <h1 class="brand-title"><a href="{{ site.page.home }}">{{ site.title }}</a></h1>
+    <h2 class="brand-tagline">{{ site.subtitle }}</h2>
     </hgroup>
     {% if page.menu %}
     <nav id="content-menu">
