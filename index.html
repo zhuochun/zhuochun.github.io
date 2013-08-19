@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+script: ['js/vendor/dynamo.min.js', 'js/home.js']
 ---
 
 <div>
@@ -10,14 +11,19 @@ title: Home
     <header class="about-header">
       <h1 class="about-title">Hi, I am Zhuochun <span class="hidden-sm">:)</span></h1>
       <p class="about-meta">
+        This is my page.
         I am at <a href="{{ site.social.github }}" title="github - zhuochun">Github</a>,
-        <a href="{{ site.social.stackoverflow }}" title="stack overflow - mifeng">Stack Overflow</a>, and
+        <a href="{{ site.social.stackoverflow }}" title="stack overflow - mifeng">Stack Overflow</a>,
+        <a href="{{ site.social.flickr }}" title="flickr - mifeng">Flickr</a>, and
         <a href="{{ site.social.linkedin }}" title="linkedin - zhuochun">LinkedIn</a> as well.
       </p>
     </header>
 
     <div class="about-content">
-      <p>I am an undergraduate at National University of Singapore. I write code and I photograph.</p>
+      <p>
+        I am an undergraduate at National University of Singapore.
+        I <span class="dynamo" data-lines="code, read, photograph, write, run">dream</span>.
+      </p>
     </div>
   </section>
 </div>

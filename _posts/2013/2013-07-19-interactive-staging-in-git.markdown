@@ -7,7 +7,7 @@ tags: Git
 categories: Git
 ---
 
-One mistake I made is, when I found a bug while working on a task, I tend to fix it before continuing on the task. As a result, I often have two different changes in one file and ended with one big messy commit.
+One mistake I made is, when I found a bug while working on a task, I tend to fix it before continuing on the task. As a result, I often have two different changes in one file and end with one big messy commit.
 
 If you make the same mistake, try command `git add -p` to clean up the mess.
 
