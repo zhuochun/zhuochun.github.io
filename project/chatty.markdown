@@ -1,0 +1,13 @@
+---
+layout: project
+title: 'Chatty - Meet New Friends'
+project: Chatty
+highlight: true
+good: 3
+description: 'A location based social app to meet new friends nearby you through interesting activities.'
+tools: PhoneGap JavaScript Android Parse
+site: 'http://chatty.bicrement.com'
+icon: 'http://chatty.bicrement.com/images/chatty_logo_512.png'
+---
+
+A location based social app to meet new friends nearby you through interesting activities.

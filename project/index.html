@@ -6,25 +6,17 @@ title: Projects
 <div class="projects">
   <h3 class="content-subhead">My Projects</h3>
 
-  <p>This page is not ready. :(</p>
-  <p>Please refer to my <a href="{{ site.social.github }}" href="github - zhuochun">Github</a> page first.</p>
-</div>
-
-<div class="posts">
-  <h3 class="content-subhead">Project Posts</h3>
-
-{% for post in site.tags.Project %}
-  <section class="post">
-    <header class="post-header">
-      <h2 class="post-title">
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-      </h2>
-
-      <p class="post-meta">
-        On <span class="post-date">{{ post.date | date_to_string }}</span>
-        about {{ post.tags | array_to_sentence_string }}
-      </p>
-    </header>
-  </section>
+{% for page in site.pages %}
+  {% if page.project %}
+    <section class="project project-good-{{page.good}}
+      {% if page.highlight %}project-highlight{% endif %}">
+      <header class="project-header">
+        <h2 class="project-title">
+          <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+        </h2>
+        <p class="project-meta">{{ page.description }}</p>
+      </header>
+    </section>
+  {% endif %}
 {% endfor %}
 </div>

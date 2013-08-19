@@ -54,25 +54,16 @@ script: ['js/vendor/dynamo.min.js', 'js/home.js']
     Project Highlights <a href="{{ site.page.project }}" title="Bicrement Projects">MORE &raquo;</a>
   </h3>
 
-  <section class="project">
-    <header class="project-header">
-      <h2 class="project-title">
-        <a href="http://chatty.bicrement.com" title="Chatty - Meet New Friends">Chatty - Meet New Friends</a>
-      </h2>
-      <p class="post-meta">
-        A location based social app to meet new friends nearby you through interesting activities.
-      </p>
-    </header>
-  </section>
-
-  <section class="project">
-    <header class="project-header">
-      <h2 class="project-title">
-        <a href="http://cors.bicrement.com" title="CORS Planner - Timetable Builder for NUS and NTU">CORS Planner</a>
-      </h2>
-      <p class="post-meta">
-        A powerful and elegant client-side timetable builder for NUS and NTU.
-      </p>
-    </header>
-  </section>
+{% for page in site.pages %}
+  {% if page.project and page.highlight %}
+    <section class="project">
+      <header class="project-header">
+        <h2 class="project-title">
+          <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+        </h2>
+        <p class="project-meta">{{ page.description }}</p>
+      </header>
+    </section>
+  {% endif %}
+{% endfor %}
 </div>

@@ -330,6 +330,31 @@ code {
     text-align: right;
 }
 
+/* project */
+.project-good-1 h2 a {
+    color: #aaa;
+}
+
+.project-good-2 h2 a {
+    color: #999;
+}
+
+.project-good-3 h2 a {
+    color: #666;
+}
+
+.project-good-4 h2 a {
+    color: #444;
+}
+
+.project-good-5 h2 a {
+    color: #333;
+}
+
+.project-highlight h2 a {
+    color: #2980b9;
+}
+
 .footer {
     text-align: center;
     padding: 1em 0;

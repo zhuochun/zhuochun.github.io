@@ -3,7 +3,7 @@ layout: post
 published: true
 title: "Crawling pages using PhantomJS"
 date: 2013-05-17 19:08:10
-tags: PhantomJS JavaScript
+tags: PhantomJS JavaScript CorsPlanner
 categories: JavaScript
 ---
 

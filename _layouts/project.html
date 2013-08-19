@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="posts">
+  <h3 class="content-subhead">
+    Project: {{ page.title }}
+  </h3>
+
+  <section class="post">
+    <header class="post-header">
+      <h2 class="post-title pure-u-1">{{ page.title }}</h2>
+      {% if page.site %}
+      <p class="project-meta">
+        Visit <a href="{{ page.site }}" title="Website for {{ page.title }}" target="_blank">Project Page &raquo;</a>
+      </p>
+      {% endif %}
+    </header>
+
+    <article class="post-content">
+      {{ content }}
+    </article>
+  </section>
+</div>
+
+{% if site.tags[page.project] %}
+  <div class="posts">
+    <h3 class="content-subhead">Related Posts</h3>
+
+  {% for post in site.tags[page.project] %}
+    <section class="post">
+      <header class="post-header">
+        <h2 class="post-title">
+          <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </h2>
+
+        <p class="post-meta">
+          On <span class="post-date">{{ post.date | date_to_string }}</span>
+          about {{ post.tags | array_to_sentence_string }}
+        </p>
+      </header>
+    </section>
+  {% endfor %}
+  </div>
+{% endif %}
