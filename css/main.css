@@ -159,6 +159,32 @@ a:focus {
     letter-spacing: normal;
 }
 
+.post-seperator {
+    font-size: 1.38em;
+
+    margin-top: 3.6em;
+    margin-bottom: 2.7em;
+}
+
+.post-year-header {
+    background-color: #2980b9;
+    color: #fff;
+
+    padding-top: 10px;
+    padding-right: 20px; 
+    padding-bottom: 10px;
+    padding-left: 50px;
+
+    margin-left: -50px;
+}
+
+.post-month-header {
+    background-color: #efefef;
+    color: #999;
+
+    padding: 10px 20px;
+}
+
 .about,
 .projects,
 .posts {
@@ -349,6 +375,20 @@ code {
 
     #layout {
         padding: 0;
+    }
+
+    .post-seperator {
+        font-size: 1.17em;
+
+        margin-top: 1.9em;
+        margin-bottom: 1.9em;
+
+        text-align: center;
+    }
+
+    .post-year-header {
+        padding-left: 20px;
+        margin-left: 0px;
     }
 
     .post-content {
