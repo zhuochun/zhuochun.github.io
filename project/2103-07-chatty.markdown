@@ -2,6 +2,7 @@
 layout: project
 title: 'Chatty - Meet New Friends'
 project: Chatty
+started: 2013.07
 highlight: true
 good: 3
 description: 'A location based social app to meet new friends nearby you through interesting activities.'
