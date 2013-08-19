@@ -54,7 +54,7 @@ script: ['js/vendor/dynamo.min.js', 'js/home.js']
     Project Highlights <a href="{{ site.page.project }}" title="Bicrement Projects">MORE &raquo;</a>
   </h3>
 
-{% for page in site.pages reversed %}
+{% for page in site.pages reversed sort_by:'started' %}
   {% if page.project and page.highlight %}
     <section class="project {% if page.highlight %}project-highlight{% endif %}">
       <header class="project-header">

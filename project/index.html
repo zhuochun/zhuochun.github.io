@@ -6,7 +6,7 @@ title: Projects
 <div class="projects">
   <h3 class="content-subhead">My Projects</h3>
 
-{% for page in site.pages reversed %}
+  {% for page in site.pages reversed sort_by:'started' %}
   {% if page.project %}
     <section class="project project-good-{{page.good}}
       {% if page.highlight %}project-highlight{% endif %}">
