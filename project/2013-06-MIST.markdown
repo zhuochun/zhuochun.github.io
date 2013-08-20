@@ -1,0 +1,15 @@
+---
+layout: project
+title: 'MIST Project'
+project: MIST
+date: 2013-06-01 00:00:00
+good: 3
+description: 'Remotely Observed Treatment of Tuberculosis through Webcam and Smartphones.'
+tools: ['Ruby on Rails', 'JavaScript', 'HTML5']
+source: 'https://github.com/H0201030/remotely-observed-treatment'
+site: 'https://github.com/H0201030'
+---
+
+Mobile Interactive Supervised Therapy (MIST) is the final year project (2013/2014) of my bachelor degree (Computer Engineering) in National University of Singapore.
+
+This project is mentored by [Prof Wei Tsang Ooi](http://www.comp.nus.edu.sg/~ooiwt/), under School of Computing, and in collaboration with National University Hospital.
