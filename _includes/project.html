@@ -1,0 +1,10 @@
+<section class="project project-good-{{project.good}}
+  {% if project.sideproject %}side-project{% endif %}
+  {% if project.highlight %}project-highlight{% endif %}">
+  <header class="project-header">
+    <h2 class="project-title">
+      <a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a>
+    </h2>
+    <p class="project-meta">{{ project.description }}</p>
+  </header>
+</section>

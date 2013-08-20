@@ -6,17 +6,7 @@ title: Projects
 <div class="projects">
   <h3 class="content-subhead">My Projects</h3>
 
-  {% for page in site.pages reversed %}
-  {% if page.project %}
-    <section class="project project-good-{{page.good}}
-      {% if page.highlight %}project-highlight{% endif %}">
-      <header class="project-header">
-        <h2 class="project-title">
-          <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
-        </h2>
-        <p class="project-meta">{{ page.description }}</p>
-      </header>
-    </section>
-  {% endif %}
-{% endfor %}
+  {% for project in site.categories.project %}
+    {% include project.html %}
+  {% endfor %}
 </div>

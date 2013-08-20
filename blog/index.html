@@ -25,6 +25,11 @@ title: Blog
     </div>
   {% endif %}
 
-  {% include post.html %}
+  {% if post.project %}
+    {% assign project = post %}
+    {% include project.html %}
+  {% else %}
+    {% include post.html %}
+  {% endif %}
 {% endfor %}
 </div>
