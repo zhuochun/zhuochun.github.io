@@ -4,7 +4,7 @@ published: true
 title: "Chatty won the 2nd place in NUS iCreate 2013"
 date: 2013-08-13 10:18:09
 tags: Chatty Project NUS
-categories: Project
+categories: Reflection
 ---
 
 Happy to announce my project [Chatty](http://chatty.bicrement.com) has won the 2nd place in NUS [iCreate Mobility Challenge 2013](http://icreate.nus.edu.sg/).

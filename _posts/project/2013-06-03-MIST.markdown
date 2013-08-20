@@ -2,12 +2,15 @@
 layout: project
 title: 'MIST Project'
 project: MIST
-date: 2013-06-01 00:00:00
+date: 2013-06-03 10:11:19
 good: 3
 description: 'Remotely Observed Treatment of Tuberculosis through Webcam and Smartphones.'
 tools: ['Ruby on Rails', 'JavaScript', 'HTML5']
 source: 'https://github.com/H0201030/remotely-observed-treatment'
 site: 'https://github.com/H0201030'
+tags: Rails JavaScript Server Webcam
+category: Project
+permalink: /project/mist.html
 ---
 
 Mobile Interactive Supervised Therapy (MIST) is the final year project (2013/2014) of my bachelor degree (Computer Engineering) in National University of Singapore.

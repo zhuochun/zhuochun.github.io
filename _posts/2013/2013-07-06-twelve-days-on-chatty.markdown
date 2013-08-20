@@ -4,8 +4,8 @@ menu: true
 published: true
 title: "Twelve days on Chatty"
 date: 2013-07-06 15:58:30
-tags: Android Project Chatty
-categories: Project
+tags: Chatty Project Android
+categories: Reflection
 ---
 
 Now, after taken a break away from computer, I want to sit back and write a few words on my project [Chatty](http://chatty.bicrement.com).
