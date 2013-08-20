@@ -1,5 +1,6 @@
 ---
 layout: none
+title: RSS Feed
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -9,7 +10,7 @@ layout: none
     <description>{{ site.description }}</description>
     <link>{{ site.url }}</link>
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:9 %}
+  {% for post in site.posts limit:9 %}
     <item>
       <title>{{ post.title }}</title>
       <description>{{ post.content | xml_escape }}</description>
@@ -17,6 +18,6 @@ layout: none
       <link>{{ site.url }}{{ post.url }}</link>
       <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
     </item>
-    {% endfor %}
+  {% endfor %}
   </channel>
 </rss>
