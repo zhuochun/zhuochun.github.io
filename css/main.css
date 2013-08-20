@@ -332,7 +332,11 @@ code {
 
 /* project */
 .project-good-1 h2 a {
-    color: #aaa;
+    color: #bbb;
+}
+
+.project-good-1 .project-meta {
+    color: #bbb;
 }
 
 .project-good-2 h2 a {

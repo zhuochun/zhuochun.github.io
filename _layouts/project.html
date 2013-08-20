@@ -10,16 +10,16 @@ layout: default
   <section class="post">
     <header class="post-header">
       <h2 class="post-title pure-u-1">{{ page.title }}</h2>
-      {% if page.site %}
       <p class="project-meta">
-          Visit <a href="{{ page.site }}" title="Website for {{ page.title }}" target="_blank">Project Page &raquo;</a>
-      </p>
+        Info:
+      {% if page.site %}
+        <a href="{{ page.site }}" title="Website for {{ page.title }}" target="_blank">Project Page</a>
+        {% if page.source %}, {% endif %}
       {% endif %}
       {% if page.source %}
-      <p class="project-meta">
-          Review <a href="{{ page.source }}" title="Source code for {{ page.title }}" target="_blank">Souce Code &raquo;</a>
-      </p>
+        <a href="{{ page.source }}" title="Source code for {{ page.title }}" target="_blank">Source Code</a>
       {% endif %}
+      </p>
     </header>
 
     <article class="post-content">
@@ -48,3 +48,19 @@ layout: default
   {% endfor %}
   </div>
 {% endif %}
+
+<div class="page-nav">
+  <div class="pure-g-r">
+    <div class="pure-u-1-2 prev-post">
+      {% if page.previous.url %}
+      <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
+    </div>
+
+    <div class="pure-u-1-2 next-post">
+      {% if page.next.url %}
+      <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo; </a>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -17,20 +17,20 @@ layout: default
       {{ content }}
     </article>
   </section>
+</div>
 
-  <div class="page-nav">
-    <div class="pure-g-r">
-      <div class="pure-u-1-2 prev-post">
-        {% if page.previous.url %}
-        <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-        {% endif %}
-      </div>
-
-      <div class="pure-u-1-2 next-post">
-        {% if page.next.url %}
-        <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo; </a>
-        {% endif %}
-      </div>
+<div class="page-nav">
+  <div class="pure-g-r">
+    <div class="pure-u-1-2 prev-post">
+      {% if page.previous.url %}
+      <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+      {% endif %}
     </div>
-  </div> 
+
+    <div class="pure-u-1-2 next-post">
+      {% if page.next.url %}
+      <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo; </a>
+      {% endif %}
+    </div>
+  </div>
 </div>

@@ -10,26 +10,23 @@ title: Blog
 {% capture month %}{% endcapture %}
 
 {% for post in site.posts %}
-  {% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-  {% capture post_month %}{{ post.date | date: "%B" }}{% endcapture %}
+  {% unless post.project %}
+    {% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture post_month %}{{ post.date | date: "%B" }}{% endcapture %}
 
-  {% if year != post_year %}
-    {% assign year = post_year %}
-  {% endif %}
+    {% if year != post_year %}
+      {% assign year = post_year %}
+    {% endif %}
 
-  {% if month != post_month %}
-    {% assign month = post_month %}
-    <div class="post-seperator">
-      <span class="post-year-header">{{ year }}</span>
-      <span class="post-month-header">{{ month }}</span>
-    </div>
-  {% endif %}
+    {% if month != post_month %}
+      {% assign month = post_month %}
+      <div class="post-seperator">
+        <span class="post-year-header">{{ year }}</span>
+        <span class="post-month-header">{{ month }}</span>
+      </div>
+    {% endif %}
 
-  {% if post.project %}
-    {% assign project = post %}
-    {% include project.html %}
-  {% else %}
     {% include post.html %}
-  {% endif %}
+  {% endunless %}
 {% endfor %}
 </div>

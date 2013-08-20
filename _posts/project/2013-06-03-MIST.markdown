@@ -13,6 +13,6 @@ category: Project
 permalink: /project/mist.html
 ---
 
-Mobile Interactive Supervised Therapy (MIST) is the final year project (2013/2014) of my bachelor degree (Computer Engineering) in National University of Singapore.
+Mobile Interactive Supervised Therapy (MIST) project is the final year project (2013/2014) of my bachelor degree (Computer Engineering) in National University of Singapore.
 
 This project is mentored by [Prof Wei Tsang Ooi](http://www.comp.nus.edu.sg/~ooiwt/), under School of Computing, and in collaboration with National University Hospital.
