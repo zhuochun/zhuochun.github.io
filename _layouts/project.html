@@ -12,7 +12,12 @@ layout: default
       <h2 class="post-title pure-u-1">{{ page.title }}</h2>
       {% if page.site %}
       <p class="project-meta">
-        Visit <a href="{{ page.site }}" title="Website for {{ page.title }}" target="_blank">Project Page &raquo;</a>
+          Visit <a href="{{ page.site }}" title="Website for {{ page.title }}" target="_blank">Project Page &raquo;</a>
+      </p>
+      {% endif %}
+      {% if page.source %}
+      <p class="project-meta">
+          Review <a href="{{ page.source }}" title="Source code for {{ page.title }}" target="_blank">Souce Code &raquo;</a>
       </p>
       {% endif %}
     </header>
