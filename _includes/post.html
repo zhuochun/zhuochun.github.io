@@ -1,0 +1,12 @@
+<section class="post">
+  <header class="post-header">
+    <h2 class="post-title">
+      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </h2>
+
+    <p class="post-meta">
+      On <span class="post-date">{{ post.date | date_to_string }}</span>
+      about {{ post.tags | array_to_sentence_string }}
+    </p>
+  </header>
+</section>

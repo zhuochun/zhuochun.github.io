@@ -16,5 +16,4 @@ social:
     twitter: https://twitter.com/zhuochun
     flickr: http://www.flickr.com/photos/mifeng
 pygments: true
-paginate: 3
 exclude: ['CNAME', 'README.md', '_drafts']
