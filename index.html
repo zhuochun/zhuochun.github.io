@@ -33,8 +33,19 @@ script: ['js/vendor/dynamo.min.js', 'js/home.js']
     Recent Posts <a href="{{ site.page.blog }}" title="Bicrement Blog">MORE &raquo;</a>
   </h3>
 
-{% for post in site.posts limit:3 %}
-  {% include post.html %}
+{% assign onemore = false %}
+{% for post in site.posts limit:4 %}
+  {% if post.project %}
+    {% assign onemore = true %}
+  {% else %}
+    {% unless forloop.last %}
+      {% include post.html %}
+    {% endunless %}
+
+    {% if forloop.last and onemore %}
+      {% include post.html %}
+    {% endif %}
+  {% endif %}
 {% endfor %}
 </div>
 
