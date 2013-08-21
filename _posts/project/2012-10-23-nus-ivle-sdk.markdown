@@ -4,6 +4,7 @@ title: 'NUS ivle JavaScript SDK'
 project: nusivle
 date: 2012-10-23 11:19:19
 highlight: false
+sideproject: true
 good: 3
 description: 'A JavaScript SDK for NUS ivle Learning Environment.'
 tools: ['JavaScript', 'ajax', 'api']

@@ -4,6 +4,7 @@ title: 'RecordRTC-together'
 project: RecordRTC
 date: 2013-07-20 19:19:19
 highlight: false
+sideproject: true
 good: 3
 description: 'Record video and audio together or individually on the web using getUserMedia.'
 tools: ['getUserMedia', 'JavaScript', 'HTML5']

@@ -336,6 +336,12 @@ code {
 }
 
 /* project */
+.side-project,
+.project-good-1,
+.project-good-2 {
+    font-size: 80%;
+}
+
 .project-good-1 h2 a {
     color: #bbb;
 }
