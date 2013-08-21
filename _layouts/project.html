@@ -8,8 +8,13 @@ layout: default
   </h3>
 
   <section class="post">
-    <header class="post-header">
-      <h2 class="post-title pure-u-1">{{ page.title }}</h2>
+    <header class="project-header">
+      {% if page.icon %}
+      <img class="project-icon" alt="{{ page.title }} icon" src="{{ page.icon }}" height="48" width="48">
+      {% endif %}
+
+      <h2 class="project-title">{{ page.title }}</h2>
+
       <p class="project-meta">
         Info:
       {% if page.site %}

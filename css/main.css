@@ -217,7 +217,7 @@ a:focus {
     text-decoration: none;
 }
 
-.project-header {
+.project .project-header {
     max-width: 40em;
 }
 
