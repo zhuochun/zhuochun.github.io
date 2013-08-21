@@ -22,14 +22,28 @@ layout: default
 <div class="page-nav">
   <div class="pure-g-r">
     <div class="pure-u-1-2 prev-post">
-      {% if page.previous.url %}
-      <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
+      {% assign previous = page.previous %}
+      {% if previous.categories contains 'project' %}
+        {% assign previous = previous.previous %}
+      {% endif %}
+
+      {% if previous.url %}
+        {% unless previous.categories contains 'project' %}
+          <a href="{{previous.url}}" title="Previous Post: {{previous.title}}">&laquo; {{previous.title}}</a>
+        {% endunless %}
       {% endif %}
     </div>
 
     <div class="pure-u-1-2 next-post">
-      {% if page.next.url %}
-      <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo; </a>
+      {% assign next = page.next %}
+      {% if next.categories contains 'project' %}
+        {% assign next = next.next %}
+      {% endif %}
+
+      {% if next.url %}
+        {% unless next.categories contains 'project' %}
+          <a href="{{next.url}}" title="Next Post: {{next.title}}">{{next.title}} &raquo;</a>
+        {% endunless %}
       {% endif %}
     </div>
   </div>

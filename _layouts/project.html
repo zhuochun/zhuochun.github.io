@@ -13,7 +13,11 @@ layout: default
       <p class="project-meta">
         Info:
       {% if page.site %}
-        <a href="{{ page.site }}" title="Website for {{ page.title }}" target="_blank">Project Page</a>
+        <a href="{{ page.site }}" title="Website for {{ page.title }}" target="_blank">Website</a>
+        {% if page.source or page.product %}, {% endif %}
+      {% endif %}
+      {% if page.product %}
+        <a href="{{ page.product }}" title="Download {{ page.title }}" target="_blank">Download</a>
         {% if page.source %}, {% endif %}
       {% endif %}
       {% if page.source %}
@@ -51,16 +55,27 @@ layout: default
 
 <div class="page-nav">
   <div class="pure-g-r">
-    <div class="pure-u-1-2 prev-post">
-      {% if page.previous.url %}
-      <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
-      {% endif %}
-    </div>
+    {% assign previous = nil %}
+    {% assign getnext = false %}
 
-    <div class="pure-u-1-2 next-post">
-      {% if page.next.url %}
-      <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">{{page.next.title}} &raquo; </a>
+    {% for project in site.categories.project %}
+      {% if getnext %}
+          <a href="{{project.url}}" title="Next Post: {{project.title}}">{{project.title}} &raquo; </a>
+        {% assign getnext = false %}
       {% endif %}
-    </div>
+
+      {% if project.title == page.title %}
+        <div class="pure-u-1-2 prev-post">
+        {% if previous %}
+          <a href="{{previous.url}}" title="Previous Post: {{previous.title}}">&laquo; {{previous.title}}</a>
+        {% endif %}
+        </div>
+        {% assign getnext = true %}
+        <div class="pure-u-1-2 next-post">
+      {% endif %}
+
+      {% assign previous = project %}
+    {% endfor %}
+        </div>
   </div>
 </div>
