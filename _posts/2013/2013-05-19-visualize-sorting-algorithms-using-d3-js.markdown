@@ -32,7 +32,9 @@ var rects = svg.selectAll("rect")
                .append("rect");
 {% endhighlight %}
 
-To display bars in `svg` will need `rect` rectangles. d3.js provides `enter`, where you can create new nodes for incoming data (`[10, 20]`). Howeveer, these `rects` are not assigned with information of its width, height and position yet.
+To display bars in `svg` will need `rect` rectangles. d3.js provides `enter`, where you can create new nodes for incoming data (`[10, 20]`).
+
+At this step, these `rects` are not assigned with information of its width, height and position yet.
 
 {% highlight javascript linenos %}
 rects.attr("x", function(d, i) { return i * 21; })

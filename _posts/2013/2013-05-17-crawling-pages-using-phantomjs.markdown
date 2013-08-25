@@ -37,11 +37,11 @@ page.open(encodeURI(url), function (status) {
 // Full Source Code: http://bit.ly/12gHAdw
 {% endhighlight %}
 
-Last month, I added support on NTU modules in CORS Planner. However, NTU modules are distributed in 339+ different webpages. Crawling page after page in sequence is far too slow. So a better way would be running several PhantomJS `webpage` together and each completes a part of the crawling. The code is (*thread is the number of `webpages`, not a real thread. `webpages` run in asynchronous*):
+Last month, I added support on NTU modules in CORS Planner. However, NTU modules are distributed in 339+ different webpages. Crawling page after page in sequence is far too slow. So a better way would be running several PhantomJS `webpage` together and each completes a part of the crawling. The code: (*thread is the number of `webpages`, not a real thread. `webpages` run in asynchronous*)
 
 {% highlight javascript linenos %}
 // list contains all the NTU pages to be visited
-var llength = list.length, completed = 0
+var llength = list.length, thread = 10, completed = 0
 // max is the maximum # of pages to be visited for each thread
   , max = ((llength / thread) | 0) + 1, i;
 
@@ -101,9 +101,9 @@ Thread | Pages Crawled | Time Taken | Avg Time/Page
 19 | 40 | 39.95s | 0.99s
 29 | 40 | 32.66s | 0.82s
 
-**Note**, Sometimes the `webpage` stopped randomly (often in slow network).
+**Note**, Sometimes the `webpage` stops if you have slow network.
 
-**Extra**, Some plugins in Node.js:
+**Extra**, Some crawling plugins in Node.js:
 
 - [cheerio](https://github.com/MatthewMueller/cheerio)
 - [htmlparser2](https://github.com/fb55/htmlparser2)
