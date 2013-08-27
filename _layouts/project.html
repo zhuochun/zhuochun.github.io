@@ -16,6 +16,7 @@ layout: default
       <h2 class="project-title">{{ page.title }}</h2>
 
       <p class="project-meta">
+        {{ page.date | date: "%b, %Y" }} |
         Info:
       {% if page.site %}
         <a href="{{ page.site }}" title="Website for {{ page.title }}" target="_blank">Website</a>

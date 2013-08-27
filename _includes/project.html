@@ -7,6 +7,7 @@
     {% endif %}
     <h2 class="project-title">
       <a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a>
+      <small>{{ project.date | date: "%b, %Y" }}</small>
     </h2>
     <p class="project-meta">{{ project.description }}</p>
   </header>

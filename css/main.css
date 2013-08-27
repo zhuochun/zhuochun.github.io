@@ -204,6 +204,12 @@ a:focus {
     margin-bottom: 0.2em;
 }
 
+.project-title small {
+    font-size: 16px;
+    font-weight: normal;
+    color: #bbb;
+}
+
 .project-title a,
 .post-title a {
     color: #333;
@@ -438,6 +444,10 @@ code {
 
     .post-content {
         font-size: 100%;
+    }
+
+    .project-title small {
+        display: block;
     }
 
     pre {

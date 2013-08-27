@@ -4,11 +4,11 @@ title: 'MIST Project'
 project: MIST
 date: 2013-06-03 10:11:19
 good: 3
-description: 'Remotely Observed Treatment of Tuberculosis through Webcam and Smartphones.'
+description: 'Mobile Interactive Supervised Therapy.'
 tools: ['Ruby on Rails', 'JavaScript', 'HTML5']
 source: 'https://github.com/H0201030/remotely-observed-treatment'
 site: 'https://github.com/H0201030'
-tags: Rails JavaScript Server Webcam
+tags: Rails Ruby AWS JavaScript Webcam iOS
 category: Project
 permalink: /project/mist.html
 ---
@@ -16,3 +16,5 @@ permalink: /project/mist.html
 Mobile Interactive Supervised Therapy (MIST) project is the final year project (2013/2014) of my bachelor degree (Computer Engineering) in National University of Singapore.
 
 This project is mentored by [Prof Wei Tsang Ooi](http://www.comp.nus.edu.sg/~ooiwt/), under School of Computing, and in collaboration with National University Hospital.
+
+MIST project aims to practice remotely observed treatment on patients' TB treatment adherence.

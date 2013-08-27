@@ -8,7 +8,7 @@ tags: Jekyll Liquid Github Tip
 categories: Blog
 ---
 
-After a few days work, a static [bicrement](http://www.bicrement.com) site is up now ;)
+After a few hours work, a static [bicrement](http://www.bicrement.com) site is up now :D.
 
 These are some tips and snippets on Jekyll, which I spent some time figured out in the process.
 
@@ -63,7 +63,9 @@ Download it, include it with `jQuery`, and add a `<div id="content-menu"></div>`
 
 ## Create project pages
 
-This is an annoying part. At first, I create pages for each project. It turns out that pages cannot be sorted (by filenames' order, or using `sort` liquid markup) on Github Page. In the end, I have to put them as posts and generate them under `/project/` using `permalink`, with a lot more changes in order not to mix project posts with normal posts. Be careful :)
+This is an annoying part. At first, I create pages for each project. It turns out that pages cannot be sorted (by filenames' order, or using `sort` liquid markup) on Github Page.
+
+In the end, I have to put them as posts and generate them under `/project/` using `permalink`, with a lot more changes in order not to mix project posts with normal posts. Refer to [my site](https://github.com/zhuochun/zhuochun.github.io)'s source code ;).
 
 ## Embed iframe elements
 
@@ -76,6 +78,6 @@ Empty tag will cause the page not fully rendered. To embed an iframe element, ad
 <iframe src="...">work now</iframe>
 {% endhighlight %}
 
-**Additions**
+**Addition**
 
 You can fork [my site](https://github.com/zhuochun/zhuochun.github.io), remove the posts in `/_posts/` and get started. Please keep the credit in the footer, thanks.
