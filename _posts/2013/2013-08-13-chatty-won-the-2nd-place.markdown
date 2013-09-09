@@ -20,7 +20,7 @@ What I had achieved in the [twelve++ days](/project/2013/07/06/twelve-days-on-ch
 
 **Bravo!**
 
-Gonna end with the demo video I made :)
+Gonna end with the demo video :)
 
 <iframe width="640" height="480" src="//www.youtube.com/embed/5Xq1C6zw61Y" frameborder="0">chatty</iframe>
 

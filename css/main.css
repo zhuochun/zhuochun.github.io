@@ -240,11 +240,27 @@ a:focus {
 
 .about-content,
 .post-content {
-    font-family: Georgia, "Cambria", serif;
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
     color: #444;
     line-height: 1.8em;
     font-size: 120%;
     max-width: 40em;
+}
+
+.post-content h2 {
+    margin: 1.83em 0 0.83em;
+}
+
+.post-content h3 {
+    margin: 2em 0 0.83em;
+}
+
+.post-content h4 {
+    margin: 2.33em 0 0.83em;
+}
+
+.about-content {
+    font-family: Georgia, "Cambria", serif;
 }
 
 .about-meta,
