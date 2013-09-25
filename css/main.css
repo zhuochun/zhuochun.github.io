@@ -336,7 +336,7 @@ blockquote {
 }
 
 pre {
-    font-size: 90%;
+    padding-left: 0.5em;
 }
 
 pre code {
