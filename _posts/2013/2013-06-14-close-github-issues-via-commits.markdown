@@ -1,15 +1,15 @@
 ---
 layout: post
 published: true
-title: "Close github issues via commit messages"
+title: "Close GitHub issues via commit messages"
 date: 2013-06-14 21:48:10
 tags: Github Tip
 categories: Git
 ---
 
-I started using Github Issues to track progess on my FYP development. Today I found that you can **close issues via commit messages.**
+I started using GitHub Issues to track progess on my FYP development. Today I found that you can **close issues via commit messages.**
 
-If you uses any of the following synonyms in your commits, github will reference to the commits from the issues and mark the issues closed.
+If you uses any of the following synonyms in your commits, GitHub will reference to the commits from the issues and mark the issues closed.
 
 {% highlight text %}
  fixes #xxx
