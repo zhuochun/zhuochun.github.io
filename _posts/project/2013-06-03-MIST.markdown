@@ -8,6 +8,7 @@ description: 'Mobile Interactive Supervised Therapy.'
 tools: ['Ruby on Rails', 'JavaScript', 'HTML5']
 source: 'https://github.com/H0201030/remotely-observed-treatment'
 site: 'https://github.com/H0201030'
+icon: '/images/projects/mist.png'
 tags: Rails Ruby AWS JavaScript Webcam iOS
 category: Project
 permalink: /project/mist.html
