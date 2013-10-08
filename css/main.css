@@ -234,6 +234,11 @@ a:focus {
     margin-left: .3em;
 }
 
+.project .project-icon {
+    float: left;
+    margin-right: 1.3em;
+}
+
 .post-date {
     color: #2c3e50;
 }
