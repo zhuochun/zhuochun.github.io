@@ -13,20 +13,20 @@ CoffeeScript is a little language that compiles into JavaScript.
 # Setup
 
 {% highlight bash %}
-npm install -g coffee-script
+$ npm install -g coffee-script
 {% endhighlight %}
 
 ## Command Line Usage
 
 {% highlight bash %}
 # REPL
-coffee
+$ coffee
 # Run and compile
-coffee -o javascripts/ -c coffeescripts/
+$ coffee -o javascripts/ -c coffeescripts/
 # With watcher
-coffee -w -o javascripts/ -c coffeescripts/
+$ coffee -w -o javascripts/ -c coffeescripts/
 # Join files
-coffee -j javascripts/app.js -c coffeescripts/*.coffee
+$ coffee -j javascripts/app.js -c coffeescripts/*.coffee
 {% endhighlight %}
 
 ## Vim Plugin
@@ -70,7 +70,7 @@ two = -> 2 + 2
 plus = (a, b = 1) ->
   a + b
 # plus(1) => 3
-sum = (i...) -> 
+sum = (i...) ->
   i.reduce (sum, k) -> sum + k
 # sum(1, 2, 3) => 6
 {% endhighlight %}
@@ -108,8 +108,13 @@ numbers[3..6] = [-3, -4, -5, -6]
 
 {% highlight coffee %}
 solipsism = true if mind? and not world?
+# => if (typeof mind !== "undefined" && mind !== null) ...
 speed ?= 15
+# => if (speed == null) ...
+footprints = yeti ? "bear"
+# => footprints = typeof yeti !== "undefined" && yeti !== null ? yeti : "bear";
 zip = lottery.drawWinner?().address?.zipcode
+# => zip = typeof lottery.drawWinner === "function" ...
 {% endhighlight %}
 
 ## Comprehensions
@@ -153,6 +158,16 @@ tom.move()
 # Access an object's prototype
 String::dasherize = ->
   this.replace /_/g, "-"
+{% endhighlight %}
+
+## Destructuring Assignment
+
+{% highlight coffee %}
+weatherReport = (location) ->
+  # Make an Ajax request to fetch the weather...
+  [location, 72, "Mostly Sunny"]
+
+[city, temp, forecast] = weatherReport "Berkeley, CA"
 {% endhighlight %}
 
 **References**

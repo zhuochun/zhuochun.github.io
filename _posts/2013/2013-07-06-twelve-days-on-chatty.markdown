@@ -12,7 +12,7 @@ Now, after taken a break away from computer, I want to sit back and write a few 
 
 ![Chatty Logo](/images/chatty/icon.png "Chatty Logo")
 
-> Chatty seems to be just another social app. **It is more.** It aims to build active interactions between strangers through activities. **Activities are breakpoints for people to build relations.** We met our friends because they took the same courses with us, they watched movies together with us, they had dinner with us, etc. These activities or experiences we had together connect us. This is what Chatty wants to help. 
+> Chatty seems to be just another social app. **It is more.** It aims to build active interactions between strangers through activities. **Activities are breakpoints for people to build relations.** We met our friends because they took the same courses with us, they watched movies together with us, they had dinner with us, etc. These activities or experiences we had together connect us. This is what Chatty wants to help.
 
 Ok, end of quick introduction ([more? Read my slides on Chatty](https://speakerdeck.com/zhuochun/chatty-meet-new-friends)).
 
