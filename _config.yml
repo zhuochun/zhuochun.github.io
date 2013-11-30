@@ -1,9 +1,11 @@
 title: Bicrement
 name: Bicrement
-url: http://www.bicrement.com
 subtitle: Where (Progress++)++
-author: Wang Zhuochun
+url: http://www.bicrement.com
 description: Bicrement is about anything I am interested. I write to make self (progress++)++.
+author: Wang Zhuochun
+author_abbr: Zhuochun
+author_description:
 page:
     home: /
     blog: /blog/

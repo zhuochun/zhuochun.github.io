@@ -4,7 +4,7 @@ menu: true
 published: true
 title: "Learn from Ruby Style Guides"
 date: 2013-09-08 19:19:19
-tags: Ruby Guide
+tags: Ruby
 categories: Ruby
 ---
 

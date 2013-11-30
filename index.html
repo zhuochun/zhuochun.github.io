@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-script: ['js/vendor/dynamo.min.js', 'js/home.js']
+script: ['js/home.js']
 ---
 
 <div>
@@ -10,7 +10,7 @@ script: ['js/vendor/dynamo.min.js', 'js/home.js']
   <section class="about">
     <header class="about-header">
       <h1 class="about-title">
-        <span class="greeting">Hi</span>, I am Zhuochun <span class="hidden-sm">:)</span>
+        <span class="greeting">Hi</span>, I am {{ site.author_abbr }} <span class="hidden-sm">:)</span>
       </h1>
       <p class="about-meta">
         This is my page.
@@ -23,10 +23,7 @@ script: ['js/vendor/dynamo.min.js', 'js/home.js']
 
     <div class="about-content">
       <p>
-        I am an undergraduate at National University of Singapore.
-      </p>
-      <p>
-        I <span class="dynamo">dream big</span>.
+        {{ site.author_description }}
       </p>
     </div>
   </section>
