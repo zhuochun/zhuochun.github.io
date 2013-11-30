@@ -26,6 +26,8 @@ You made some unsatisfied changes in a file and want to discard it. You can use 
 {% highlight bash %}
 # discard all changes in a file (not staged)
 $ git checkout -- <file>
+# discard all modified files in workspac
+$ git clean
 {% endhighlight %}
 
 ## Change last commit
@@ -33,10 +35,8 @@ $ git checkout -- <file>
 If you forget to add some files or mess up your commit messages, use `--amend` option to edit your last commit:
 
 {% highlight bash %}
-# your last commit
-git commit -m 'initial commit'
 # stage files you forgotten
-git add forgotten_file
+git add <forgotten_file>
 # amend the last commit
 git commit --amend
 {% endhighlight %}
@@ -48,12 +48,10 @@ This command takes your staging area and uses it for the commit. The `amend` com
 If you made a unwanted commit, you can overwrite it using `git reset HEAD^` command like it never happens:
 
 {% highlight bash %}
-# your unwanted commit
-$ git commit -m "i do not want this"
 # reset your unwanted commit
 $ git reset --soft HEAD^
 # edit and stage your new commit
-$ git add ....
+$ git add <files>
 # overwrite the unwanted commit
 $ git commit -c ORIG_HEAD
 {% endhighlight %}
