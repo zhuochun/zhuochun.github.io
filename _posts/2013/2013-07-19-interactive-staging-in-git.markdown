@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: "Interactive Staging in Git"
+title: "Interactive staging in Git"
 date: 2013-07-19 19:19:19
 tags: Git
 categories: Git
