@@ -4,7 +4,7 @@ published: true
 title: 'Unmap default menu bindings in MacVim'
 date: 2013-11-30 20:34:45
 tags: Vim MacVim Mac
-categories: Vim MacVim Mac
+categories: Vim
 ---
 
 In MacVim, the `Command` key has default menu bindings (e.g. `<D-o>` is mapped to _Open File_). Sadly, these mappings cannot be overwritten directly through `.vimrc`.
