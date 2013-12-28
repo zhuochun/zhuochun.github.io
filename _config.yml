@@ -9,6 +9,7 @@ author_description:
 page:
     home: /
     blog: /blog/
+    note: /note/
     about: /about/
     project: /project/
 social:

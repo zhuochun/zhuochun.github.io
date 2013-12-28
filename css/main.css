@@ -362,6 +362,10 @@ code {
     text-align: right;
 }
 
+.note-sup a {
+    color: #fff;
+}
+
 /* project */
 .side-project,
 .project-good-1,

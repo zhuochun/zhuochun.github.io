@@ -2,8 +2,10 @@
   <header class="post-header">
     <h2 class="post-title">
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-      {% if post.note %}
-      <sup class="light-sup">¬</sup>
+      {% if post.note && site.page.note %}
+      <sup class="note-sup">
+        <a href="{{ site.page.note }}">Note</a>
+      </sup>
       {% endif %}
     </h2>
 
