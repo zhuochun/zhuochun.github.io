@@ -66,6 +66,7 @@ a:focus {
 
 .header.with-menu {
     margin: 39% 2em 0;
+    height: 100%;
 }
 
 .brand-title,
@@ -117,6 +118,7 @@ a:focus {
 
 #content-menu {
     padding-top: 3em;
+    height: 100%;
 }
 
 #content-menu h3 {
@@ -125,6 +127,9 @@ a:focus {
 
 #content-menu ol {
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 54%;
 }
 
 #content-menu li {
