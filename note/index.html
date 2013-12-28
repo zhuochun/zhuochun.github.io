@@ -1,0 +1,14 @@
+---
+layout: default
+title: Notes
+---
+
+<div class="posts">
+  <h3 class="content-subhead">Notes</h3>
+
+{% for post in site.posts %}
+  {% if post.note %}
+    {% include post.html %}
+  {% endif %}
+{% endfor %}
+</div>
