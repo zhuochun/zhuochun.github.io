@@ -1,5 +1,6 @@
 ---
 layout: post
+note: true
 published: true
 title: 'Memoization in Ruby'
 date: 2013-11-29 11:07:57

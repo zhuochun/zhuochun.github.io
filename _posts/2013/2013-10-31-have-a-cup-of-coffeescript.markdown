@@ -1,6 +1,7 @@
 ---
 layout: post
 menu: true
+note: true
 published: true
 title: "Have a cup of CoffeeScript"
 date: 2013-10-31 13:00:10

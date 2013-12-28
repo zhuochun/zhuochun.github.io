@@ -1,5 +1,6 @@
 ---
 layout: post
+note: true
 published: true
 title: "Interactive staging in Git"
 date: 2013-07-19 19:19:19
