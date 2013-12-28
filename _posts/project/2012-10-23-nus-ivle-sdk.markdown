@@ -16,4 +16,8 @@ category: Project
 permalink: /project/nus-ivle-sdk.html
 ---
 
-A JavaScript SDK for [ivle](https://ivle.nus.edu.sg/) Learning Environment of National University of Singapore.
+A JavaScript SDK for [ivle](https://ivle.nus.edu.sg/) Learning Environment of
+National University of Singapore.
+
+Visit the SDK [demo page](http://www.bicrement.com/nus-ivle-api/).
+([LAPI](https://ivle.nus.edu.sg/LAPI/default.aspx) key is required.)
