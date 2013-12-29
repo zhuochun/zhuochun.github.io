@@ -19,11 +19,11 @@ Using `:echom` will save the output and let you run `:messages` to view it later
 
 There are two main kinds of options:
 
-- boolean options (either "on" or "off"):
+- Boolean options (either "on" or "off"):
   * `:set <name>` turns the option on and `:set no<name>` turns it off.
   * `:set <name>!` to toggle a boolean option.
-- options that take a value:
-  * change non-boolean options with `:set <name>=<value>`,
+- Options that take a value:
+  * Change non-boolean options with `:set <name>=<value>`,
 
 You can ask Vim what an option is currently set to by `:set <name>?`.
 
@@ -55,7 +55,7 @@ E.g.:
 
 {% highlight vim %}
 :autocmd BufNewFile,BufRead *.html setlocal nowrap
-:autocmd FileType python nnoremap <buffer]]> <localleader]]>c I#<esc]]>
+:autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
 {% endhighlight %}
 
 - `BufNewFile` starting to edit a file that doesn't exist
@@ -69,7 +69,7 @@ Clear an autocommands group uses `autocmd!` inside the group:
 {% highlight vim %}
 augroup filetype_html
     autocmd!
-    autocmd FileType html nnoremap <buffer]]> <localleader]]>f Vatzf
+    autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
 augroup END
 {% endhighlight %}
 
@@ -103,7 +103,7 @@ Set a local option as a variable using prefix: `:let &l:number = 1`.
 - Set registers as variables: `:let @a = "hello!"`.
 - Registers can also be read: `:echo @a`.
 - When yank (`y`), yanked value is stored in `"` register: `:echo @"`.
-- When search ('/'), search command is stored in `/` register: `:echo @/`.
+- When search (`/`), search command is stored in `/` register: `:echo @/`.
 
 ### Variable Scoping
 
@@ -119,7 +119,7 @@ the variable `hello` should be local to the current buffer: `:let b:hello = "wor
 - Integer `0` is `false`.
 - Vim does not necessarily treat a non-empty string as `true`:
   - Strings that start with a number are coerced to that number;
-  - Otherwise they're coerced to 0.
+  - Otherwise they're coerced to `0`.
 
 {% highlight vim %}
 if 0
@@ -129,7 +129,7 @@ elseif "nope!"
 else
     echom "finally!"
 endif
-=> finally!
+" => finally!
 {% endhighlight %}
 
 ### Case Sensitivity
@@ -161,7 +161,7 @@ You should always use explicit case sensitive or insensitive comparisons.
 ## Functions
 
 Vimscript functions must start with a **capital letter** if they are unscoped!
-If a function doesn't return a value, it implicitly returns 0.
+If a function doesn't return a value, it implicitly returns `0`.
 
 {% highlight vim %}
 function TextwidthIsTooWide()
@@ -173,7 +173,7 @@ endfunction
 
 ### Function Arguments
 
-When you write a Vimscript function that takes arguments
+When you write a Vimscript function that takes arguments,
 you always need to prefix those arguments with `a:` to tell Vim that
 they're in the argument scope.
 
@@ -184,7 +184,7 @@ function DisplayName(name)
 endfunction
 {% endhighlight %}
 
-_Note:_ you can't reassign argument variables
+_Note:_ you can't reassign argument variables.
 
 ## Strings
 
@@ -193,12 +193,12 @@ Vim will try to coerce it to a number before performing the addition.
 
 {% highlight vim %}
 :echom "Hello, " + "world"
-=> 0
+" => 0
 :echom 10 + "10.10"
-=> 20
+" => 20
 {% endhighlight %}
 
-Use `.` to concatenate strings: `:echom "Hello, " . "world"`
+Use `.` to concatenate strings: `:echom "Hello, " . "world"`.
 
 Using _single quotes_ tells Vim that you want the string exactly as-is,
 with no escape sequences.
@@ -318,17 +318,19 @@ endfunction
 
 ## Functional Programming
 
-Vimscript supports using variables to store functions: `let Myfunc = function("sort")`
+Vimscript supports using variables to store functions: `let Myfunc = function("sort")`.
 
 ## Paths
 
 {% highlight vim %}
-# % means "the current file"
+" % means "the current file"
 :echom expand('%')
-# :p tells Vim that you want the absolute path
+
+" :p tells Vim that you want the absolute path
 :echom expand('%:p')
-# an absolute path to the file foo.txt in the current directory
-# regardless of whether that file actually exists
+
+" an absolute path to the file foo.txt in the current directory
+" regardless of whether that file actually exists
 :echom fnamemodify('foo.txt', ':p')
 {% endhighlight %}
 
