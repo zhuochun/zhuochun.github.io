@@ -36,7 +36,7 @@ a:focus {
 }
 
 .sidebar-color-1 {
-    background-color: #f39c12;
+    background-color: #98502b;
 }
 
 .sidebar-color-2 {
@@ -126,9 +126,10 @@ a:focus {
 }
 
 #content-menu ol {
-    padding: 0;
+    padding: 0 23px 0 0;
+    margin-right: -23px;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 54%;
 }
 
