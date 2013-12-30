@@ -14,6 +14,7 @@ category: Project
 permalink: /project/nus-ivle-helper.html
 ---
 
-A Firefox Add-on that enhance and improve [ivle](https://ivle.nus.edu.sg/) Learning Environment of National University of Singapore.
+A Firefox Add-on that enhance and improve [ivle](https://ivle.nus.edu.sg/)
+Learning Environment of National University of Singapore.
 
 <iframe width="640" height="480" src="//www.youtube.com/embed/ma7jX-JqE9I?rel=0" frameborder="0" allowfullscreen="true">nus ivle helper</iframe>

@@ -16,4 +16,5 @@ permalink: /project/record-rtc-together.html
 
 Record video and audio together or individually on the web using `getUserMedia`.
 
-This is used in [MIST project](/project/mist.html) to allow users record and submit videos using their webcams.
+This is used in [MIST project](/project/mist.html) to allow users record and
+submit videos using their webcams.

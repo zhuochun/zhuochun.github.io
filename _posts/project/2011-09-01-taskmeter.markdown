@@ -15,8 +15,10 @@ category: Project
 permalink: /project/taskmeter.html
 ---
 
-A user friendly To-do list manager built using Java during course CS2103 Software Engineering (2011/12 Semester 1).
+A user friendly To-do list manager built using Java during course
+CS2103 Software Engineering (2011/12 Semester 1).
 
-It received [honorable mention](http://www.comp.nus.edu.sg/~cs2103/AY1112S1projects/halloffame.html) among 60 projects submitted in the course.
+It received [honorable mention](http://www.comp.nus.edu.sg/~cs2103/AY1112S1projects/halloffame.html)
+among 60 projects submitted in the course.
 
 <iframe width="640" height="480" src="//www.youtube.com/embed/Lb0jWORyq1s?rel=0" frameborder="0" allowfullscreen="true">Task Meter</iframe>

@@ -17,4 +17,4 @@ permalink: /project/corsplanner.html
 
 A powerful and elegant client-side timetable builder for NUS and NTU.
 
-![Version 0.3.0 Screenshot](https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-ash3/530386_522148014470753_1886317266_n.png)
+<iframe width="853" height="480" src="//www.youtube.com/embed/0tcNz4Wguc8?rel=0" frameborder="0" allowfullscreen>CORS Planner</iframe>

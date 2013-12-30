@@ -14,6 +14,7 @@ categories: Project Incomplete
 permalink: /project/simplegtd.html
 ---
 
-A web tool (in Chinese) to exercise the concepts of [Getting Things Done](http://en.wikipedia.org/wiki/Getting_Things_Done).
+A web tool (in Chinese) to exercise the concepts of
+[Getting Things Done](http://en.wikipedia.org/wiki/Getting_Things_Done).
 
 ![SimpleGTD](/images/projects/simplegtd.png)
