@@ -32,7 +32,7 @@ def user(name)
 end
 {% endhighlight %}
 
-**References**
+## References
 
 - [The Basics of Ruby Memoization - Gavin Miller](http://gavinmiller.io/2013/basics-of-ruby-memoization/)
 - [Advanced Memoization in Ruby - Gavin Miller](http://gavinmiller.io/2013/advanced-memoization-in-ruby/)

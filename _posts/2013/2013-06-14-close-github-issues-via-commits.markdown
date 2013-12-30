@@ -7,9 +7,11 @@ tags: Github Tip
 categories: Git
 ---
 
-I started using GitHub Issues to track progess on my FYP development. Today I found that you can **close issues via commit messages.**
+I started using GitHub Issues to track progess on my FYP development.
+Today I found that you can **close issues via commit messages.**
 
-If you uses any of the following synonyms in your commits, GitHub will reference to the commits from the issues and mark the issues closed.
+If you uses any of the following synonyms in your commits,
+GitHub will reference to the commits from the issues and mark the issues closed.
 
 {% highlight text %}
  fixes #xxx
@@ -20,7 +22,9 @@ If you uses any of the following synonyms in your commits, GitHub will reference
  closed #xxx
 {% endhighlight %}
 
-Additionally, you can create nice tasks lists in issues, pulls and comments like [this](https://github.com/twitter/bootstrap/pull/6342), using `[ ]` or `[x]` (incomplete or complete, respectively) markdowns. For example:
+Additionally, you can create nice tasks lists in issues, pulls and comments like
+[this](https://github.com/twitter/bootstrap/pull/6342), using `[ ]` or `[x]`
+(incomplete or complete, respectively) markdowns. For example:
 
 {% highlight text %}
  - [x] list syntax required
@@ -28,7 +32,7 @@ Additionally, you can create nice tasks lists in issues, pulls and comments like
  - [ ] this is an incomplete item
 {% endhighlight %}
 
-**References:**
+## References:
 
 - [Issues 2.0: The Next Generation](https://github.com/blog/831-issues-2-0-the-next-generation)
 - [Closing Issues via Commit Messages](https://github.com/blog/1386-closing-issues-via-commit-messages)

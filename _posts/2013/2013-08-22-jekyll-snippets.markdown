@@ -22,12 +22,18 @@ You can use `page.next` and `page.previous` to access the previous and next post
 {% if previous.url %}
   <a href="{{previous.url}}" title="Previous Post: {{previous.title}}">&laquo; {{previous.title}}</a>
 {% endif %}
+
+{% assign next = page.next %}
+{% if next.url %}
+  <a href="{{next.url}}" title="Next Post: {{next.title}}">{{next.title}} &raquo;</a>
+{% endif %}
 {% endraw %}
 {% endhighlight %}
 
 ## Display year/month in archive page
 
-If you want to display `year` and `month` in archive page like [my blog page](http://www.bicrement.com/blog/), here is the code:
+If you want to display `year` and `month` in archive page like
+[my blog page](http://www.bicrement.com/blog/), here is the code:
 
 {% highlight html %}
 {% raw %}
@@ -57,19 +63,25 @@ If you want to display `year` and `month` in archive page like [my blog page](ht
 
 ## Add content menu
 
-On the left sidebar, a sweet content menu of this post is displayed. This is created using JavaScript, take a look at [my headings.js script](/js/headings.js).
+On the left sidebar, a sweet content menu of this post is displayed.
+This is created using JavaScript, take a look at [my headings.js script](/js/headings.js).
 
-Download it, include it with `jQuery`, and add a `<div id="content-menu"></div>` to your layout to use it.
+Download it, include it with `jQuery`, and add a `<div id="content-menu"></div>` to
+your layout to use it.
 
 ## Create project pages
 
-This is an annoying part. At first, I create pages for each project. It turns out that pages cannot be sorted (by filenames' order, or using `sort` liquid markup) on Github Page.
+This is an annoying part. At first, I create pages for each project.
+It turns out that pages cannot be sorted (by filenames' order, or using `sort` liquid markup) on Github Page.
 
-In the end, I have to put them as posts and generate them under `/project/` using `permalink`, with a lot more changes in order not to mix project posts with normal posts. Refer to [my site](https://github.com/zhuochun/zhuochun.github.io)'s source code ;).
+In the end, I have to put them as posts and generate them under `/project/` using
+`permalink`, with a lot more changes in order not to mix project posts with normal posts.
+Refer to [my site](https://github.com/zhuochun/zhuochun.github.io)'s source code ;).
 
 ## Embed iframe elements
 
-Empty tag will cause the page not fully rendered. To embed an iframe element, add some text inside the tag to solve this:
+Empty tag will cause the page not fully rendered.
+To embed an iframe element, add some text inside the tag to solve this:
 
 {% highlight html %}
 <!-- change this iframe element to work -->
@@ -78,6 +90,8 @@ Empty tag will cause the page not fully rendered. To embed an iframe element, ad
 <iframe src="...">work now</iframe>
 {% endhighlight %}
 
-**Addition**
+## Fork
 
-You can fork [my site](https://github.com/zhuochun/zhuochun.github.io), remove the posts in `/_posts/` and get started. Please keep the credit in the footer, thanks.
+You can fork [my site](https://github.com/zhuochun/zhuochun.github.io).
+Remove the posts in `/_posts/` and get started.
+Please keep the credit in the footer, thanks.

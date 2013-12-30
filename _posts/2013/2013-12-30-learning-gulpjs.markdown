@@ -118,7 +118,7 @@ gulp.task('default', function() {
 });
 {% endhighlight %}
 
-**References**
+## References
 
 - [gulpjs/gulp](https://github.com/gulpjs/gulp/)
 - [search-gulp-plugins](http://gratimax.github.io/search-gulp-plugins/)

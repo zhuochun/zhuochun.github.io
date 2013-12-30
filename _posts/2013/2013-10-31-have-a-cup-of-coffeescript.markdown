@@ -32,8 +32,10 @@ $ coffee -j javascripts/app.js -c coffeescripts/*.coffee
 
 ## Vim Plugin
 
-- [kchmck/vim-coffee-script](https://github.com/kchmck/vim-coffee-script): Adds CoffeeScript support to Vim. It covers syntax, indenting, compiling, and more.
-- [scrooloose/syntastic](https://github.com/scrooloose/syntastic): Ultimate syntax checking plugin on Vim
+- [kchmck/vim-coffee-script](https://github.com/kchmck/vim-coffee-script):
+  Adds CoffeeScript support to Vim. It covers syntax, indenting, compiling, and more.
+- [scrooloose/syntastic](https://github.com/scrooloose/syntastic):
+  Ultimate syntax checking plugin on Vim
 
 {% highlight bash %}
 # shows the compiled CoffeeScript
@@ -76,7 +78,8 @@ sum = (i...) ->
 # sum(1, 2, 3) => 6
 {% endhighlight %}
 
-Using the fat arrow `=>` instead of the thin arrow ensures that the function context will be bound to the local one.
+Using the fat arrow `=>` instead of the thin arrow ensures that
+the function context will be bound to the local one.
 
 ## Objects
 
@@ -171,7 +174,7 @@ weatherReport = (location) ->
 [city, temp, forecast] = weatherReport "Berkeley, CA"
 {% endhighlight %}
 
-**References**
+## References
 
 - [Official Site](http://coffeescript.org/)
 - [The Little Book on CoffeeScript](http://arcturo.github.io/library/coffeescript/)

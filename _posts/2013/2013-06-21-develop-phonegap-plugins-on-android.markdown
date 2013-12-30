@@ -8,11 +8,13 @@ tags: PhoneGap Android JavaScript
 categories: Phonegap
 ---
 
-Recently, I dug a little further in [Phonegap](http://phonegap.com/) on writing plugins. The [official plugin development guide](http://docs.phonegap.com/en/edge/guide_plugin-development_android_index.md.html#Developing%20a%20Plugin%20on%20Android) is hard to grasp for beginner. So this is quick note.
+Recently, I dug a little further in [Phonegap](http://phonegap.com/) on writing plugins.
+The [official plugin development guide](http://docs.phonegap.com/en/edge/guide_plugin-development_android_index.md.html#Developing%20a%20Plugin%20on%20Android) is hard to grasp for beginner. So this is quick note.
 
 ## JavaScript Interface
 
-Phonegap plugins allow you to use functionalities on native platform through a single JavaScript interface `cordova.exec`.
+Phonegap plugins allow you to use functionalities on native platform through
+a single JavaScript interface `cordova.exec`.
 
 {% highlight javascript %}
 cordova.exec(<successFun>, // success callback function
@@ -22,15 +24,18 @@ cordova.exec(<successFun>, // success callback function
              <args>); // arguments passed into the service action
 {% endhighlight %}
 
-- `successFun (Function)`: if your `exec` call completes successfully, this function is invoked (optionally with any parameters you pass back to it).
-- `failFun (Function)`: if the operation does not complete successfully, this function is invoked (optionally with an error parameter).
+- `successFun (Function)`: if your `exec` call completes successfully,
+  this function is invoked (optionally with any parameters you pass back to it).
+- `failFun (Function)`: if the operation does not complete successfully,
+  this function is invoked (optionally with an error parameter).
 - `service (String)`: the service name to call into on the native side.
 - `action (String)`: the action name to call into. 
 - `args (Array)`: arguments to pass into.
 
 ## Android Plugin
 
-On the native platform, you needs to implement the `service` (as class name), which extends `CordovaPlugin` and overides `execute` method.
+On the native platform, you needs to implement the `service` (as class name), which
+extends `CordovaPlugin` and overides `execute` method.
 
 Your plugin must be added to the `config.xml` file in your Cordova-Android application's `res/xml/` folder.
 
@@ -60,15 +65,18 @@ public class YourServiceName extends CordovaPlugin {
 - `args`: the arguments passed in.
 - `ctx`: the callback that you can return information to JavaScript.
 
-You can access your cordova activity and context using `this.cordova.getActivity()` and `this.cordova.getActivity().getBaseContext();`.
+You can access your cordova activity and context using `this.cordova.getActivity()` and
+`this.cordova.getActivity().getBaseContext();`.
 
 You can pass data back using `ctx` with `ctx.success()`, `ctx.error()` or `ctx.sendPluginResult()`.
 
-For example, you can refer to the [source code](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/Notification.java) of `Notification` API provided by phonegap.
+For example, you can refer to the [source code](https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/Notification.java)
+of `Notification` API provided by phonegap.
 
 ## JavaScript Plugin Wrapper
 
-It is better to wrap your plugin calls, instead of calling `cordova.exec` directly every time. There are two ways doing it:
+It is better to wrap your plugin calls, instead of calling `cordova.exec`
+directly every time. There are two ways doing it:
 
 ### The Common Way
 
@@ -120,7 +128,7 @@ Service.action(args, succeed, failed);
 
 The `require` is not compatible with old Phonegap (1.x).
 
-**References**:
+## References
 
 - [Phonegap Plugin Development Guide](http://docs.phonegap.com/en/edge/guide_plugin-development_index.md.html#Plugin%20Development%20Guide)
 - [Phonegap Source Code](https://github.com/apache/cordova-android)

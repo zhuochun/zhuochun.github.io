@@ -9,7 +9,8 @@ tags: Ruby
 categories: Ruby
 ---
 
-I always think reading style guides is one of the fast ways to grasp the knowledge of a new language. Some guide quotes on Ruby:
+I always think reading style guides is one of the fast ways to grasp
+the knowledge of a new language. Some guide quotes on Ruby:
 
 ## Coding Style
 
@@ -78,8 +79,12 @@ num = 1_000_000
 - Use `snake_case` for methods and variables.
 - Use `CamelCase` for classes and modules. (Keep acronyms like HTTP, RFC, XML uppercase.)
 - Use `SCREAMING_SNAKE_CASE` for other constants.
-- The names of predicate methods (methods that return a boolean value) should end in a question mark. (i.e. `Array#empty?`).
-- The names of potentially "dangerous" methods (i.e. methods that modify self or the arguments, `exit!`, etc.) should end with an exclamation mark. Bang methods should only exist if a non-bang method exists. ([More on this](http://dablog.rubypal.com/2007/8/15/bang-methods-or-danger-will-rubyist)).
+- The names of predicate methods (methods that return a boolean value) should
+  end in a question mark. (i.e. `Array#empty?`).
+- The names of potentially "dangerous" methods (i.e. methods that modify self or
+  the arguments, `exit!`, etc.) should end with an exclamation mark.
+  Bang methods should only exist if a non-bang method exists.
+  ([More on this](http://dablog.rubypal.com/2007/8/15/bang-methods-or-danger-will-rubyist)).
 
 ## Syntax
 
@@ -116,7 +121,7 @@ end
 
 - Avoid `return` where not required.
 
-- Use `||=` freely to initialize variables. But not in initializeing boolean variables.
+- Use `||=` freely to initialize variables. But not in initializing boolean variables.
 
 {% highlight ruby %}
 # set name to Bozhidar, only if it's nil or false
@@ -125,7 +130,9 @@ name ||= "Bozhidar"
 enabled = true if enabled.nil?
 {% endhighlight %}
 
-- Never put a space between a method name and the opening parenthesis. If the first argument to a method begins with an open parenthesis, always use parentheses in the method invocation.
+- Never put a space between a method name and the opening parenthesis.
+  If the first argument to a method begins with an open parenthesis, always use
+  parentheses in the method invocation.
 
 {% highlight ruby %}
 # bad
@@ -163,7 +170,8 @@ end
 Parent.print_class_var # => will print "child"
 {% endhighlight %}
 
-- Avoid explicit use of `self` as the recipient of internal class or instance messages unless to specify a method shadowed by a variable.
+- Avoid explicit use of `self` as the recipient of internal class or
+  instance messages unless to specify a method shadowed by a variable.
 
 {% highlight ruby %}
 class SomeClass
@@ -176,7 +184,8 @@ class SomeClass
 end
 {% endhighlight %}
 
-- When defining binary operators, name the argument `other`(`<<` and `[]` are exceptions to the rule, since their semantics are different).
+- When defining binary operators, name the argument `other`(`<<` and `[]` are
+  exceptions to the rule, since their semantics are different).
 
 {% highlight ruby %}
 def +(other)
@@ -184,7 +193,8 @@ def +(other)
 end
 {% endhighlight %}
 
-- Prefer modules to classes with only class methods. Classes should be used only when it makes sense to create instances out of them.
+- Prefer modules to classes with only class methods. Classes should be used only
+  when it makes sense to create instances out of them.
 
 ## Collections
 
@@ -211,8 +221,11 @@ do_something if x.between?(1000, 2000)
 ## Strings
 
 - Prefer string interpolation `"#{name} <#{email}>"` than string concatenation `name + "<" + email + ">"`.
-- Prefer double-quoted strings. Interpolation and escaped characters will always work without a delimiter change, and `'` is a lot more common than `"` in string literals.
-- Avoid using `String#+` when you need to construct large data chunks. Instead, use `String#<<`. Concatenation mutates the string instance in-place and is always faster than `String#+`, which creates a bunch of new string objects.
+- Prefer double-quoted strings. Interpolation and escaped characters will always work
+  without a delimiter change, and `'` is a lot more common than `"` in string literals.
+- Avoid using `String#+` when you need to construct large data chunks.
+  Instead, use `String#<<`. Concatenation mutates the string instance in-place and
+  is always faster than `String#+`, which creates a bunch of new string objects.
 
 {% highlight ruby %}
 # good and also fast
@@ -233,7 +246,8 @@ end
 /(?:first|second)/ # good
 {% endhighlight %}
 
-- Avoid using $1-9 as it can be hard to track what they contain. Named groups can be used instead.
+- Avoid using $1-9 as it can be hard to track what they contain.
+  Named groups can be used instead.
 
 {% highlight ruby %}
 # bad
@@ -247,7 +261,8 @@ process $1
 process meaningful_var
 {% endhighlight %}
 
-- Be careful with `^` and `$` as they match start/end of line, not string endings. If you want to match the whole string use: `\A` and `\Z`.
+- Be careful with `^` and `$` as they match start/end of line, not string endings.
+  If you want to match the whole string use: `\A` and `\Z`.
 
 {% highlight ruby %}
 string = "some injection\nusername"
@@ -255,7 +270,8 @@ string[/^username$/]   # matches
 string[/\Ausername\Z/] # don't match
 {% endhighlight %}
 
-- Use `x` modifier for complex regexps. This makes them more readable and you can add some useful comments. Just be careful as spaces are ignored.
+- Use `x` modifier for complex regexps. This makes them more readable and
+  you can add some useful comments. Just be careful as spaces are ignored.
 
 {% highlight ruby %}
 regexp = %r{
@@ -269,7 +285,10 @@ regexp = %r{
 
 ## Lambda, Proc, and Block
 
-- Prefer `{...}` over `do...end` for single-line blocks. Avoid using `{...}` for multi-line blocks (multiline chaining is always ugly). Always use `do...end` for "control flow" and "method definitions" (e.g. in Rakefiles and certain DSLs). Avoid `do...end` when chaining.
+- Prefer `{...}` over `do...end` for single-line blocks.
+  Avoid using `{...}` for multi-line blocks (multiline chaining is always ugly).
+  Always use `do...end` for "control flow" and "method definitions"
+  (e.g. in Rakefiles and certain DSLs). Avoid `do...end` when chaining.
 
 {% highlight ruby %}
 # bad
@@ -287,7 +306,8 @@ end.map { |name| name.upcase }
 names.select { |name| name.start_with?('S') }.map { |name| name.upcase }
 {% endhighlight %}
 
-- Use the new lambda literal syntax for single line body blocks. Use the `lambda` method for multi-line blocks.
+- Use the new lambda literal syntax for single line body blocks.
+  Use the `lambda` method for multi-line blocks.
 
 {% highlight ruby %}
 # bad
@@ -320,7 +340,9 @@ p = proc { |n| puts n }
 
 ## Exceptions
 
-- Signal exceptions using the `fail` method. Use `raise` only when catching an exception and re-raising it (because here you're not failing, but explicitly and purposefully raising an exception).
+- Signal exceptions using the `fail` method. Use `raise` only when
+  catching an exception and re-raising it (here you're not failing, but
+  explicitly and purposefully raising an exception).
 
 {% highlight ruby %}
 begin
@@ -369,7 +391,7 @@ def multiplex(text, count)
 end
 {% endhighlight %}
 
-**Reference**
+## Reference
 
 - [GitHub Ruby Styleguide](https://github.com/styleguide/ruby)
 - [The Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)

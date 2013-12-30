@@ -116,7 +116,7 @@ Examples:
 - `/oon\b/` matches the `'oon'` in `"moon"`, because `'oon'` is the end of the string, thus not followed by a word character;
 - `/\w\b\w/` will never match anything, because a word character can never be followed by both a non-word and a word character.
 
-**References:**
+## References
 
 - [Regular Expressions - JavaScript | MDN](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions)
 - [Regex Tutorial - Lookahead and Lookbehind Zero-Length Assertions](http://www.regular-expressions.info/lookaround.html)

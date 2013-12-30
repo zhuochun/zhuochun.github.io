@@ -7,7 +7,8 @@ tags: Vim MacVim Mac
 categories: Vim
 ---
 
-In MacVim, the `Command` key has default menu bindings (e.g. `<D-o>` is mapped to _Open File_). Sadly, these mappings cannot be overwritten directly through `.vimrc`.
+In MacVim, the `Command` key has default menu bindings (e.g. `<D-o>` is mapped to _Open File_).
+Sadly, these mappings cannot be overwritten directly through `.vimrc`.
 
 Here is the trick to unmap the unwanted `<D->` bindings. Put the snippet in `.gvimrc`:
 
@@ -34,6 +35,4 @@ if has("gui_macvim")
 endif
 {% endhighlight %}
 
-**References**
-
-- [My Vim Settings](https://github.com/zhuochun/dotfiles)
+View **[my Vim settings](https://github.com/zhuochun/dotfiles)**
