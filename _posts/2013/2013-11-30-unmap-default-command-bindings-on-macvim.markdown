@@ -35,4 +35,4 @@ if has("gui_macvim")
 endif
 {% endhighlight %}
 
-View **[my Vim settings](https://github.com/zhuochun/dotfiles)**
+View [my Vim settings](https://github.com/zhuochun/dotfiles).

@@ -9,7 +9,7 @@ categories: JavaScript
 
 I used [PhantomJS][phantomjs] in my [CORS Planner][corsplanner] project to crawl module codes from NUS website. It is really simple to pick up some code from the [examples](https://github.com/ariya/phantomjs/wiki/Examples) provided in PhantomJS site. My code look like this:
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var page = require("webpage").create();
 
 // Route "console.log()" calls from within the Page context
@@ -39,7 +39,7 @@ page.open(encodeURI(url), function (status) {
 
 Last month, I added support on NTU modules in CORS Planner. However, NTU modules are distributed in 339+ different webpages. Crawling page after page in sequence is far too slow. So a better way would be running several PhantomJS `webpage` together and each completes a part of the crawling. The code: (*thread is the number of `webpages`, not a real thread. `webpages` run in asynchronous*)
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 // list contains all the NTU pages to be visited
 var llength = list.length, thread = 10, completed = 0
 // max is the maximum # of pages to be visited for each thread

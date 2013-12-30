@@ -62,7 +62,7 @@ $ git add <files>
 $ git commit -c ORIG_HEAD
 {% endhighlight %}
 
-## .gitconfig
+## Git Configs
 
 edit `~/.gitconfig` file:
 

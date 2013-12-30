@@ -70,7 +70,7 @@ refresh what you have done today, and keep progress in mind.
 - [Chatty Video](http://youtu.be/5Xq1C6zw61Y)
 - [My Presentation on Chatty](https://speakerdeck.com/zhuochun/chatty-meet-new-friends)
 
-## Add-ons
+## Readings
 
 A few articles I read recently, provided as additional readings:
 

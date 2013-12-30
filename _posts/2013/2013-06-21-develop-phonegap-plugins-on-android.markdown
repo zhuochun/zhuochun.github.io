@@ -45,7 +45,7 @@ Your plugin must be added to the `config.xml` file in your Cordova-Android appli
 
 This is a plugin template:
 
-{% highlight java linenos %}
+{% highlight java %}
 public class YourServiceName extends CordovaPlugin {
 
     @Override
@@ -82,7 +82,7 @@ directly every time. There are two ways doing it:
 
 This is the common way found in [phonegap-plugins](https://github.com/phonegap/phonegap-plugins) repos:
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 (function(cordova){
     var YourService = function() { };
 
@@ -108,7 +108,7 @@ window.plugins.YourService.action(args, succeed, failed);
 
 This is what I found in `cordova.js`'s [source code](https://github.com/apache/cordova-android/blob/master/framework/assets/www/cordova.js#L4116):
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 cordova.define('cordova/plugin/YourService', function(require, exports, module) {    
     var exec = require("cordova/exec");
 
