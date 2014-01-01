@@ -1,0 +1,14 @@
+---
+layout: project
+title: 'ShopTwo'
+project: shop-two
+date: 2013-09-20 09:20:34
+good: 3
+description: 'An online shopping and product management website.'
+tools: ['Ruby on Rails', 'Heroku', 'JavaScript', 'PostgreSQL']
+source: 'https://github.com/zhuochun/shopTwo'
+tags: Rails ShopTwo
+category: Project
+permalink: /project/shop-two.html
+---
+
