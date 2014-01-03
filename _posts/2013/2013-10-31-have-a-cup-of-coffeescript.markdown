@@ -138,7 +138,10 @@ alert("#{first} #{last}") for first, last of names
 
 {% highlight coffee %}
 class Animal
-  constructor: (@name) ->
+  constructor: (@name, size) ->
+    # set property (@name) directly in constructor args
+    # or manually like @size
+    @size = size
 
   move: (meters) ->
     alert @name + " moved #{meters}m."
