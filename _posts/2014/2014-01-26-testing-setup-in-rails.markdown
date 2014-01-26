@@ -18,6 +18,7 @@ The gems gonna used are:
 - [rspec/rspec-rails](https://github.com/rspec/rspec-rails): BDD Testing Framework for Rails.
 - [jnicklas/capybara](https://github.com/jnicklas/capybara): Acceptance Testing Framework.
 - [jfirebaugh/konacha](https://github.com/jfirebaugh/konacha): JavaScript Testing for Rails (Mocha + Chai).
+- [jonleighton/poltergeist](https://github.com/jonleighton/poltergeist): PhantomJS driver for Capybara.
 - [thoughtbot/factory_girl_rails](https://github.com/thoughtbot/factory_girl_rails): Fixtures.
 - [bmabey/database_cleaner](https://github.com/bmabey/database_cleaner): Database Cleaning.
 
@@ -27,7 +28,8 @@ The gems gonna used are:
 group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'capybara', '~> 2.2.1'
-  gem 'database_cleaner', "~> 1.2.0"
+  gem 'poltergeist', '~> 1.5.0'
+  gem 'database_cleaner', '~> 1.2.0'
 end
 
 group :development, :test do
@@ -61,6 +63,20 @@ end
 {% endhighlight %}
 
 - Setup Konacha by creating `spec/javascripts` folder. Optionally, with a `spec_helper.js.coffee` file.
+- To use Poltergeist, [PhantomJS](http://www.phantomjs.org/) is required. Then:
+{% highlight ruby %}
+# Setup Capybara with Poltergeist
+# Add the following lines to `spec_helper.rb`:
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
+
+# Setup Konacha with Poltergeist
+# Add the following lines to `config/initializers/konacha.rb`:
+Konacha.configure do |config|
+  require 'capybara/poltergeist'
+  config.driver = :poltergeist
+end if defined?(Konacha)
+{% endhighlight %}
 
 Refer to Gist [spec_helper.rb](https://gist.github.com/zhuochun/8634158).
 
@@ -72,9 +88,7 @@ Refer to Gist [spec_helper.rb](https://gist.github.com/zhuochun/8634158).
 - `bundle exec rspec spec/models`: run all model specs.
 - `bundle exec rspec spec/models/todo_spec.rb`: run specs in a file.
 
-#### Generators
-
-Generator `rails generate rspec:model widget` will create a new spec file in `spec/models/widget_spec.rb`.
+RSpec provides generator `rails generate rspec:model widget`, which will create a new spec file in `spec/models/widget_spec.rb`.
 
 Available generators: `scaffold`, `model`, `controller`, `helper`, `view`, `mailer`, `observer`, `integration`.
 
@@ -94,7 +108,3 @@ Common helper functions used in testing can created in `spec/support` folder. Th
 # include `spec/support/menu_helper.rb` for feature testings
 config.include MenuHelper, type: :feature
 {% endhighlight %}
-
-## Todo
-
-- Headless testing for JavaScript in Capybara and Konacha.
