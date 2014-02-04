@@ -2,7 +2,7 @@
 layout: post
 note: true
 published: true
-title: 'Globbing (Wildcard Matching)'
+title: 'Globbing Patterns'
 date: 2013-12-31 22:41:27
 tags: UNIX Glob
 categories: UNIX
@@ -54,3 +54,4 @@ categories: UNIX
 ## References
 
 - `man 5 gitignore`
+- [Grunt Globbing Patterns](http://gruntjs.com/configuring-tasks#globbing-patterns)

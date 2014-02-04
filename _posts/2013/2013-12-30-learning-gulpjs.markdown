@@ -9,7 +9,7 @@ tags: JavaScript gulpjs
 categories: JavaScript
 ---
 
-[Gulp](https://github.com/gulpjs/gulp/) is a streaming build system.
+[Gulp][gulp] is a streaming build system.
 I found it is much easier than [Grunt](http://gruntjs.com/).
 
 The differene between Gulp and Grunt ([slide](http://slid.es/contra/gulp)):
@@ -20,28 +20,48 @@ The differene between Gulp and Grunt ([slide](http://slid.es/contra/gulp)):
 - Tasks are executed with maximum concurrency.
 - I/O works the way you picture it.
 
-## Usage
+## Install
 
 {% highlight bash %}
 # install gulp globally
 $ npm install -g gulp
 # install gulp in project
 $ npm install --save-dev gulp
-# run gulp
-$ gulp [<task> <othertask>]
 {% endhighlight %}
 
-## Basic
+## Usage
+
+{% highlight bash %}
+# run gulp default task
+$ gulp
+# run specific gulp tasks
+$ gulp <task> <othertask>
+# list all gulp tasks
+$ gulp -T
+{% endhighlight %}
+
+## Gulpfile
 
 Create a `gulpfile.js` at the root of project directory.
 
-There are five APIs in gulp:
+{% highlight javascript %}
+var gulp = require('gulp');
+
+gulp.task('default', function(){
+  // place code for your default task here
+});
+{% endhighlight %}
+
+## Gulp APIs
+
+There are four APIs in gulp:
 
 - `gulp.src(globs[, options])`
 - `gulp.dest(path)`
 - `gulp.task(name[, deps], fn)`
-- `gulp.run(tasks...[, cb])`
-- `gulp.watch(glob, cb)`
+- `gulp.watch(glob, tasks)`
+
+Refer to [API Docs](https://github.com/gulpjs/gulp/blob/master/docs/API.md).
 
 ## Plugins
 
@@ -50,7 +70,7 @@ There are five APIs in gulp:
 $ npm install gulp-coffee gulp-less --save-dev
 {% endhighlight %}
 
-Some plugins: [More](http://gratimax.github.io/search-gulp-plugins/)
+Some plugins: [More][plugins]
 
 - [plus3network/gulp-less](https://github.com/plus3network/gulp-less)
 - [wearefractal/gulp-coffee](https://github.com/wearefractal/gulp-coffee)
@@ -60,16 +80,6 @@ Some plugins: [More](http://gratimax.github.io/search-gulp-plugins/)
 - [jonathanepollack/gulp-minify-html](https://github.com/jonathanepollack/gulp-minify-html)
 - [wearefractal/gulp-concat](https://github.com/wearefractal/gulp-concat)
 - [hparra/gulp-rename](https://github.com/hparra/gulp-rename)
-
-## Gulpfile
-
-{% highlight javascript %}
-var gulp = require('gulp');
-
-gulp.task('default', function(){
-  // place code for your default task here
-});
-{% endhighlight %}
 
 ## Sample Tasks
 
@@ -109,17 +119,18 @@ gulp.tasks('copy_files', function() {
 ### Watch File Changes
 
 {% highlight javascript %}
-gulp.task('default', function() {
-    gulp.run('coffee', 'less');
-
-    gulp.watch(['coffee/*.coffee', 'less/*.less'], function() {
-         gulp.run('coffee', 'less');
-    });
+gulp.task('watch', function() {
+    gulp.watch('coffee/*.coffee', ['coffee']);
+    gulp.watch('less/*.less', ['less']);
 });
 {% endhighlight %}
 
 ## References
 
-- [gulpjs/gulp](https://github.com/gulpjs/gulp/)
-- [search-gulp-plugins](http://gratimax.github.io/search-gulp-plugins/)
+- [gulpjs/gulp][gulp]
+- [gulp plugins][plugins]
 - [Getting Started With Gulp](http://travismaynard.com/writing/getting-started-with-gulp)
+- [My First Gulp Adventure](http://blog.ponyfoo.com/2014/01/27/my-first-gulp-adventure)
+
+[gulp]: https://github.com/gulpjs/gulp/
+[plugins]: http://gulpjs.com/plugins/
