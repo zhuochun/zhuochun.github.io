@@ -17,17 +17,17 @@ Regular expressions are patterns used to match character combinations in strings
 
 ## Lookahead
 
-> `x(?=y)`
+> `x(?=y)` (Positive Lookahead)
 >
-> Matches `'x'` only if `'x'` is followed by `'y'`. This is called a _lookahead_.
+> Matches `'x'` only if `'x'` is followed by `'y'`.
 >
 > For example, `/Jack(?=Sprat)/` matches `'Jack'` only if it is followed by `'Sprat'`.
 > `/Jack(?=Sprat|Frost)/` matches `'Jack'` only if it is followed by `'Sprat'` or `'Frost'`.
 > However, **neither 'Sprat' nor 'Frost' is part of the match results**.
 >
-> `x(?!y)`
+> `x(?!y)` (Negative Lookahead)
 >
-> Matches `'x'` only if `'x'` is not followed by `'y'`. This is called a _negated lookahead_.
+> Matches `'x'` only if `'x'` is not followed by `'y'`.
 >
 > For example, `/\d+(?!\.)/` matches a number only if it is not followed by a decimal point.
 > The regular expression `/\d+(?!\.)/.exec("3.141")` matches `'141'` but not `'3.141'`.
@@ -52,6 +52,22 @@ var re = /\b(?!\d+[05])\d+\b/;
 // Anything that doesn't contain 'foo'
 var re = /^(?!.*foo).+$/;
 {% endhighlight %}
+
+## Lookbehind
+
+Lookbehind works backwards. It tells the regex engine to temporarily check backwards in the string.
+
+> `(?<=y)x` (Positive Lookbehind)
+>
+> Matches `'x'` only if `'x'` is preceded by `'y'`.
+>
+> `(?<!y)x` (Negative Lookbehind)
+>
+> Matches `'x'` only if `'x'` is not preceded by `'y'`.
+>
+> For example, `(?<!\\)(\\\\)*\\$` matches odd numbers of consecutive `\`.
+
+_Note: Lookbehind is not available in JavaScript._
 
 ## Backreferences
 
