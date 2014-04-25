@@ -2,7 +2,7 @@ title: Bicrement
 name: Bicrement
 subtitle: Where (Progress++)++
 url: http://www.bicrement.com
-description: Bicrement is about anything I am interested. I write to make self (progress++)++.
+description: Bicrement is about making (progress++)++.
 author: Wang Zhuochun
 author_abbr: Zhuochun
 author_description:
@@ -19,4 +19,5 @@ social:
     twitter: https://twitter.com/zhuochun
     flickr: http://www.flickr.com/photos/mifeng
 pygments: true
+markdown: kramdown
 exclude: ['CNAME', 'README.md', '_drafts']

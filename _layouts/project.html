@@ -10,7 +10,8 @@ layout: default
   <section class="post project">
     <header class="project-header">
       {% if page.icon %}
-      <img class="project-icon" alt="{{ page.title }} icon" src="{{ page.icon }}" height="48" width="48">
+      <img class="project-icon" alt="{{ page.title }} icon"
+           src="{{ page.icon }}" height="48" width="48">
       {% endif %}
 
       <h2 class="project-title">{{ page.title }}</h2>
@@ -18,17 +19,23 @@ layout: default
       <p class="project-meta">
         {{ page.date | date: "%b, %Y" }} |
         Info:
-      {% if page.site %}
-        <a href="{{ page.site }}" title="Website for {{ page.title }}" target="_blank">Website</a>
-        {% if page.source or page.product %}, {% endif %}
-      {% endif %}
-      {% if page.product %}
-        <a href="{{ page.product }}" title="Download {{ page.title }}" target="_blank">Download</a>
-        {% if page.source %}, {% endif %}
-      {% endif %}
-      {% if page.source %}
-        <a href="{{ page.source }}" title="Source code for {{ page.title }}" target="_blank">Source Code</a>
-      {% endif %}
+        {% if page.site %}
+          <a href="{{ page.site }}" title="Visit {{ page.title }}" target="_blank">
+            Website
+          </a>
+          {% if page.source or page.product %}, {% endif %}
+        {% endif %}
+        {% if page.product %}
+          <a href="{{ page.product }}" title="Download {{ page.title }}" target="_blank">
+            Download
+          </a>
+          {% if page.source %}, {% endif %}
+        {% endif %}
+        {% if page.source %}
+          <a href="{{ page.source }}" title="View Source Code" target="_blank">
+            Source Code
+          </a>
+        {% endif %}
       </p>
     </header>
 
@@ -66,15 +73,19 @@ layout: default
 
     {% for project in site.categories.project %}
       {% if getnext %}
-          <a href="{{project.url}}" title="Next Post: {{project.title}}">{{project.title}} &raquo; </a>
+        <a href="{{project.url}}" title="Next Post: {{project.title}}">
+          {{project.title}} &raquo;
+        </a>
         {% assign getnext = false %}
       {% endif %}
 
       {% if project.title == page.title %}
         <div class="pure-u-1-2 prev-post">
-        {% if previous %}
-          <a href="{{previous.url}}" title="Previous Post: {{previous.title}}">&laquo; {{previous.title}}</a>
-        {% endif %}
+          {% if previous %}
+            <a href="{{previous.url}}" title="Previous Post: {{previous.title}}">
+              &laquo; {{previous.title}}
+            </a>
+          {% endif %}
         </div>
         {% assign getnext = true %}
         <div class="pure-u-1-2 next-post">
@@ -82,6 +93,6 @@ layout: default
 
       {% assign previous = project %}
     {% endfor %}
-        </div>
+    </div>
   </div>
 </div>

@@ -10,11 +10,14 @@ script: ['js/home.js']
   <section class="about">
     <header class="about-header">
       <h1 class="about-title">
-        <span class="greeting">Hi</span>, I am {{ site.author_abbr }} <span class="hidden-sm">:)</span>
+        <span class="greeting">Hi</span>,
+        I am {{ site.author_abbr }}
+        <span class="hidden-sm">:)</span>
       </h1>
       <p class="about-meta">
         This is my page.
-        I am at <a href="{{ site.social.github }}" title="github - zhuochun">Github</a>,
+        I am at
+        <a href="{{ site.social.github }}" title="github - zhuochun">Github</a>,
         <a href="{{ site.social.stackoverflow }}" title="stack overflow - mifeng">Stack Overflow</a>,
         <a href="{{ site.social.flickr }}" title="flickr - mifeng">Flickr</a>, and
         <a href="{{ site.social.linkedin }}" title="linkedin - zhuochun">LinkedIn</a> as well.
@@ -52,7 +55,8 @@ script: ['js/home.js']
 
 <div class="projects">
   <h3 class="content-subhead">
-    Project Highlights <a href="{{ site.page.project }}" title="Bicrement Projects">MORE &raquo;</a>
+    Project Highlights
+    <a href="{{ site.page.project }}" title="Bicrement Projects">MORE &raquo;</a>
   </h3>
 
 {% for project in site.categories.project %}

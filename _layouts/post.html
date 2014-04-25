@@ -29,7 +29,9 @@ layout: default
 
       {% if previous.url %}
         {% unless previous.categories contains 'project' %}
-          <a href="{{previous.url}}" title="Previous Post: {{previous.title}}">&laquo; {{previous.title}}</a>
+        <a href="{{previous.url}}" title="Previous Post: {{previous.title}}">
+          &laquo; {{previous.title}}
+        </a>
         {% endunless %}
       {% endif %}
     </div>
@@ -42,7 +44,9 @@ layout: default
 
       {% if next.url %}
         {% unless next.categories contains 'project' %}
-          <a href="{{next.url}}" title="Next Post: {{next.title}}">{{next.title}} &raquo;</a>
+        <a href="{{next.url}}" title="Next Post: {{next.title}}">
+          {{next.title}} &raquo;
+        </a>
         {% endunless %}
       {% endif %}
     </div>
