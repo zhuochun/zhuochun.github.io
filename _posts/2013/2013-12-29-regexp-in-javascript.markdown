@@ -134,7 +134,7 @@ Examples:
 
 ## References
 
-- [Regular Expressions - JavaScript | MDN](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular Expressions - JavaScript](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions)
 - [Regex Tutorial - Lookahead and Lookbehind Zero-Length Assertions](http://www.regular-expressions.info/lookaround.html)
 - [Best of Fluent 2012: Demystifying Regular Expressions](http://www.youtube.com/watch?v=EkluES9Rvak)
 - [Ruby Conf 2013 - Beneath The Surface: Harnessing the True Power of Regular Expressions in Ruby](http://www.youtube.com/watch?v=JfwS4ibJFDw&list=WL2C5B38F754406DB8)

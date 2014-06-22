@@ -9,7 +9,7 @@
         this.title = title;
 
         this.id = "";
-        this.sid = title.toLowerCase().replace(/[^a-z ]/g, "").replace(/\s/g, "_");
+        this.sid = title.toLowerCase().replace(/[^a-z ]/g, "").replace(/\s/g, "-");
         this.child = [];
         this.parent = null;
     }
@@ -19,14 +19,14 @@
         node.parent = this;
     };
 
-    var list = [], current = null, prefix = 'heading-';
+    var list = [], current = null, prefix = "heading-";
 
     function insertNode(current, node) {
         if (current === null) {
             node.id = prefix + (list.length + 1);
             list.push(node);
         } else if (current.tag < node.tag) {
-            node.id = current.id + '-' + (current.child.length + 1);
+            node.id = current.id + "-" + (current.child.length + 1);
             current.addChild(node);
         } else if (current.tag === node.tag) {
             if (current.parent === null) {

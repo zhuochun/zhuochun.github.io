@@ -1,10 +1,15 @@
 <div class="sidebar pure-u sidebar-color-{{ page.tags | size }}">
-  <header class="header {% if page.menu %} with-menu {% endif %}">
+  <header class="header {% if page.menu %}with-menu{% endif %}">
     <hgroup>
     <h1 class="brand-title">
-      <a href="{% if page.project %}{{ site.page.project }}
-        {% elsif page.categories %}{{ site.page.blog }}
-        {% else %}{{ site.page.home }}{% endif %}">{{ site.title }}</a></h1>
+    {% if page.project %}
+      <a href="{{ site.page.project }}">{{ site.title }}</a>
+    {% elsif page.categories %}
+      <a href="{{ site.page.blog }}">{{ site.title }}</a>
+    {% else %}
+      <a href="{{ site.page.home }}">{{ site.title }}</a>
+    {% endif %}
+    </h1>
     <h2 class="brand-tagline">{{ site.subtitle }}</h2>
     </hgroup>
     {% if page.menu %}

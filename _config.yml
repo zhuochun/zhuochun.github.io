@@ -1,11 +1,18 @@
+# Site Settings
 title: Bicrement
 name: Bicrement
-subtitle: Where (Progress++)++
-url: http://www.bicrement.com
-description: Bicrement is about making (progress++)++.
-author: Wang Zhuochun
+subtitle: "Where (Progress++)++"
+description: "Bicrement is about making (progress++)++."
+baseurl: ""
+url: "http://www.bicrement.com"
+email: zhuochun@hotmail.com
+
+# Author
+author: "Wang Zhuochun"
 author_abbr: Zhuochun
-author_description:
+author_description: ""
+
+# Pages
 page:
     home: /
     blog: /blog/
@@ -18,6 +25,8 @@ social:
     stackoverflow: http://stackoverflow.com/users/889972/mifeng
     twitter: https://twitter.com/zhuochun
     flickr: http://www.flickr.com/photos/mifeng
-pygments: true
+
+# Build Settings
+highlighter: pygments
 markdown: kramdown
 exclude: ['CNAME', 'README.md', '_drafts']
