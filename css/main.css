@@ -177,7 +177,7 @@ a:focus {
     color: #fff;
 
     padding-top: 10px;
-    padding-right: 20px; 
+    padding-right: 20px;
     padding-bottom: 10px;
     padding-left: 50px;
 
@@ -234,15 +234,12 @@ a:focus {
 }
 
 .project-icon {
-    border-radius: 50px;
-    float: right;
-    margin-top: .3em;
-    margin-left: .3em;
+    border-radius: 90px;
 }
 
 .project .project-icon {
     float: left;
-    margin-right: 1.3em;
+    margin-right: 1em;
 }
 
 .post-date {
