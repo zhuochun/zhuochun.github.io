@@ -90,7 +90,7 @@ admin.editor?   # => true
 
 Based on roles, we could restrict `Admin` registration to `super_admins` only.
 
-{% highlight bash %}
+{% highlight ruby %}
 class Admins::RegistrationsController < Devise::RegistrationsController
   # disable default no_authentication action
   skip_before_action :require_no_authentication, only: [:new, :create, :cancel]
@@ -110,6 +110,20 @@ class Admins::RegistrationsController < Devise::RegistrationsController
     unless resource.super_admin?
       redirect_to root_path
     end
+  end
+end
+{% endhighlight %}
+
+## After Sign In
+
+To redirect users to a specific page on successful sign in/out, add this to `ApplicationController`:
+
+{% highlight ruby %}
+class ApplicationController < ActionController::Base
+  protected
+
+  def after_sign_in_path_for(resource)
+    # return the path based on resource
   end
 end
 {% endhighlight %}
