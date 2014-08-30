@@ -5,11 +5,12 @@ subtitle: "Where (Progress++)++"
 description: "Bicrement is about making (progress++)++."
 baseurl: ""
 url: "http://www.bicrement.com"
-email: zhuochun@hotmail.com
+permalink: "/articles/:year/:title.html"
 
 # Author
 author: "Wang Zhuochun"
 author_abbr: Zhuochun
+author_email: zhuochun@hotmail.com
 author_description: ""
 
 # Pages
