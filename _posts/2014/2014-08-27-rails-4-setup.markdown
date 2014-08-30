@@ -28,11 +28,11 @@ Edit `config/database.yml` to make sure DB setup is correct.
 
 ## Setup RSpec and Capybara
 
-Follow [RSpec Setup in Rails 4](http://www.bicrement.com/rails/2014/08/28/rspec-setup-in-rails-4.html).
+Follow [RSpec Setup in Rails 4](http://www.bicrement.com/articles/2014/rspec-setup-in-rails-4.html).
 
 ## Setup Bootstrap
 
-Add gems to Gemfile:
+Use [42dev/bower-rails](https://github.com/42dev/bower-rails) or add gems to Gemfile:
 
 {% highlight ruby %}
 gem 'bootstrap-sass', '~> 3.2.0'
