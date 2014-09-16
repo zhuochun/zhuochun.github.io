@@ -7,7 +7,9 @@ title: Projects
   <h3 class="content-subhead">My Projects</h3>
 
   {% for project in site.categories.project %}
-    {% include project.html %}
+    {% unless project.hidden %}
+      {% include project.html %}
+    {% endunless %}
   {% endfor %}
 
   <section class="project">
@@ -15,7 +17,7 @@ title: Projects
       <h2 class="project-title">
         <a href="{{ site.social.github }}" title="GitHub">GitHub »</a>
       </h2>
-      <p class="project-meta">Visit my GitHub and more projects.</p>
+      <p class="project-meta">Visit my GitHub for more projects.</p>
     </header>
   </section>
 
@@ -25,7 +27,7 @@ title: Projects
       <h2 class="project-title">
         <a href="http://www.mifengtd.cn" title="褪墨・时间管理">Mifengtd.cn »</a>
       </h2>
-      <p class="project-meta">I also operate this Chinese blog.</p>
+      <p class="project-meta">I also operate this popular Chinese website.</p>
     </header>
   </section>
 </div>

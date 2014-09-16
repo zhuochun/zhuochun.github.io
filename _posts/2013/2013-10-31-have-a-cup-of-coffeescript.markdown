@@ -181,4 +181,5 @@ weatherReport = (location) ->
 
 - [Official Site](http://coffeescript.org/)
 - [The Little Book on CoffeeScript](http://arcturo.github.io/library/coffeescript/)
+- [CoffeeScript Cookbook](http://coffeescriptcookbook.com/)
 - [Smooth CoffeeScript](http://autotelicum.github.com/Smooth-CoffeeScript/)

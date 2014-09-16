@@ -1,14 +1,22 @@
-{% if page.menu or page.script %}
-  <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
-  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+{% if page.menu or page.search or page.script %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
 {% endif %}
 
 {% if page.menu %}
-  <script src="/js/headings.js"></script>
+<script src="/js/headings.js" async></script>
+{% elsif page.search %}
+<script src="/js/search.js" async></script>
 {% endif %}
 
-{% if page.script %}
-  {% for script in page.script %}
-  <script src="{{ script }}"></script>
-  {% endfor %}
-{% endif %}
+{% if page.script %}{% for script in page.script %}
+<script src="{{ script }}" async></script>
+{% endfor %}{% endif %}
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-35844116-3', 'auto');
+ga('send', 'pageview');
+</script>

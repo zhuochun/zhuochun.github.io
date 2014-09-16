@@ -4,8 +4,8 @@ note: true
 published: true
 title: 'Globbing Patterns'
 date: 2013-12-31 22:41:27
-tags: UNIX Glob
-categories: UNIX
+tags: Unix Glob
+categories: Unix
 ---
 
 > Globbing is sometimes used to refer to pattern matching based on wildcard characters.

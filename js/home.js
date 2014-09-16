@@ -1,19 +1,16 @@
 $(function() {
-    function sayaword() {
-        var hour = new Date().getHours();
+    var date = new Date();
 
-        return hour <=  6 ? 'Hello' :
-            hour <= 12 ? 'Good morning' :
-            hour <= 18 ? 'Good afternoon' :
-            hour <= 20 ? 'Good evening' : 'Hi';
+    function sayaword() {
+        var hour = date.getHours();
+
+        return hour <=  5 ? "Hello" :
+               hour <= 12 ? "Good morning" :
+               hour <= 18 ? "Good afternoon" :
+                            "Good evening";
     }
 
-    $('.greeting').html(sayaword());
+    $(".greeting").html(sayaword());
 
-    // $('.dynamo').dynamo({
-    //     delay: 1000,
-    //     center: true,
-    //     lines: [ 'listen', 'think aloud', 'learn fast',
-    //              'code', 'photograph', 'write', 'run']
-    // });
+    $(".sidebar").addClass("sidebar-color-" + date.getDay());
 });

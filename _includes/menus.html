@@ -1,17 +1,21 @@
-<div class="sidebar pure-u sidebar-color-{{ page.tags | size }}">
+{% capture color %}{% if page.color %}{{ page.color }}{% else %}{{ page.tags | size }}{% endif %}{% endcapture %}
+<div class="sidebar pure-u sidebar-color-{{ color }}">
   <header class="header {% if page.menu %}with-menu{% endif %}">
-    <hgroup>
     <h1 class="brand-title">
     {% if page.project %}
-      <a href="{{ site.page.project }}">{{ site.title }}</a>
+      <a href="{{ site.page.project }}">{{ site.title }}<sup>project</sup></a>
     {% elsif page.categories %}
-      <a href="{{ site.page.blog }}">{{ site.title }}</a>
+      <a href="{{ site.page.blog }}">{{ site.title }}<sup>blog</sup></a>
     {% else %}
       <a href="{{ site.page.home }}">{{ site.title }}</a>
     {% endif %}
     </h1>
     <h2 class="brand-tagline">{{ site.subtitle }}</h2>
-    </hgroup>
+    {% if page.search %}
+    <form class="pure-form">
+      <input id="search" type="text" placeholder="Search..." class="pure-input-rounded">
+    </form>
+    {% endif %}
     {% if page.menu %}
     <nav id="content-menu">
       <h3>Article Contents</h3>

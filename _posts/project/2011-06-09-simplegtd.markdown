@@ -4,6 +4,7 @@ title: 'SimpleGTD'
 project: simplegtd
 date: 2011-06-09 10:10:10
 highlight: false
+hidden: true
 good: 1
 description: 'A web tool to exercise the Getting Things Done time management system.'
 tools: ['PHP', 'JavaScript', 'HTML']

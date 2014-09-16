@@ -3,10 +3,6 @@ layout: default
 ---
 
 <div class="posts">
-  <h3 class="content-subhead">
-    Project: {{ page.title }}
-  </h3>
-
   <section class="post project">
     <header class="project-header">
       {% if page.icon %}
@@ -66,31 +62,35 @@ layout: default
 {% endif %}
 
 <div class="page-nav">
-  <div class="pure-g-r">
+  <div class="pure-g">
     {% assign previous = nil %}
-    {% assign getnext = false %}
+    {% assign hasNext = false %}
 
     {% for project in site.categories.project %}
-      {% if getnext %}
-        <a href="{{project.url}}" title="Next Post: {{project.title}}">
-          {{project.title}} &raquo;
-        </a>
-        {% assign getnext = false %}
+      {% if hasNext %}
+        {% unless project.hidden %}
+          <a href="{{project.url}}" title="Next Project: {{project.title}}">
+            {{project.title}} &raquo;
+          </a>
+          {% assign hasNext = false %}
+        {% endunless %}
       {% endif %}
 
       {% if project.title == page.title %}
         <div class="pure-u-1-2 prev-post">
           {% if previous %}
-            <a href="{{previous.url}}" title="Previous Post: {{previous.title}}">
+            <a href="{{previous.url}}" title="Previous Project: {{previous.title}}">
               &laquo; {{previous.title}}
             </a>
           {% endif %}
         </div>
-        {% assign getnext = true %}
+        {% assign hasNext = true %}
         <div class="pure-u-1-2 next-post">
       {% endif %}
 
-      {% assign previous = project %}
+      {% unless project.hidden %}
+        {% assign previous = project %}
+      {% endunless %}
     {% endfor %}
     </div>
   </div>

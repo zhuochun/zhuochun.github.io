@@ -1,9 +1,7 @@
 // Author: Wang Zhuochun
 // Url: http://blog.bicrement.com
 
-(function ($) {
-    "use strict";
-
+$(function () {
     function Node(tag, title) {
         this.tag = tag;
         this.title = title;
@@ -33,8 +31,7 @@
                 node.id = prefix + (list.length + 1);
                 list.push(node);
             } else {
-                node.id = current.parent.id + "-" +
-                            (current.parent.child.length + 1);
+                node.id = current.parent.id + "-" + (current.parent.child.length + 1);
                 current.parent.addChild(node);
             }
         } else {
@@ -48,8 +45,6 @@
 
         insertNode(current, node);
 
-        //$this.append("<span id='" + node.id + "'>&nbsp;</span>");
-
         current = node;
     });
 
@@ -60,8 +55,9 @@
             result += "<li><a href='#" + arr[i].sid + "'>" + 
                     arr[i].title + "</a>";
 
-            if (arr[i].child.length > 0)
+            if (arr[i].child.length > 0) {
                 result += "<ul class='sub-menu'>" + dump(arr[i].child, true) + "</ul>";
+            }
 
             result += "</li>";
         }
@@ -71,4 +67,4 @@
 
     $("#content-menu").append("<ol>" + dump(list) + "</ol>");
 
-})(jQuery);
+});

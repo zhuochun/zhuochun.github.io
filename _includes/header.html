@@ -8,25 +8,20 @@
 
   <title>{{ page.title }} | {{ site.title }}</title>
 
+{% capture description %}
+  {% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
+{% endcapture %}
   <meta name="author" content="{{ site.author }}">
-{% if page.description %}
-  <meta name="description" content="{{ page.description }}">
-{% else %}
-  <meta name="description" content="{{ site.description }}">
-{% endif %}
+  <meta name="description" content="{{ description | strip_newlines | replace: '  ','' }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - RSS" href="{{ site.url }}/feed.xml" />
 
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+{% if page.date %}
   <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+{% endif %}
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
-  <script>
-      var _gaq=[['_setAccount','UA-35844116-3'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src='//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
+  {% include scripts.html %}
 </head>
 <body>
