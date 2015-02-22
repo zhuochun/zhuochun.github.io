@@ -30,4 +30,8 @@ social:
 # Build Settings
 highlighter: pygments
 markdown: kramdown
+# Support Github Flavored Markdown
+kramdown:
+  input: GFM
+# Exclude files
 exclude: ['CNAME', 'README.md', '_drafts']
