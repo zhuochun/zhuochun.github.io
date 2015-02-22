@@ -1,0 +1,28 @@
+# static engine of your blog
+siteEngine: "jekyll"
+# root directory of your blog
+siteLocalDir: "/Users/zhuochun/Documents/Programming/Web/zhuochun.github.io"
+# directory to drafts from the root of siteLocalDir
+siteDraftsDir: "_drafts/"
+# directory to posts from the root of siteLocalDir
+sitePostsDir: "_posts/{year}/"
+# directory to images from the root of siteLocalDir
+siteImagesDir: "images/{year}/{month}/"
+# URL to your blog
+siteUrl: "http://www.bicrement.com/"
+# URLs to tags/posts/categories JSON file
+urlForTags: "http://www.bicrement.com/blog/tags.json"
+urlForPosts: "http://www.bicrement.com/blog/posts.json"
+urlForCategories: "http://www.bicrement.com/blog/categories.json"
+# front matter template
+frontMatter: """
+---
+layout: <layout>
+menu: true
+note: false
+title: '<title>'
+date: <date>
+---
+"""
+# image tag template
+imageTag: "![<alt>](<src>)"
