@@ -3,7 +3,7 @@ layout: project
 title: 'Chatty - Meet New Friends'
 project: Chatty
 date: 2013-06-19 10:10:10
-highlight: true
+highlight: false
 good: 3
 description: 'A location based social app to meet new friends nearby you.'
 tools: ['PhoneGap', 'JavaScript', 'Android', 'Parse']
