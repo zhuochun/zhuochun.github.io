@@ -10,7 +10,7 @@ A node list is a **live** HTML collection of nodes. This means that changes on
 the DOM tree are going to be reflected on the collection.
 (*If the NodeList is the return value of `document.querySelectorAll`, it is NOT live.*)
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var nodeList = document.getElementsByTagName('p');
 Object.prototype.toString.call(nodeList);
 // "[object HTMLCollection]"
@@ -36,7 +36,7 @@ Let's see the suggestion extracted from
 This means that getting a property like length is <code>O(n)</code>, and
 iterating over the list by re-checking the length will be <code>O(n^2)</code>.</p>
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var paragraphs = document.getElementsByTagName('p');
 for (var i = 0; i < paragraphs.length; i++) {
     doSomething(paragraphs[i]);
@@ -45,7 +45,7 @@ for (var i = 0; i < paragraphs.length; i++) {
 
 <p>It is better to do this instead:</p>
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var paragraphs = document.getElementsByTagName('p');
 for (var i = 0, paragraph; paragraph = paragraphs[i]; i++) {
     doSomething(paragraph);
@@ -56,7 +56,7 @@ for (var i = 0, paragraph; paragraph = paragraphs[i]; i++) {
 However, you should be careful when using Google's for-loop if you are creating
 new DOM elements and adding them to the `document`:
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var paragraphs = document.getElementsByTagName('p');
 for (var i = 0, paragraph; paragraph = paragraphs[i]; i++) {
     paragraph.appendChild( document.createElement('p') );
@@ -75,7 +75,7 @@ and [2](http://jsperf.com/iterate-nodelist-in-loop-2) with several different for
 
 I recommend using the following for-loop, which I always use. It prevents infinite loop and is fast as well.
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var paragraphs = document.getElementsByTagName('p');
 for (var i = 0, len = paragraphs.length; i < len; i++) {
     doSomething(paragraphs[i]);

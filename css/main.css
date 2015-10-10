@@ -333,14 +333,6 @@ img {
     text-shadow: 0 1px 1px #333;
 }
 
-.highlight {
-    background: #f3f3f3;
-}
-
-.highlight .lineno {
-    padding: 0 .3em;
-}
-
 table {
     background-color: transparent;
     border-collapse: collapse;
@@ -372,6 +364,9 @@ blockquote {
 
 pre {
     padding-left: 0.5em;
+    white-space: pre;    
+    word-wrap: normal;
+    overflow-x: scroll;
 }
 
 pre code {
@@ -382,6 +377,12 @@ pre code {
 code {
     color: #999;
     background-color: #f9f9f9;
+}
+
+.highlight, .code {
+    background: #f3f3f3;
+    font-size: .9em;
+    line-height: 1.5em;
 }
 
 .page-nav {

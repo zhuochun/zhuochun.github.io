@@ -31,7 +31,14 @@ social:
 highlighter: pygments
 markdown: kramdown
 # Support Github Flavored Markdown
+# http://kramdown.gettalong.org/options.html
 kramdown:
   input: GFM
+  coderay_wrap: div
+  coderay_line_numbers: nil
+  coderay_line_number_start: 1
+  coderay_tab_width: 2
+  coderay_bold_every: false
+  coderay_css: style
 # Exclude files
 exclude: ['CNAME', 'README.md', '_drafts']

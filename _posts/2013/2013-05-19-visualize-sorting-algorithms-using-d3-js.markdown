@@ -15,7 +15,7 @@ algorithm visualization using it.
 
 ## Code demystify
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var w = 300, h = 100, svg;
 
 svg = d3.select("#graph")
@@ -26,7 +26,7 @@ svg = d3.select("#graph")
 
 This creates a `svg` using d3.js with `width = 300` and `height = 100`.
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 var rects = svg.selectAll("rect")
                .data([10, 20])
                .enter()
@@ -38,7 +38,7 @@ D3.js provides `enter`, where you can create new nodes for incoming data (`[10, 
 
 At this step, these `rects` are not assigned with information of its width, height and position yet.
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 rects.attr("x", function(d, i) { return i * 21; })
      .attr("y", h)
      .attr("width", 20)
@@ -51,7 +51,7 @@ Above lines will assign `<x, y>` position and `<width, height>` to each `rect`.
 
 To update the `rects`, you will do the similar using new data and `transition`:
 
-{% highlight javascript linenos %}
+{% highlight javascript %}
 function redraw(newData) {
     var rects = svg.selectAll("rect")
                    .data(newData)
