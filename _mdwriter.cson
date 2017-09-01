@@ -1,7 +1,19 @@
+# Markdown-Writer for Atom
+# https://atom.io/packages/markdown-writer
+#
+# To find latest and default configurations, refer to:
+# https://github.com/zhuochun/md-writer/blob/master/lib/config.cson
+#
+# NOTE 1: After edit, please run command `Window: Reload` or
+#         Use menu: View -> Developer -> Reload Window.
+#
+# NOTE 2: Strings need to be quoted.
+
 # static engine of your blog
 siteEngine: "jekyll"
 # root directory of your blog
-siteLocalDir: "/Users/zhuochun/Documents/Programming/Web/zhuochun.github.io"
+# leave empty to use atom's current project (recommended)
+siteLocalDir: ""
 # directory to drafts from the root of siteLocalDir
 siteDraftsDir: "_drafts/"
 # directory to posts from the root of siteLocalDir
@@ -24,5 +36,7 @@ title: '<title>'
 date: <date>
 ---
 """
+# whether rename filename based on title in front matter when publishing
+publishRenameBasedOnTitle: false
 # image tag template
 imageTag: "![<alt>](<src>)"
