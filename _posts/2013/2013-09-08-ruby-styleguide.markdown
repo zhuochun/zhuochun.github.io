@@ -3,14 +3,14 @@ layout: post
 menu: true
 note: true
 published: true
-title: "Learn from Ruby Style Guides"
+title: "Study Ruby Style Guides"
 date: 2013-09-08 19:19:19
 tags: Ruby
 categories: Ruby
 ---
 
 I always think reading style guides is one of the fast ways to grasp
-the knowledge of a new language. Some guide quotes on Ruby:
+the knowledge of a new language. Here are some snippets from various Ruby style guides:
 
 ## Coding Style
 
@@ -70,6 +70,7 @@ end
 {% highlight ruby %}
 # bad - how many 0s are there?
 num = 1000000
+
 # good - much easier to parse for the human brain
 num = 1_000_000
 {% endhighlight %}
@@ -97,6 +98,7 @@ num = 1_000_000
 if some_condition
   do_something
 end
+
 # good
 do_something if some_condition
 {% endhighlight %}

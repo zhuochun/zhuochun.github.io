@@ -28,17 +28,15 @@ social:
     flickr: http://www.flickr.com/photos/mifeng
 
 # Build Settings
-highlighter: pygments
 markdown: kramdown
+encoding: UTF-8
+highlighter: rouge
 # Support Github Flavored Markdown
 # http://kramdown.gettalong.org/options.html
 kramdown:
   input: GFM
-  coderay_wrap: div
-  coderay_line_numbers: nil
-  coderay_line_number_start: 1
-  coderay_tab_width: 2
-  coderay_bold_every: false
-  coderay_css: style
+  hard_wrap: false
+# https://help.github.com/en/articles/configuring-jekyll
+gfm_quirks: paragraph_end
 # Exclude files
-exclude: ['CNAME', 'README.md', '_drafts']
+exclude: ['Gemfile', 'Gemfile.lock', 'CNAME', 'README.md', '_drafts']

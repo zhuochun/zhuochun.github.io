@@ -16,11 +16,10 @@ script:
         <span class="hidden-sm">:)</span>
       </h1>
       <p class="about-meta">
-        This is my page.
+        Welcome to my page.
         I am at
         <a href="{{ site.social.github }}" title="github - zhuochun">GitHub</a>,
-        <a href="{{ site.social.stackoverflow }}" title="stack overflow - mifeng">Stack Overflow</a>,
-        <a href="{{ site.social.flickr }}" title="flickr - mifeng">Flickr</a>, and
+        <a href="{{ site.social.stackoverflow }}" title="stack overflow - mifeng">Stack Overflow</a> and
         <a href="{{ site.social.linkedin }}" title="linkedin - zhuochun">LinkedIn</a> as well.
       </p>
     </header>
@@ -39,7 +38,7 @@ script:
   </h3>
 
 {% assign onemore = false %}
-{% for post in site.posts limit:4 %}
+{% for post in site.posts limit:5 %}
   {% if post.project %}
     {% assign onemore = true %}
   {% else %}
@@ -50,19 +49,6 @@ script:
     {% if forloop.last and onemore %}
       {% include post.html %}
     {% endif %}
-  {% endif %}
-{% endfor %}
-</div>
-
-<div class="projects">
-  <h3 class="content-subhead">
-    Project Highlights
-    <a href="{{ site.page.project }}" title="Bicrement Projects">MORE &raquo;</a>
-  </h3>
-
-{% for project in site.categories.project %}
-  {% if project.highlight %}
-    {% include project.html %}
   {% endif %}
 {% endfor %}
 </div>

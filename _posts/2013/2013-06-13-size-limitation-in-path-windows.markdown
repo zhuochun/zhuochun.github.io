@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: "Why my user PATH is not included"
+title: "Why PATH is not included?"
 date: 2013-06-13 16:58:10
 tags: Windows
 categories: Windows
@@ -22,4 +22,4 @@ Afterwards, I found the answer [here](http://superuser.com/q/419360/162776):
 > then it started working again. So, I recommend that you try and shorten it up and
 > see if that will make a difference.
 
-_Ouch! Size limitation! Why are you doing this to me?_
+_Oops! Size limitation!_

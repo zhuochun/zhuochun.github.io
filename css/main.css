@@ -279,7 +279,6 @@ img {
     color: #444;
     line-height: 1.8em;
     font-size: 120%;
-    max-width: 40em;
 }
 
 .post-content h2 {
@@ -292,6 +291,10 @@ img {
 
 .post-content h4 {
     margin: 2.33em 0 0.83em;
+}
+
+.post-content p {
+    max-width: 60em;
 }
 
 .about-content {
@@ -364,7 +367,7 @@ blockquote {
 
 pre {
     padding-left: 0.5em;
-    white-space: pre;    
+    white-space: pre;
     word-wrap: normal;
     overflow-x: scroll;
 }
@@ -382,7 +385,7 @@ code {
 .highlight, .code {
     background: #f3f3f3;
     font-size: .9em;
-    line-height: 1.5em;
+    line-height: 1.3em;
 }
 
 .page-nav {
