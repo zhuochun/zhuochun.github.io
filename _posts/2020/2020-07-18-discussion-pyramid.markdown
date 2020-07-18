@@ -10,11 +10,11 @@ categories: "Mental Model"
 
 A quick snapshot of my mental model on discussing product features.
 
-![Discussion Pyramid](images/2020/07/discussion-pyramid.png)
+![Discussion Pyramid](/images/2020/07/discussion-pyramid.png)
 
 ## How to read it?
 
-### Level 1: What is the problem to be solved? For who? Why it is important?
+### Level 1: What is the problem to be solved? For who? Why is it important?
 
 This answers the [job to be done](https://jtbd.info/2-what-is-jobs-to-be-done-jtbd-796b82081cca).
 
@@ -24,7 +24,7 @@ This answers the [job to be done](https://jtbd.info/2-what-is-jobs-to-be-done-jt
 
 This answers the perspectives in reasoning above the problem.
 
-![Six or Nine](images/2020/07/different-perspectives.jpeg)
+![Six or Nine](/images/2020/07/different-perspectives.jpeg)
 
 ### Level 3: What are the possible solutions?
 
