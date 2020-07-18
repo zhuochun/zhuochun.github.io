@@ -34,6 +34,8 @@ menu: true
 note: false
 title: '<title>'
 date: <date>
+tags:
+categories:
 ---
 """
 # whether rename filename based on title in front matter when publishing
