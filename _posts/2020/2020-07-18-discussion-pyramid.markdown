@@ -44,7 +44,7 @@ Failed to communicate or align on the top levels results in bad executions at th
 
 Common conflicts:
 
-- Shaky work. E.g. when top levels are based on one-sided assumptions or competition driven.
+- Shaky work. E.g. when top levels are based on one-sided assumptions or the requirement is competition driven.
 - Losing the big pictures. E.g. getting questioned about the intent of the feature. solution is short-sighted or execution is not extensivable.
 - Bloated requirements. E.g. "We can do these together!" when the solution can lump multiple problems.
 
