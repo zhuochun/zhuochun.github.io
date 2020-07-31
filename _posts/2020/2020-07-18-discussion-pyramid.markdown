@@ -2,10 +2,10 @@
 layout: post
 menu: true
 note: false
-title: 'A Discussion Pyramid on Building Features'
+title: 'The Discussion Pyramid on Building Features'
 date: 2020-07-18 15:56
-tags: "Mental Model"
-categories: "Mental Model"
+tags: 'Mental Model'
+categories: 'Mental Model'
 ---
 
 A quick snapshot of my mental model on discussing product features.
@@ -22,7 +22,7 @@ This answers the [job to be done](https://jtbd.info/2-what-is-jobs-to-be-done-jt
 
 ### Level 2: Where the problem fits in?
 
-This answers the perspectives in reasoning above the problem.
+This answers the perspectives on reasoning above the problem.
 
 ![Six or Nine](/images/2020/07/different-perspectives.jpeg)
 
@@ -30,9 +30,13 @@ This answers the perspectives in reasoning above the problem.
 
 This answers the new workflows to solve the problem in the domain.
 
+![Design Alternatives for a Bridge](/images/2020/07/bridge-design-alternatives.PNG)
+
 ### Level 4: How to execute the solution?
 
-This answers the implementation details: time, skills or constraints.
+This answers the implementation details, dependencies-and constraints.
+
+![Iron Triangle of Constraints](/images/2020/07/constraints-triangle.png)
 
 ## How to use it?
 
@@ -45,7 +49,7 @@ Failed to communicate or align on the top levels results in bad executions at th
 Common conflicts:
 
 - Shaky work. E.g. when top levels are based on one-sided assumptions or the requirement is competition driven.
-- Losing the big pictures. E.g. getting questioned about the intent of the feature. solution is short-sighted or execution is not extensivable.
+- Lost the big pictures. E.g. getting questioned about the intent of the feature. solution is short-sighted or execution is not extensivable.
 - Bloated requirements. E.g. "We can do these together!" when the solution can lump multiple problems.
 
 ### The levels below constitute the levels above
