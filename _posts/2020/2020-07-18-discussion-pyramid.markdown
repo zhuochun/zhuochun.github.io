@@ -2,17 +2,17 @@
 layout: post
 menu: true
 note: false
-title: 'The Discussion Pyramid on Building Features'
+title: 'Pyramid on Building Features'
 date: 2020-07-18 15:56
 tags: 'Mental Model'
 categories: 'Mental Model'
 ---
 
-A quick snapshot of my mental model on discussing product features.
+A quick snapshot of my mental model (as an engineer) on discussing product features.
 
 ![Discussion Pyramid](/images/2020/07/discussion-pyramid.png)
 
-## How to read it?
+## How to read the graph?
 
 ### Level 1: What is the problem to be solved? For who? Why is it important?
 
@@ -22,13 +22,13 @@ This answers the [job to be done](https://jtbd.info/2-what-is-jobs-to-be-done-jt
 
 ### Level 2: Where the problem fits in?
 
-This answers the perspectives on reasoning above the problem.
+This reasons about different perspectives about the problem. Basically, identify which domains/areas to tackle the problem.
 
 ![Six or Nine](/images/2020/07/different-perspectives.jpeg)
 
 ### Level 3: What are the possible solutions?
 
-This answers the new workflows to solve the problem in the domain.
+This answers the new workflows to solve the problem inside the domain.
 
 ![Design Alternatives for a Bridge](/images/2020/07/bridge-design-alternatives.PNG)
 
