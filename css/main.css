@@ -369,7 +369,6 @@ pre {
     padding-left: 0.5em;
     white-space: pre;
     word-wrap: normal;
-    overflow-x: scroll;
 }
 
 pre code {
@@ -441,20 +440,7 @@ code {
 }
 
 .footer {
-    text-align: center;
-    padding: 1em 0;
-}
-
-.footer .pure-menu a {
-    color: #2c3e50;
-    font-size: 80%;
-}
-
-.footer .pure-menu a:hover,
-.footer .pure-menu a:focus {
-    color: #fff;
-    background: #34495e;
-    text-decoration: none;
+    padding: 2em 3em 0;
 }
 
 .credit {

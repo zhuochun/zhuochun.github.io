@@ -52,7 +52,7 @@ $(function () {
         var result = submenu ? "" : "<li><a href='#top'>Top</a></li>";
 
         for (var i = 0; i < arr.length; i++) {
-            result += "<li><a href='#" + arr[i].sid + "'>" + 
+            result += "<li><a href='#" + arr[i].sid + "'>" +
                     arr[i].title + "</a>";
 
             if (arr[i].child.length > 0) {
@@ -65,6 +65,9 @@ $(function () {
         return result;
     }
 
-    $("#content-menu").append("<ol>" + dump(list) + "</ol>");
+    if (list.length > 0) {
+        $("#content-menu").append("<h3>Table of Content</h3>");
+        $("#content-menu").append("<ol>" + dump(list) + "</ol>");
+    }
 
 });

@@ -2,9 +2,9 @@
 title: Bicrement
 name: Bicrement
 subtitle: "Where (Progress++)++"
-description: "Bicrement is about making (progress++)++."
+description: "Bicrement contains a learner's writing."
 baseurl: ""
-url: "http://www.bicrement.com"
+url: "https://www.bicrement.com"
 permalink: "/articles/:year/:title.html"
 
 # Author
@@ -22,10 +22,11 @@ page:
     project: /project/
 social:
     github: https://github.com/zhuochun
-    linkedin: http://www.linkedin.com/in/zhuochun
-    stackoverflow: http://stackoverflow.com/users/889972/mifeng
+    linkedin: https://www.linkedin.com/in/zhuochun
+    stackoverflow: https://stackoverflow.com/users/889972/mifeng
     twitter: https://twitter.com/zhuochun
-    flickr: http://www.flickr.com/photos/mifeng
+    substack: https://bicrement.substack.com/
+    flickr: https://www.flickr.com/photos/mifeng
 
 # Build Settings
 markdown: kramdown
