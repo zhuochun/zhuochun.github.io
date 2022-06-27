@@ -309,6 +309,10 @@ img {
     margin: 0;
 }
 
+.about-meta {
+    margin-bottom: 0.5em;
+}
+
 .post-category {
     margin: 0 0.1em;
     padding: 0.3em 1em;
@@ -440,7 +444,7 @@ code {
 }
 
 .footer {
-    padding: 2em 3em 0;
+    padding: 2em 3em;
 }
 
 .credit {
