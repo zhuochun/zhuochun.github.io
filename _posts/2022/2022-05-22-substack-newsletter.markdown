@@ -1,6 +1,6 @@
 ---
 layout: post
-menu: true
+menu: false
 note: false
 title: Start my writing project
 date: '2022-05-22 00:29'

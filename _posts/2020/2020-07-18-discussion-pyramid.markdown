@@ -4,8 +4,11 @@ menu: true
 note: false
 title: 'Pyramid on Building Features'
 date: 2020-07-18 15:56
-tags: 'Mental Model'
-categories: 'Mental Model'
+tags:
+  - Product
+  - Mental Model
+categories:
+  - Mental Model
 ---
 
 A quick snapshot of my mental model (as an engineer) on discussing product features.
