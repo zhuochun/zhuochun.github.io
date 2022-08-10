@@ -2,7 +2,7 @@
 layout: post
 menu: false
 note: false
-title: Start my writing project
+title: Started My Writing Project
 date: '2022-05-22 00:29'
 tags: Writing
 categories:
@@ -31,4 +31,6 @@ There is one thing I haven't decided, should I start quietly or loudly?
 Well. I will let my impulse decide at the right time.
 ```
 
-The 2nd post is published. If you are interested to read more, [subscribe](https://bicrement.substack.com/) :D
+The 2nd post is published recently.
+
+If you are interested to read more, [subscribe](https://bicrement.substack.com/) :D

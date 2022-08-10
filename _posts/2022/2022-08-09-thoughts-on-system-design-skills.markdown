@@ -11,16 +11,18 @@ categories:
   - Mental Model
 ---
 
-A brain dump of my thoughts on system design skills at different levels:
+A brain dump of my thoughts on system design skills at different levels.
 
-## Level 1
+One important note, one has to repeatly demonstrated at each level first, before moving on.
+
+## Level 1 - Junior
 
 Based on concrete requirements, can design, develop and launch work that fulfills all the requirements.
 
 - Scale: Service components or modules. Small to medium features.
-- Other points: Development process, code review, system stability/monitors, on-call and system know-what.
+- Other points: Development process, testing, code review, system stability/monitorings, on-call and system know-what.
 
-## Level 2
+## Level 2 - Matured Junior/Senior
 
 Before the requirements are finalized, can take the initiative to clarify requirements, discuss requirements based on the constraints of the existing system.
 
@@ -28,35 +30,36 @@ Before the requirements are finalized, can take the initiative to clarify requir
 - Similar: Migrating an existing mature service to a new tech stack.
 - Other points: Project planning (Tasks breakdown, estimations and follow the plan). Make sure all stakeholders know the status/outcomes of the project in a timely manner.
 
-## Level 3
+## Level 3 - Matured Senior/Staff
 
-Before the requirements are finalized, can grasp the essence of requirements and identify the volatile points, can start the system design without waiting for finished requirements, so that the requirements and the architecture can be carried out in parallel.
+Before the requirements are finalized, can grasp the essence of requirements and identify the volatile points, can start the system design without waiting for finalized requirements, so that the requirements and the system designing process can be carried out in parallel.
 
 - Scale: Medium-sized to large-sized features.
 - Similar: Migrate an important online service smoothly. Master different migration methods.
-- Other points: Effectively collaboration with different teams. Parallel development with different engineers (web/mobile/backend) whenever possible.
+- Other points: Effectively collaborate with multiple teams. Coordinate parallel development with different engineers (web/mobile/backend) whenever possible.
 
-## Level 4
+## Level 4 - Staff
 
-Since the beginning of requirment collection, can participate as an expert, can go one step further in understanding the requirements, can create an evolving system design or system framework, so that the design/framework can provide years of support for the long-term goals.
+Since the beginning of requirment collection, can participate as an technical expert, can go one step further in understanding the requirements, can create an evolving system design that can stand in 2~3 years of iterations and aligned to the long-term goals.
 
 - Scale: Large-sized features.
-- Similar: Refactor or breakdown a core system to support the next level of system scale. Lead multiple people to execute in parallel.
-- Similar: Platformize a core system, and successfully onboarded multiple users. Support and maintain the platform for continuous development.
+- Similar: Refactor or breakdown a core system to support a next level of system scale, and lead multiple engineer to execute in parallel.
+- Similar: Platformize a core system, and successfully onboarded multiple users. The platform can evolve and stand in iterations across time.
 - Other points: Ability to train new engineers. Lead a team to perform the tasks.
 
-## Level 5
+## Level 5 - Senior Staff
 
-Based on in-depth understanding of requirements and industry knowledge, able to propose and launch new system design or new frameworks in important parts of a complex production systems, leads to new empowerment of growth and scale.
+Based on in-depth understanding of requirements and industry knowledge, able to propose and launch new complex system in important parts of a sophisticated production systems, lead to new empowerment of growth and scale.
 
 - Scale: Large-sized, multi-staged projects.
-- Similar: Sort out and refine existing requirements in a large and complex product, identify and iterate new architecture improvments/migrations with minimal impact on existing systems.
-- Similar: A breakthrough change/improvement in a core area and lead to a comparative advantage.
-- Other points: Ability to persuade others. Lead multiple teams.
+- Similar: Sort out and refine existing requirements in a large and complex product, then identify and iterate new architecture improvments/migrations with minimal downtime impact on existing systems.
+- Similar: A breakthrough change/improvement in a core area, that lead to a comparative advantage for the orgnization.
+- Other points: Ability to persuade others. Lead multiple engineering teams.
 
-## Level 6
+## Level 6 - Senior Staff?
 
-Bridge business empowerment, organizational capability and architecture design, able to find the new direction, drive a reasonable strategy to make it successful.
+Can bridge business, organizational capability and architecture design, able to find a new direction, create and drive a reasonable strategy to make it successful.
 
 - Scale: Organizational-wide projects.
+- Similar: Organization migrations to the cloud/multi-cloud.
 - Other points: Organizational skills.
