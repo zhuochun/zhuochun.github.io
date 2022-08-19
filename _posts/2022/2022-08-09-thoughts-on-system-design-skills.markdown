@@ -17,37 +17,37 @@ One important note, one has to repeatly demonstrated at each level first, before
 
 ## Level 1 - Junior
 
-Based on concrete requirements, can design, develop and launch work that fulfills all the requirements.
+Based on concrete task requirements, can design, develop, test and launch work that fulfills all the requirements.
 
 - Scale: Service components or modules. Small to medium features.
-- Other points: Development process, testing, code review, system stability/monitorings, on-call and system know-what.
+- Other skills: Familiar with the development process, unit/integrated testing, code review, system stability/monitorings, on-call and system know-what.
 
 ## Level 2 - Matured Junior/Senior
 
-Before the requirements are finalized, can take the initiative to clarify requirements, discuss requirements based on the constraints of the existing system.
+Before the task/product requirements are finalized, can take the initiative to clarify details, discuss requirements based on the constraints of the existing system.
 
 - Scale: Medium-sized features. Development of a new microservice (non-critical).
 - Similar: Migrating an existing mature service to a new tech stack.
-- Other points: Project planning (Tasks breakdown, estimations and follow the plan). Make sure all stakeholders know the status/outcomes of the project in a timely manner.
+- Other points: Project planning (Write engineering spec, tasks breakdown, estimations, execution and retrospection). Make sure all stakeholders know the status/outcomes of the project in a timely manner.
 
-## Level 3 - Matured Senior/Staff
+## Level 3 - Matured Senior/Lead
 
-Before the requirements are finalized, can grasp the essence of requirements and identify the volatile points, can start the system design without waiting for finalized requirements, so that the requirements and the system designing process can be carried out in parallel.
+Before the product requirements are finalized, can grasp the essence of requirements and identify the volatile points, can start the system design without waiting for finalized requirements, so that the requirements and the system designing process can be carried out in parallel.
 
 - Scale: Medium-sized to large-sized features.
 - Similar: Migrate an important online service smoothly. Master different migration methods.
-- Other points: Effectively collaborate with multiple teams. Coordinate parallel development with different engineers (web/mobile/backend) whenever possible.
+- Other points: Effectively collaborate with multiple teams/stakeholders. Coordinate parallel development with different engineers (web/mobile/backend) whenever possible.
 
-## Level 4 - Staff
+## Level 4 - Lead
 
-Since the beginning of requirment collection, can participate as an technical expert, can go one step further in understanding the requirements, can create an evolving system design that can stand in 2~3 years of iterations and aligned to the long-term goals.
+Since the beginning of user requirment collection, can participate as an technical expert, go one step further in understanding the problem, can create and lead an evolving system design that can stand in >=2 years of continuous iterations.
 
 - Scale: Large-sized features.
-- Similar: Refactor or breakdown a core system to support a next level of system scale, and lead multiple engineer to execute in parallel.
+- Similar: Refactor or breakdown a core system to support a next level of system scale, and lead multiple engineer to execute at different parts in parallel.
 - Similar: Platformize a core system, and successfully onboarded multiple users. The platform can evolve and stand in iterations across time.
-- Other points: Ability to train new engineers. Lead a team to perform the tasks.
+- Other points: Deal with complexity and ambiiguity. Drive alignment among stakeholders. Ability to train new engineers. 
 
-## Level 5 - Senior Staff
+## Level 5 - Matured Lead/Staff
 
 Based on in-depth understanding of requirements and industry knowledge, able to propose and launch new complex system in important parts of a sophisticated production systems, lead to new empowerment of growth and scale.
 
