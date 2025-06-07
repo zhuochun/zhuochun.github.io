@@ -8,7 +8,7 @@ tags: Jekyll Liquid Github Tip
 categories: Blog
 ---
 
-After a few hours work, a static [bicrement](http://www.bicrement.com) site is up now :D.
+After a few hours work, a static [bicrement](https://www.bicrement.com) site is up now :D.
 
 These are some tips and snippets on Jekyll, which I spent some time figured out in the process.
 
@@ -33,7 +33,7 @@ You can use `page.next` and `page.previous` to access the previous and next post
 ## Display year/month in archive page
 
 If you want to display `year` and `month` in archive page like
-[my blog page](http://www.bicrement.com/blog/), here is the code:
+[my blog page](https://www.bicrement.com/blog/), here is the code:
 
 {% highlight html %}
 {% raw %}

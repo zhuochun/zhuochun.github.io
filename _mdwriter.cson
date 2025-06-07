@@ -21,11 +21,11 @@ sitePostsDir: "_posts/{year}/"
 # directory to images from the root of siteLocalDir
 siteImagesDir: "images/{year}/{month}/"
 # URL to your blog
-siteUrl: "http://www.bicrement.com/"
+siteUrl: "https://www.bicrement.com/"
 # URLs to tags/posts/categories JSON file
-urlForTags: "http://www.bicrement.com/blog/tags.json"
-urlForPosts: "http://www.bicrement.com/blog/posts.json"
-urlForCategories: "http://www.bicrement.com/blog/categories.json"
+urlForTags: "https://www.bicrement.com/blog/tags.json"
+urlForPosts: "https://www.bicrement.com/blog/posts.json"
+urlForCategories: "https://www.bicrement.com/blog/categories.json"
 # front matter template
 frontMatter: """
 ---
