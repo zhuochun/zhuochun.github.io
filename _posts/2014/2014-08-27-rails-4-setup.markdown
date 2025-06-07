@@ -28,7 +28,7 @@ Edit `config/database.yml` to make sure DB setup is correct.
 
 ## Setup RSpec and Capybara
 
-Follow [RSpec Setup in Rails 4](http://www.bicrement.com/articles/2014/rspec-setup-in-rails-4.html).
+Follow [RSpec Setup in Rails 4](https://www.bicrement.com/articles/2014/rspec-setup-in-rails-4.html).
 
 ## Setup Bootstrap
 
