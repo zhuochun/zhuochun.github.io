@@ -35,8 +35,7 @@ $(function() {
         var title = item.title || "Untitled";
         var link = item.canonical_url || item.url || (item.slug ? "https://bicrement.substack.com/p/" + item.slug : "https://bicrement.substack.com/");
         var dateText = formatNewsletterDate(item.post_date || item.published_at || item.created_at);
-
-        var metaText = dateText ? "On " + dateText + " about newsletter" : "Newsletter";
+        var subtitleText = item.subtitle ? " about " + item.subtitle : "";
 
         return (
             "<section class=\"post\">" +
@@ -44,7 +43,7 @@ $(function() {
                     "<h2 class=\"post-title\">" +
                         "<a href=\"" + link + "\" title=\"" + title + "\">" + title + "</a>" +
                     "</h2>" +
-                    "<p class=\"post-meta\">" + metaText + "</p>" +
+                    "<p class=\"post-meta\">On <span class=\"post-date\">" + dateText + "</span>" + subtitleText + "</p>" +
                 "</header>" +
             "</section>"
         );
