@@ -56,7 +56,10 @@ $(function() {
             return;
         }
 
-        fetch("https://bicrement.substack.com/api/v1/archive?limit=3")
+        var newsletterUrl = "https://bicrement.substack.com/api/v1/archive?limit=3";
+        var proxyUrl = "https://api.allorigins.win/raw?url=" + encodeURIComponent(newsletterUrl);
+
+        fetch(proxyUrl)
             .then(function(response) {
                 if (!response.ok) {
                     throw new Error("Failed to load newsletter posts");
