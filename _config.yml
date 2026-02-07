@@ -6,6 +6,7 @@ description: "Bicrement contains a learner's writing."
 baseurl: ""
 url: "https://www.bicrement.com"
 permalink: "/articles/:year/:title.html"
+ga4_measurement_id: "G-XXXXXXXXXX"
 
 # Author
 author: "Wang Zhuochun"
