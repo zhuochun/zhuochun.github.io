@@ -42,7 +42,24 @@ script:
   </h3>
 
   <div id="newsletter-posts">
-    <p class="post-meta newsletter-loading">Loading latest newsletter posts...</p>
+{% assign newsletter_posts = site.data.newsletter | default: empty %}
+{% if newsletter_posts.size > 0 %}
+{% for post in newsletter_posts limit:3 %}
+    <section class="post">
+      <header class="post-header">
+        <h2 class="post-title">
+          <a href="{{ post.url }}" title="{{ post.title | escape }}">{{ post.title | escape }}</a>
+        </h2>
+        <p class="post-meta">
+          On <span class="post-date">{{ post.date | date: "%-d %b %Y" }}</span>
+{% if post.subtitle %} about {{ post.subtitle | escape }}{% endif %}
+        </p>
+      </header>
+    </section>
+{% endfor %}
+{% else %}
+    <p class="post-meta">No newsletter posts available yet.</p>
+{% endif %}
   </div>
 </div>
 
