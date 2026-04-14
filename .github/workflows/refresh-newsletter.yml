@@ -14,13 +14,13 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          python-version: "3.12"
+          bundler-cache: false
 
       - name: Update newsletter data
-        run: python scripts/update_newsletter_data.py
+        run: ruby scripts/update_newsletter_data.rb
 
       - name: Commit changes
         run: |
