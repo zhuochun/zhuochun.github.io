@@ -15,19 +15,19 @@ layout: default
       <p class="project-meta">
         {{ page.date | date: "%b, %Y" }} ・
         {% if page.site %}
-          <a href="{{ page.site }}" title="Visit {{ page.title }}" target="_blank">
+          <a href="{{ page.site }}" title="Visit {{ page.title }}" target="_blank" rel="noopener noreferrer">
             Website
           </a>
           {% if page.source or page.product %}, {% endif %}
         {% endif %}
         {% if page.product %}
-          <a href="{{ page.product }}" title="Download {{ page.title }}" target="_blank">
+          <a href="{{ page.product }}" title="Download {{ page.title }}" target="_blank" rel="noopener noreferrer">
             Download
           </a>
           {% if page.source %}, {% endif %}
         {% endif %}
         {% if page.source %}
-          <a href="{{ page.source }}" title="View Source Code" target="_blank">
+          <a href="{{ page.source }}" title="View Source Code" target="_blank" rel="noopener noreferrer">
             Source Code
           </a>
         {% endif %}

@@ -7,7 +7,7 @@ $(function () {
         this.title = title;
 
         this.id = "";
-        this.sid = title.toLowerCase().replace(/[^a-z ]/g, "").replace(/\s/g, "-");
+        this.sid = "";
         this.child = [];
         this.parent = null;
     }
@@ -43,6 +43,8 @@ $(function () {
         var $this = $(this),
             node = new Node($this.prop("tagName"), $this.text());
 
+        node.sid = $this.attr("id") || "";
+
         insertNode(current, node);
 
         current = node;
@@ -52,6 +54,10 @@ $(function () {
         var result = submenu ? "" : "<li><a href='#top'>Top</a></li>";
 
         for (var i = 0; i < arr.length; i++) {
+            if (!arr[i].sid) {
+                continue;
+            }
+
             result += "<li><a href='#" + arr[i].sid + "'>" +
                     arr[i].title + "</a>";
 

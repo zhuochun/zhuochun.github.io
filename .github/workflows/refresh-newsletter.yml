@@ -20,7 +20,7 @@ jobs:
           bundler-cache: false
 
       - name: Update newsletter data
-        run: ruby scripts/update_newsletter_data.rb
+        run: ruby _scripts/update_newsletter_data.rb
 
       - name: Commit changes
         run: |
