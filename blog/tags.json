@@ -4,7 +4,7 @@ layout: null
 {
     "tags": [
         {% for tag in site.tags %}
-        "{{ tag | first }}"{% unless forloop.last %},{% endunless %}
+        {{ tag | first | jsonify }}{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ]
 }

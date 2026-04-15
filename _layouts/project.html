@@ -63,10 +63,11 @@ layout: default
 
 <div class="page-nav">
   <div class="pure-g">
+    {% assign projects = site.projects | sort: "date" | reverse %}
     {% assign previous = nil %}
     {% assign hasNext = false %}
 
-    {% for project in site.categories.project %}
+    {% for project in projects %}
       {% if hasNext %}
         {% unless project.hidden %}
           <a href="{{project.url}}" title="Next Project: {{project.title}}">

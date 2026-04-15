@@ -6,7 +6,8 @@ title: Projects
 <div class="projects">
   <h3 class="content-subhead">My Projects</h3>
 
-  {% for project in site.categories.project %}
+  {% assign projects = site.projects | sort: "date" | reverse %}
+  {% for project in projects %}
     {% unless project.hidden %}
       {% include project.html %}
     {% endunless %}

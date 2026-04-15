@@ -1,13 +1,14 @@
 ---
 layout: null
 ---
+{% assign posts = site.posts | map: "title" %}
 {
     "posts": [
         {% for post in site.posts %}
         {
-            "title": "{{ post.title | xml_escape }}",
-            "url": "{{ site.url }}{{ post.url }}",
-            "date": "{{ post.date | date_to_xmlschema }}"
+            "title": {{ post.title | jsonify }},
+            "url": {{ site.url | append: post.url | jsonify }},
+            "date": {{ post.date | date_to_xmlschema | jsonify }}
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ]

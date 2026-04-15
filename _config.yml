@@ -29,6 +29,10 @@ social:
     substack: https://bicrement.substack.com/
     flickr: https://www.flickr.com/photos/mifeng
 
+collections:
+  projects:
+    output: true
+
 # Build Settings
 markdown: kramdown
 encoding: UTF-8
