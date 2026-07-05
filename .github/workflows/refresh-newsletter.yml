@@ -1,6 +1,8 @@
 name: Refresh newsletter data
 
 on:
+  schedule:
+    - cron: '0 0 3 * *'
   workflow_dispatch:
 
 permissions:
@@ -12,11 +14,12 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: '3.4'
           bundler-cache: false
 
       - name: Update newsletter data
