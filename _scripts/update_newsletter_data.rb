@@ -1,11 +1,17 @@
 require "fileutils"
 require "cgi"
+require "json"
 require "open-uri"
 require "rss"
 
 FEED_URL = "https://bicrement.substack.com/feed"
 OUTPUT_PATH = File.expand_path("../_data/newsletter.yml", __dir__)
 POST_LIMIT = 3
+ARCHIVE_URL = "https://bicrement.substack.com/api/v1/archive?sort=new&search=&offset=0&limit=#{POST_LIMIT}"
+HTTP_HEADERS = {
+  "User-Agent" => "Mozilla/5.0 (compatible; zhuochun.github.io newsletter refresh; +https://zhuochun.github.io/)",
+  "Accept-Language" => "en-US,en;q=0.9"
+}
 
 def yaml_quote(value)
   escaped = value.to_s.gsub("\\", "\\\\\\").gsub('"', '\"')
@@ -26,6 +32,15 @@ def normalize_item(item)
   }
 end
 
+def normalize_archive_post(post)
+  {
+    "title" => post.fetch("title").to_s.strip,
+    "url" => post.fetch("canonical_url").to_s.strip,
+    "date" => post.fetch("post_date").to_s[0, 10],
+    "subtitle" => strip_html(post["subtitle"] || post["description"])
+  }
+end
+
 def render_yaml(posts)
   lines = posts.flat_map do |post|
     [
@@ -39,15 +54,31 @@ def render_yaml(posts)
   "#{lines.join("\n")}\n"
 end
 
-def fetch_posts
+def fetch_archive_posts
+  content = URI.open(
+    ARCHIVE_URL,
+    **HTTP_HEADERS,
+    "Accept" => "application/json"
+  ).read
+
+  JSON.parse(content).first(POST_LIMIT).map { |post| normalize_archive_post(post) }
+end
+
+def fetch_feed_posts
   content = URI.open(
     FEED_URL,
-    "User-Agent" => "zhuochun.github.io newsletter refresh",
+    **HTTP_HEADERS,
     "Accept" => "application/rss+xml, application/xml;q=0.9, */*;q=0.8"
   ).read
 
   feed = RSS::Parser.parse(content, false)
   feed.items.first(POST_LIMIT).map { |item| normalize_item(item) }
+end
+
+def fetch_posts
+  fetch_archive_posts
+rescue OpenURI::HTTPError, JSON::ParserError, KeyError
+  fetch_feed_posts
 end
 
 def main
