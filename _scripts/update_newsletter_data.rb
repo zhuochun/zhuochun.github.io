@@ -1,6 +1,7 @@
 require "fileutils"
 require "cgi"
 require "json"
+require "net/http"
 require "open-uri"
 require "rss"
 
@@ -12,6 +13,21 @@ HTTP_HEADERS = {
   "User-Agent" => "Mozilla/5.0 (compatible; zhuochun.github.io newsletter refresh; +https://zhuochun.github.io/)",
   "Accept-Language" => "en-US,en;q=0.9"
 }
+FETCH_ERRORS = [
+  OpenURI::HTTPError,
+  JSON::ParserError,
+  KeyError,
+  RSS::NotWellFormedError,
+  SocketError,
+  EOFError,
+  Errno::ECONNREFUSED,
+  Errno::ECONNRESET,
+  Errno::ETIMEDOUT,
+  Net::OpenTimeout,
+  Net::ReadTimeout
+].freeze
+
+class FetchFailed < StandardError; end
 
 def yaml_quote(value)
   escaped = value.to_s.gsub("\\", "\\\\\\").gsub('"', '\"')
@@ -77,14 +93,25 @@ end
 
 def fetch_posts
   fetch_archive_posts
-rescue OpenURI::HTTPError, JSON::ParserError, KeyError
-  fetch_feed_posts
+rescue *FETCH_ERRORS => archive_error
+  warn "Archive fetch failed: #{archive_error.class}: #{archive_error.message}"
+
+  begin
+    fetch_feed_posts
+  rescue *FETCH_ERRORS => feed_error
+    warn "Feed fetch failed: #{feed_error.class}: #{feed_error.message}"
+    raise FetchFailed, "Unable to fetch newsletter posts from Substack"
+  end
 end
 
 def main
   posts = fetch_posts
   FileUtils.mkdir_p(File.dirname(OUTPUT_PATH))
   File.write(OUTPUT_PATH, render_yaml(posts), mode: "w:utf-8")
+rescue FetchFailed => error
+  raise unless File.exist?(OUTPUT_PATH)
+
+  warn "#{error.message}; keeping existing #{OUTPUT_PATH}"
 end
 
 main if $PROGRAM_NAME == __FILE__
