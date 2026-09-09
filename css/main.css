@@ -1,6 +1,4 @@
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -119,8 +117,6 @@ img {
 
 .nav-item {
     display: inline-block;
-    *display: inline;
-    zoom: 1;
 }
 
 .nav-item a {

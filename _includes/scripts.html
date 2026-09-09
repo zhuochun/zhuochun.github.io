@@ -1,15 +1,11 @@
-{% if page.menu or page.search or page.script %}
-<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
-{% endif %}
-
 {% if page.menu %}
-<script src="/js/headings.js" async></script>
+<script src="/js/headings.js" defer></script>
 {% elsif page.search %}
-<script src="/js/search.js" async></script>
+<script src="/js/search.js" defer></script>
 {% endif %}
 
 {% if page.script %}{% for script in page.script %}
-<script src="{{ script }}" async></script>
+<script src="{{ script }}" defer></script>
 {% endfor %}{% endif %}
 
 {% if site.ga4_measurement_id and site.ga4_measurement_id != "" and site.ga4_measurement_id != "G-XXXXXXXXXX" %}

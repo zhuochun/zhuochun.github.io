@@ -1,79 +1,46 @@
-// Author: Wang Zhuochun
-// Url: http://blog.bicrement.com
+const headings = [];
+const ancestors = [];
 
-$(function () {
-    function Node(tag, title) {
-        this.tag = tag;
-        this.title = title;
-
-        this.id = "";
-        this.sid = "";
-        this.child = [];
-        this.parent = null;
-    }
-
-    Node.prototype.addChild = function(node) {
-        this.child.push(node);
-        node.parent = this;
+document.querySelectorAll(".post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6").forEach(element => {
+    const node = {
+        level: Number(element.tagName.slice(1)),
+        id: element.id,
+        title: element.textContent,
+        children: []
     };
 
-    var list = [], current = null, prefix = "heading-";
-
-    function insertNode(current, node) {
-        if (current === null) {
-            node.id = prefix + (list.length + 1);
-            list.push(node);
-        } else if (current.tag < node.tag) {
-            node.id = current.id + "-" + (current.child.length + 1);
-            current.addChild(node);
-        } else if (current.tag === node.tag) {
-            if (current.parent === null) {
-                node.id = prefix + (list.length + 1);
-                list.push(node);
-            } else {
-                node.id = current.parent.id + "-" + (current.parent.child.length + 1);
-                current.parent.addChild(node);
-            }
-        } else {
-            insertNode(current.parent, node);
-        }
+    while (ancestors.length && ancestors.at(-1).level >= node.level) {
+        ancestors.pop();
     }
-
-    $(".post-content").find("h1,h2,h3,h4,h5,h6").each(function() {
-        var $this = $(this),
-            node = new Node($this.prop("tagName"), $this.text());
-
-        node.sid = $this.attr("id") || "";
-
-        insertNode(current, node);
-
-        current = node;
-    });
-
-    function dump(arr, submenu) {
-        var result = submenu ? "" : "<li><a href='#top'>Top</a></li>";
-
-        for (var i = 0; i < arr.length; i++) {
-            if (!arr[i].sid) {
-                continue;
-            }
-
-            result += "<li><a href='#" + arr[i].sid + "'>" +
-                    arr[i].title + "</a>";
-
-            if (arr[i].child.length > 0) {
-                result += "<ul class='sub-menu'>" + dump(arr[i].child, true) + "</ul>";
-            }
-
-            result += "</li>";
-        }
-
-        return result;
-    }
-
-    if (list.length > 0) {
-        $("#content-menu").append("<h3>Table of Content</h3>");
-        $("#content-menu").append("<ol>" + dump(list) + "</ol>");
-    }
-
+    const siblings = ancestors.length ? ancestors.at(-1).children : headings;
+    siblings.push(node);
+    ancestors.push(node);
 });
+
+function renderHeadings(nodes, list) {
+    for (const node of nodes) {
+        if (!node.id) continue;
+
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        link.setAttribute("href", `#${node.id}`);
+        link.textContent = node.title;
+        item.append(link);
+
+        if (node.children.length) {
+            const submenu = document.createElement("ul");
+            submenu.className = "sub-menu";
+            renderHeadings(node.children, submenu);
+            item.append(submenu);
+        }
+        list.append(item);
+    }
+}
+
+if (headings.length) {
+    const title = document.createElement("h3");
+    title.textContent = "Table of Content";
+    const list = document.createElement("ol");
+    renderHeadings([{ id: "top", title: "Top", children: [] }, ...headings], list);
+    document.querySelector("#content-menu")?.append(title, list);
+}

@@ -1,43 +1,18 @@
-// Author: Wang Zhuochun
-// Url: http://blog.bicrement.com
+const separators = document.querySelectorAll(".post-seperator");
+const posts = Array.from(document.querySelectorAll(".post"), element => ({
+    text: element.textContent.toLowerCase().trim(),
+    element
+}));
+const search = document.querySelector("#search");
 
-$(function() {
-    var i, post, posts = [],
-        $separators = $(".post-seperator"),
-        $posts = $(".post"),
-        $search = $("#search"),
-        $form = $(".pure-form");
-
-    for (i = 0; (post = $posts[i]); i++) {
-        var e = $(post),
-            t = $.trim(e.text().toLowerCase());
-        posts.push([t, e]);
-    }
-
-    function filter(key) {
-        key = $.trim(key.toLowerCase());
-
-        if (key.length > 0) {
-            for (i = 0; (post = posts[i]); i++) {
-                if (post[0].indexOf(key) != -1) {
-                    post[1].removeClass("hidden");
-                } else {
-                    post[1].addClass("hidden");
-                }
-            }
-
-            $separators.addClass("hidden");
-        } else {
-            $posts.removeClass("hidden");
-            $separators.removeClass("hidden");
-        }
-    }
-
-    $search.on("keyup", function() {
-        filter($search.val());
+search?.addEventListener("keyup", () => {
+    const key = search.value.toLowerCase().trim();
+    posts.forEach(({ text, element }) => {
+        element.classList.toggle("hidden", !text.includes(key));
     });
+    separators.forEach(element => element.classList.toggle("hidden", key.length > 0));
+});
 
-    $form.on("submit", function(e) {
-        e.preventDefault();
-    });
+document.querySelectorAll(".pure-form").forEach(form => {
+    form.addEventListener("submit", event => event.preventDefault());
 });

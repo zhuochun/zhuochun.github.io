@@ -1,16 +1,12 @@
-$(function() {
-    var date = new Date();
+const date = new Date();
+const hour = date.getHours();
+const greeting = hour <= 5 ? "Hello" :
+                 hour <= 12 ? "Good morning" :
+                 hour <= 18 ? "Good afternoon" : "Good evening";
 
-    function sayaword() {
-        var hour = date.getHours();
-
-        return hour <=  5 ? "Hello" :
-               hour <= 12 ? "Good morning" :
-               hour <= 18 ? "Good afternoon" :
-                            "Good evening";
-    }
-
-    $(".greeting").html(sayaword());
-
-    $(".sidebar").addClass("sidebar-color-" + date.getDay());
+document.querySelectorAll(".greeting").forEach(element => {
+    element.textContent = greeting;
+});
+document.querySelectorAll(".sidebar").forEach(element => {
+    element.classList.add(`sidebar-color-${date.getDay()}`);
 });
