@@ -68,18 +68,8 @@ script:
     Recent Posts <a href="{{ site.page.blog }}" title="Bicrement Blog">MORE &raquo;</a>
   </h3>
 
-{% assign onemore = false %}
-{% for post in site.posts limit:7 %}
-  {% if post.project %}
-    {% assign onemore = true %}
-  {% else %}
-    {% unless forloop.last %}
-      {% include post.html %}
-    {% endunless %}
-
-    {% if forloop.last and onemore %}
-      {% include post.html %}
-    {% endif %}
-  {% endif %}
+{% assign recent_posts = site.posts | where_exp: "post", "post.project == nil" %}
+{% for post in recent_posts limit:6 %}
+  {% include post.html %}
 {% endfor %}
 </div>

@@ -1,4 +1,6 @@
 require "fileutils"
+require "date"
+require "yaml"
 require "cgi"
 require "json"
 require "net/http"
@@ -29,11 +31,6 @@ FETCH_ERRORS = [
 
 class FetchFailed < StandardError; end
 
-def yaml_quote(value)
-  escaped = value.to_s.gsub("\\", "\\\\\\").gsub('"', '\"')
-  %("#{escaped}")
-end
-
 def strip_html(value)
   text = value.to_s.gsub(/<[^>]*>/, " ")
   CGI.unescapeHTML(text).gsub(/\s+/, " ").strip
@@ -58,16 +55,11 @@ def normalize_archive_post(post)
 end
 
 def render_yaml(posts)
-  lines = posts.flat_map do |post|
-    [
-      "- title: #{yaml_quote(post.fetch("title"))}",
-      "  url: #{post.fetch("url")}",
-      "  date: #{post.fetch("date")}",
-      "  subtitle: #{yaml_quote(post.fetch("subtitle"))}"
-    ]
-  end
-
-  "#{lines.join("\n")}\n"
+  # Keep dates as YAML dates, matching the checked-in data's interpretation.
+  YAML.dump(posts.map do |post|
+    date = post.fetch("date")
+    post.merge("date" => date.to_s.empty? ? nil : Date.iso8601(date))
+  end)
 end
 
 def fetch_archive_posts
